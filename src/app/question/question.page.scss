@@ -1,0 +1,28 @@
+.content-page{
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: column;
+}
+
+.question-box{
+    min-height: 100px;
+    color: rgb(212, 0, 0);
+    border-bottom: 1px solid #000;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .time {
+        width: 54px;
+        height: 54px;
+        border-radius: 100%;
+        border: 3px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
