@@ -8,7 +8,7 @@
 <div class="content-page">
   <div class="question-box">
     <div class="question">
-      <p>Questão 1</p>
+      <p>{{ curQuesion.title }}</p>
     </div>
     <div>
       <div class="time">
@@ -18,19 +18,10 @@
   
   </div>
   <div class="answers">
-<div class="answer">
-  <span class="number">1</span>
-  <span class="answer-test">aoba</span>
-</div>
+<div (click)= "doAnswer(answer)"*ngFor="let answer of curQuesion.answers; let n = index;" class="answer">
+  <span class="number">{{ n + 1 }}</span>
+  <span class="answer-test">{{ answer.description }}</span>
 
-<div class="answer">
-  <span class="number">2</span>
-  <span  class="answer-test">aoba</span>
-</div>
-
-<div class="answer">
-  <span class="number">3</span>
-  <span  class="answer-test">aoba</span>
 </div>
 
   </div>
