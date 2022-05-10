@@ -9,11 +9,14 @@ import { QuestionService } from '../question.service';
 })
 export class QuestionPage implements OnInit {
 
+ questions: Question[] = [
+
+ ];
+ 
   curQuesion: Question;
   questionIndex: number = 0;
 
  
-
   constructor(
     private questionService: QuestionService
   ) { }
