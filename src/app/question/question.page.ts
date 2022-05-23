@@ -185,7 +185,7 @@ export class QuestionPage implements OnInit {
     level: 1
   }
 ];
- 
+
   curQuesion: Question;
   questionIndex: number = 0;
 
