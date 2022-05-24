@@ -11,12 +11,12 @@ export class QuestionPage implements OnInit {
 
  private questions: Question[] = [
   {
-    title: 'Um número múltiplo de cinco é?',
+    title: 'Como é a cor roxo em inglês?',
     answers: [
-      {description: 'Um número que é divisível por 3', isRight: false},
-      {description: 'Um número que é divisível por 5', isRight: true},
-      {description: 'Um número que multiplicado por 5 é par', isRight: false},
-      {description: 'Um número que somado com 5 é impar', isRight: false},
+      {description: 'Purple', isRight: true},
+      {description: 'Yellow', isRight: false},
+      {description: 'Green', isRight: false},
+      {description: 'Black', isRight: false},
     ],
     level: 1
   },
