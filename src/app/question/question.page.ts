@@ -198,5 +198,11 @@ export class QuestionPage implements OnInit {
       this.questionIndex++;
       this.curQuesion = this.questions[this.questionIndex];
     }
+      else{
+        if(answer.isRight){
+          this.questionIndex--;
+          this.curQuesion = this.questions[this.questionIndex];
+        }
+    }
   }
 }

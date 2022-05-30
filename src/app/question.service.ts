@@ -5,6 +5,6 @@ import { Question } from './models/question';
   providedIn: 'root'
 })
 export class QuestionService {
- 
+
   constructor() { }
 }
