@@ -8,33 +8,35 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   squares: string[];
-  winner: string;
   xIsNext: boolean;
+  winner: string;
 
   constructor() {}
 
-  ngOnInit(){
+  ngOnInit() {
     this.newGame();
   }
 
-  newGame(){
-  this.squares = Array(9).fill(null);
-  this.winner = null;
-  this.xIsNext = true;
+  newGame() {
+    this.squares = Array(9).fill(null);
+    this.winner = null;
+    this.xIsNext = true;
   }
 
   get player() {
     return this.xIsNext ? 'X' : 'O';
   }
 
-  makeMove(idx: number){
-    if(this.squares[idx]){
-  this.squares.splice(idx, 1, this.player);
-  this.xIsNext = !this.xIsNext;
+  makeMove(idx: number) {
+    if (!this.squares[idx]) {
+      this.squares.splice(idx, 1, this.player);
+      this.xIsNext = !this.xIsNext;
     }
+
+    this.winner = this.calculateWinner();
   }
 
-  calculateWinner(){
+  calculateWinner() {
     const lines = [
       [0, 1, 2],
       [3, 4, 5],

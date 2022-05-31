@@ -34,6 +34,10 @@ const routes: Routes = [
     path: 'conquistas',
     loadChildren: () => import('./conquistas/conquistas.module').then( m => m.ConquistasPageModule)
   },
+  {
+    path: 'j-velha',
+    loadChildren: () => import('./j-velha/j-velha.module').then( m => m.JVelhaPageModule)
+  },
 
 ];
 
