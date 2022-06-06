@@ -1,10 +1,4 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+
 
 
 
@@ -13,10 +7,19 @@
 <img src="">
   </div>
 
-  <div class="formfield">
-    <ion-input placeholder="Nome:"></ion-input>
-    <ion-input placeholder="Idade:"></ion-input>
-    <ion-input placeholder="Sexo"></ion-input>
+  <div class="logo">
+    <img src="./../../assets/img/logo.png">
   </div>
 
+  <div class="login">
+    <ion-input placeholder="Email:"></ion-input>
+    <ion-input placeholder="Senha:" type="password"></ion-input>
+  </div>
+
+  <div>
+    <p>Não é cadastrado?</p>
+    <ion-button color="tertiary" routerLink="/cadastro">Se Cadastrar</ion-button>
+  </div>
+ 
+  
 </ion-content>
