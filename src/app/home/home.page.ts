@@ -23,6 +23,7 @@ export class HomePage {
     this.xIsNext = true;
   }
 
+  // eslint-disable-next-line @typescript-eslint/member-ordering
   get player() {
     return this.xIsNext ? 'X' : 'O';
   }
@@ -47,6 +48,8 @@ export class HomePage {
       [0, 4, 8],
       [2, 4, 6]
     ];
+
+    // eslint-disable-next-line @typescript-eslint/prefer-for-of
     for (let i = 0; i < lines.length; i++) {
       const [a, b, c] = lines[i];
       if (
