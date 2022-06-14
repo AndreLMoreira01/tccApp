@@ -38,6 +38,10 @@ const routes: Routes = [
     path: 'j-velha',
     loadChildren: () => import('./j-velha/j-velha.module').then( m => m.JVelhaPageModule)
   },
+  {
+    path: 'historias',
+    loadChildren: () => import('./historias/historias.module').then( m => m.HistoriasPageModule)
+  },
 
 ];
 
