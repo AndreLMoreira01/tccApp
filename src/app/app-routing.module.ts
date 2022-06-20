@@ -12,21 +12,14 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'quiz',
-    loadChildren: () => import('./quiz/quiz.module').then( m => m.QuizPageModule)
-  },
-  {
-    path: 'question',
-    loadChildren: () => import('./question/question.module').then( m => m.QuestionPageModule)
-  },
-  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
     path: 'cadastro',
     loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
-  },  {
+  },
+  {
     path: 'teste',
     loadChildren: () => import('./teste/teste.module').then( m => m.TestePageModule)
   },

@@ -23,7 +23,7 @@ export class HomePage {
     this.xIsNext = true;
   }
 
-  // eslint-disable-next-line @typescript-eslint/member-ordering
+ // eslint-disable-next-line @typescript-eslint/member-ordering
   get player() {
     return this.xIsNext ? 'X' : 'O';
   }
