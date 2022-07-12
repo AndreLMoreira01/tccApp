@@ -1,19 +1,38 @@
-ion-content{
-    --background: url(../../assets/img/andy.jpg)
+@import url(//db.onlinewebfonts.com/c/304a216e4a6b83d00597af9802dfdd52?family=Carton+Six);
+
+ion-content {
+  --background: url(../../assets/img/andy.jpg);
 }
 
-.username{
-  color: aqua;
+.nome {
+  font-family: "Carton Six";
+  src: url("//db.onlinewebfonts.com/t/304a216e4a6b83d00597af9802dfdd52.eot");
+  src: url("//db.onlinewebfonts.com/t/304a216e4a6b83d00597af9802dfdd52.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/304a216e4a6b83d00597af9802dfdd52.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/304a216e4a6b83d00597af9802dfdd52.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/304a216e4a6b83d00597af9802dfdd52.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/304a216e4a6b83d00597af9802dfdd52.svg#Carton Six")
+      format("svg");
+  font-size: 25px;
+  font-weight: 100;
 }
 
-.logo{
-    width: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-
+.logo {
+  width: 175px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 90px;
 }
 
-.login{
-   margin-top: 10px;
+.login {
+  margin-top: 10px;
+}
+
+.bottom{
+  width: 115px;
+  height: 55px;
 }
