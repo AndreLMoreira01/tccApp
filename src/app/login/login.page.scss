@@ -1,25 +1,135 @@
 @import url(//db.onlinewebfonts.com/c/304a216e4a6b83d00597af9802dfdd52?family=Carton+Six);
 
+
 ion-content {
+  font-family: 'Carton Six';
+  display: grid;
+  place-items: center;
+  color: #ffffff;
   --background: url(../../assets/img/andy.jpg);
+
+.login {
+  font-size: large;
+  margin-right: 40pt;
+  margin-left: 40pt;
+  position: relative;
+  justify-content: space-between;
 }
 
-.nome {
-  font-family: "Carton Six";
-  src: url("//db.onlinewebfonts.com/t/304a216e4a6b83d00597af9802dfdd52.eot");
-  src: url("//db.onlinewebfonts.com/t/304a216e4a6b83d00597af9802dfdd52.eot?#iefix")
-      format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/304a216e4a6b83d00597af9802dfdd52.woff2")
-      format("woff2"),
-    url("//db.onlinewebfonts.com/t/304a216e4a6b83d00597af9802dfdd52.woff")
-      format("woff"),
-    url("//db.onlinewebfonts.com/t/304a216e4a6b83d00597af9802dfdd52.ttf")
-      format("truetype"),
-    url("//db.onlinewebfonts.com/t/304a216e4a6b83d00597af9802dfdd52.svg#Carton Six")
-      format("svg");
-  font-size: 25px;
-  font-weight: 100;
+label {
+  align-items: center;
+  color: #ffffff;
+  position: absolute;
+  margin-top: -25px;
+  left: 10px;
+  line-height: 25px;
+  display: inline-flex;
+  column-gap: 10px;
+  align-items: center;
+  transition: transform .25s,
+  opacity .25s;
 }
+
+label::before {
+  opacity: 0;
+}
+
+.login:focus-within label {
+  transform: translateX(26px);
+}
+
+.login:focus-within label::before {
+  opacity: 1;
+  transition-delay: .1s;
+}
+
+input {
+  background-color: #F0F0F0;
+  opacity: 100;
+  width: 250px;
+  height: 35px;
+  margin-top: 25px;
+  display: block;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  font-family: 'Carton Six';
+  font-weight: 400;
+}
+
+input::placeholder {
+  color: rgb(111, 113, 116);
+  transition: opacity .25s;
+}
+
+input:focus::placeholder {
+  opacity: 0;
+}
+
+
+.login2 {
+  font-size: large;
+  margin-top: 35px;
+  margin-right: 40pt;
+  margin-left: 40pt;
+  position: relative;
+  justify-content: space-between;
+}
+
+label {
+  margin-top: 50pt;
+  align-items: center;
+  color: #ffffff;
+  position: absolute;
+  margin-top: -25px;
+  left: 10px;
+  line-height: 30px;
+  display: inline-flex;
+  column-gap: 10px;
+  align-items: center;
+  transition: transform .25s,
+  opacity .25s;
+}
+
+label::before {
+  opacity: 0;
+}
+
+.login2:focus-within label {
+  transform: translateX(26px);
+}
+
+.login2:focus-within label::before {
+  opacity: 1;
+  transition-delay: .1s;
+}
+
+input {
+  box-shadow: 0 5px 5px rgb(64, 65, 65);
+  background-color: #F0F0F0;
+  opacity: 80%;
+  width: 250px;
+  height: 35px;
+  margin-top: 25px;
+  display: block;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  font-family: 'Carton Six';
+  font-weight: 400;
+}
+
+input::placeholder {
+  color: rgb(146, 148, 151);
+  transition: opacity .25s;
+}
+
+input:focus::placeholder {
+  opacity: 0;
+}
+
 
 .logo {
   width: 175px;
@@ -28,11 +138,20 @@ ion-content {
   margin-top: 90px;
 }
 
-.login {
-  margin-top: 10px;
-}
 
 .bottom{
-  width: 115px;
-  height: 55px;
+  margin-top: 12px;
+  width: 250px;
+  height: 45px;
+  border-radius: 25%;
+  box-shadow: 0 10px 10px rgb(64, 65, 65);
+  opacity: 90%;
+  font-family: 'Carton Six';
+  font-size: 20px;
+}
+
+
+
+
+
 }
