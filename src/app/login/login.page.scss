@@ -1,13 +1,14 @@
+/** fonte importada **/
 @import url(//db.onlinewebfonts.com/c/304a216e4a6b83d00597af9802dfdd52?family=Carton+Six);
 
 
 ion-content {
   font-family: 'Carton Six';
-  display: grid;
   place-items: center;
-  color: #ffffff;
-  --background: url(../../assets/img/andy.jpg);
+  --background: linear-gradient(to bottom, skyblue, cornflowerblue);
+  overflow: hidden;
 
+  /** login - nome **/
 .login {
   font-size: large;
   margin-right: 40pt;
@@ -67,7 +68,7 @@ input:focus::placeholder {
   opacity: 0;
 }
 
-
+/** login2 - senha **/
 .login2 {
   font-size: large;
   margin-top: 35px;
@@ -130,16 +131,8 @@ input:focus::placeholder {
   opacity: 0;
 }
 
-
-.logo {
-  width: 175px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 90px;
-}
-
-
-.bottom{
+/** botão - continuar **/
+.bottom1{
   margin-top: 12px;
   width: 250px;
   height: 45px;
@@ -150,8 +143,187 @@ input:focus::placeholder {
   font-size: 20px;
 }
 
+/** logo **/
+.logo {
+  width: 175px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 90px;
+}
+
+/** background **/
+/** nuvens **/
+.cloud.one {
+  opacity: 80%;
+  top: 8%;
+  width: 90px;
+  height: 30px;
+  animation-duration: 11s;
+}
+
+ .cloud.two {
+  opacity: 65%;
+  top: 35%;
+  width: 30px;
+  height: 10px;
+  animation-duration: 7s;
+}
+
+.cloud.three {
+  top: 70%;
+  width: 60px;
+  height: 20px;
+  animation-duration: 9s;
+}
+
+.cloud.four {
+  top: 80%;
+  width: 120px;
+  height: 40px;
+  animation-duration: 6s;
+}
 
 
 
+.cloud {
+  position: absolute;
+  left: 0;
+  background: white;
+  border-radius: 1000px;
+  animation: zoomies 5s infinite linear;
+}
+
+.cloud::before {
+  content: "";
+  position: absolute;
+  top: -80%;
+  left: 10%;
+  width: 50%;
+  height: 150%;
+  background: white;
+  border-radius: 50%;
+}
+
+.cloud::after {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: 20%;
+  width: 30%;
+  height: 100%;
+  background: white;
+  border-radius: 50%;
+}
+
+@keyframes zoomies {
+  from {
+    left: 0;
+    transform: translateX(-100%);
+  }
+
+  to {
+    left: 100%;
+    transform: translateX(0%);
+  }
+}
+
+
+/** balão **/
+.balloon{
+  height: 100px;
+  width: 100px;
+  background-color: #6e14b3;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.5%;
+  left: 15px;
+  animation: float 4.5s infinite;
+}
+
+@keyframes float {
+  50%{
+    transform: translateY(25px);
+  }
+}
+
+.balloon::before{
+  position: absolute;
+  content: "";
+  height: 100px;
+  width: 70px;
+  background-color: #ffb91d;
+  border-radius: 50%;
+  left: 15px;
+}
+
+
+.balloon:after{
+  position: absolute;
+  content: "";
+  height: 100px;
+  width: 40px;
+  background-color: #6e14b3;
+  border-radius: 50%;
+  left: 30px;
+  top: 0;
+}
+
+.bottom2{
+  background-color: #6e14b3;
+  height: 10px;
+  width: 50px;
+  position: relative;
+  top: 94px;
+  left: 25px;
+}
+
+.basket{
+  height: 28px;
+  width: 35px;
+  background-color: #8b0aee;
+  position: relative;
+  top: 118px;
+  left: 33px;
+  border-radius: 0 0 10px 10px;
+}
+
+.basket::before{
+  position: absolute;
+  content: "";
+  background-color: #6e14b3;
+  height: 4px;
+  width: 40px;
+  border-radius: 7px;
+  left: -2px;
+}
+
+.rope{
+  background-color: #61169e;
+  height: 28px;
+  width: 2px;
+  position: relative;
+  top: 65px;
+  left: 49px;
+}
+.rope:before{
+  position: absolute;
+  content: "";
+  background-color: #61169e;
+  height: 28px;
+  width: 2px;
+  top: 0;
+  left: -20px;
+  transform: rotate(-8deg);
+}
+.rope::after{
+  position: absolute;
+  content: "";
+  background-color: #61169e;
+  height: 28px;
+  width: 2px;
+  top: 0;
+  left: 20px;
+  transform: rotate(8deg);
+}
 
 }
