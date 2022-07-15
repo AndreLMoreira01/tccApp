@@ -10,17 +10,16 @@ ion-content{
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   overflow: hidden;
 
 .planet{
   display: flex;
   flex-direction: column;
-  h2{
-    color: #fff;
-    font-size: 4em;
-    margin-bottom: 40px;
-    font-weight: 600;
+  h3{
+    color: #2b2b2b;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: 300;
   }
   .container{
     width: 100%;
@@ -30,17 +29,20 @@ ion-content{
     flex-direction: column;
   }
 }
+
+
+// Terra
 .planetEarth{
   position: relative;
   min-width: 50%;
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background: #182357;
+  background: #F3F3F3;
   .loader{
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     animation: animate 4s linear infinite;
     span{
@@ -49,7 +51,7 @@ ion-content{
       left: 10px;
       right: 10px;
       bottom: 10px;
-      background: #182357;
+      background: #F3F3F3;
       border-radius: 50%;
     }
     @keyframes animate{
@@ -99,8 +101,8 @@ ion-content{
 }
 .earth{
   position: absolute;
-  width: 340px;
-  height: 340px;
+  width: 50px;
+  height: 50px;
   background: url(../../assets/img/earth.jpg);
   border-radius: 50%;
   background-size: cover;
@@ -120,17 +122,18 @@ ion-content{
   }
 }
 
+//Marte
 .planetMars{
   position: relative;
   min-width: 50%;
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background: #190703;
+  background: #F3F3F3;
   .loader{
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     animation: animate 4s linear infinite;
     span{
@@ -139,7 +142,7 @@ ion-content{
       left: 10px;
       right: 10px;
       bottom: 10px;
-      background: #041903;
+      background: #F3F3F3;
       border-radius: 50%;
     }
     @keyframes animate{
@@ -189,8 +192,8 @@ ion-content{
 }
 .mars{
   position: absolute;
-  width: 340px;
-  height: 340px;
+  width: 50px;
+  height: 50px;
   background: url(../../assets/img/mars.jpg);
   border-radius: 50%;
   background-size: cover;
@@ -218,11 +221,11 @@ ion-content{
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background: #0070b1;
+  background: #F3F3F3;
   .loader{
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     animation: animate 4s linear infinite;
     span{
@@ -231,7 +234,7 @@ ion-content{
       left: 10px;
       right: 10px;
       bottom: 10px;
-      background: #0070b1;
+      background: #F3F3F3;
       border-radius: 50%;
     }
     @keyframes animate{
@@ -281,8 +284,8 @@ ion-content{
 }
 .jupiter{
   position: absolute;
-  width: 340px;
-  height: 340px;
+  width: 50px;
+  height: 50px;
   background: url(../../assets/img/jupiter.png);
   border-radius: 100%;
   background-size: cover;
@@ -310,11 +313,11 @@ ion-content{
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background: #e7c500;
+  background: #F3F3F3;
   .loader{
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     animation: animate 4s linear infinite;
     span{
@@ -323,7 +326,7 @@ ion-content{
       left: 10px;
       right: 10px;
       bottom: 10px;
-      background: #e7c400e1;
+      background: #F3F3F3;
       border-radius: 50%;
     }
     @keyframes animate{
@@ -356,7 +359,7 @@ ion-content{
     transform: translateX(-50%);
     width: 10px;
     height: 10px;
-    background: #afafaf;
+    background: #9c9c9c;
     border-radius: 50%;
     z-index: 10;
     box-shadow: 0 0 10px #777777,
@@ -371,11 +374,10 @@ ion-content{
                 0 0 100px #777777,
   }
 }
-
 .saturn{
   position: absolute;
-  width: 340px;
-  height: 340px;
+  width: 100px;
+  height: 100px;
   background: url(../../assets/img/saturn.jpg);
   border-radius: 100%;
   background-size: cover;
@@ -384,8 +386,6 @@ ion-content{
   animation: animateSaturn 15s linear infinite;
 
 }
-
-
 
   @keyframes animateSaturn
 {
@@ -397,8 +397,198 @@ ion-content{
   {
     background-position: -550px;
   }
+
 }
 
+
+  // moon
+.planetMoon{
+  position: relative;
+  min-width: 50%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #F3F3F3;
+  .loader{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    animation: animate 4s linear infinite;
+    span{
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      background: #F3F3F3;
+      border-radius: 50%;
+    }
+    @keyframes animate{
+      0%{
+        transform: rotate(0deg);
+      }
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+  }
+  .loader:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #b1b1b1);
+    background-size: 200px 360px;
+    background-repeat: no-repeat;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+  }
+  .loader:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 10px #cecece,
+                0 0 20px #cecece,
+                0 0 30px #cecece,
+                0 0 40px #cecece,
+                0 0 50px #cecece,
+                0 0 60px #cecece,
+                0 0 70px #cecece,
+                0 0 80px #cecece,
+                0 0 90px #cecece,
+                0 0 100px #cecece,
+  }
+}
+.moon{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: url(../../assets/img/moon2.png);
+  border-radius: 100%;
+  background-size: cover;
+  box-shadow: inset 0 0 20px #cecece,
+              0 0 120px #cecece;
+  animation: animateMoon 15s linear infinite;
+
+}
+
+  @keyframes animateMoon
+{
+  0%
+  {
+    background-position: 0;
+  }
+  100%
+  {
+    background-position: -550px;
+  }
+
+}
+
+
+  // sol
+  .planetSun{
+    position: relative;
+    min-width: 50%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #F3F3F3;
+    .loader{
+      position: relative;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      animation: animate 4s linear infinite;
+      span{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        background: #F3F3F3;
+        border-radius: 50%;
+      }
+      @keyframes animate{
+        0%{
+          transform: rotate(0deg);
+        }
+        100%{
+          transform: rotate(360deg);
+        }
+      }
+    }
+    .loader:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(to top, transparent, #ff9d2d);
+      background-size: 200px 360px;
+      background-repeat: no-repeat;
+      border-top-left-radius: 200px;
+      border-bottom-left-radius: 200px;
+    }
+    .loader:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 10px;
+      background: #ffd8b9;
+      border-radius: 50%;
+      z-index: 10;
+      box-shadow: 0 0 10px #ff9d2d,
+                  0 0 20px #ff9d2d,
+                  0 0 30px #ff9d2d,
+                  0 0 40px #ff9d2d,
+                  0 0 50px #ff9d2d,
+                  0 0 60px #ff9d2d,
+                  0 0 70px #ff9d2d,
+                  0 0 80px #ff9d2d,
+                  0 0 90px #ff9d2d,
+                  0 0 100px #ff9d2d,
+    }
+  }
+.sun{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: url(../../assets/img/sun.png);
+    border-radius: 100%;
+    background-size: cover;
+    box-shadow: inset 0 0 60px #ff6434,
+                0 0 120px #ff6434;
+    animation: animateSun 15s linear infinite;
+
+  }
+
+    @keyframes animateSun
+  {
+    0%
+    {
+      background-position: 0;
+    }
+    100%
+    {
+      background-position: 162.5%;
+    }
+
+  }
 
 
 
