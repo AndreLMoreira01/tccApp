@@ -139,7 +139,7 @@ ion-content{
       left: 10px;
       right: 10px;
       bottom: 10px;
-      background: #190703;
+      background: #041903;
       border-radius: 50%;
     }
     @keyframes animate{
@@ -301,4 +301,108 @@ ion-content{
     background-position: -550px;
   }
 }
+
+
+// saturno
+.planetSaturn{
+  position: relative;
+  min-width: 50%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #e7c500;
+  .loader{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    animation: animate 4s linear infinite;
+    span{
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      background: #e7c400e1;
+      border-radius: 50%;
+    }
+    @keyframes animate{
+      0%{
+        transform: rotate(0deg);
+      }
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+  }
+  .loader:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #777777);
+    background-size: 200px 360px;
+    background-repeat: no-repeat;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+  }
+  .loader:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #afafaf;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 10px #777777,
+                0 0 20px #777777,
+                0 0 30px #777777,
+                0 0 40px #777777,
+                0 0 50px #777777,
+                0 0 60px #777777,
+                0 0 70px #777777,
+                0 0 80px #777777,
+                0 0 90px #777777,
+                0 0 100px #777777,
+  }
+}
+
+.saturn{
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  background: url(../../assets/img/saturn.jpg);
+  border-radius: 100%;
+  background-size: cover;
+  box-shadow: inset 0 0 20px #777777,
+              0 0 120px #777777;
+  animation: animateSaturn 15s linear infinite;
+
+}
+
+
+
+  @keyframes animateSaturn
+{
+  0%
+  {
+    background-position: 0;
+  }
+  100%
+  {
+    background-position: -550px;
+  }
+}
+
+
+
+
+
+
+
 }
