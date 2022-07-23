@@ -1,522 +1,248 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
-*
-{
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-ion-content{
-  display: flex;
+ion-content {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  height: max-content;
 
-.planet{
-  display: flex;
-  flex-direction: column;
-  h3{
-    color: #2b2b2b;
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    font-weight: 300;
+  /** botão de voltar **/
+  ion-button{
+    margin-top: 20px;
+    font-size: 20px;
   }
-  .container{
+
+    /** plano de fundo **/
+  .star{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
+    pointer-events: none;
+    animation: animate 5s ease-in-out infinite,
+               backgroundmove 10s linear infinite;
+  }
+  .star1{
+    animation-delay: 0s;
+    background: url(../../assets/img/estrelas/star1.png);
+  }
+  .star2{
+    animation-delay: -1s;
+    background: url(../../assets/img/estrelas/star2.png);
+  }
+  .star3{
+    animation-delay: -2s;
+    background: url(../../assets/img/estrelas/star3.png);
+  }
+  .star4{
+    animation-delay: -3s;
+    background: url(../../assets/img/estrelas/star4.png);
+  }
+  .star5{
+    animation-delay: -4s;
+    background: url(../../assets/img/estrelas/star5.png);
+  }
+  .star6{
+    animation-delay: -5s;
+    background: url(../../assets/img/estrelas/star6.png);
+  }
+  .star7{
+    animation-delay: -6s;
+    background: url(../../assets/img/estrelas/star7.png);
+  }
+  .star8{
+    animation-delay: -7s;
+    background: url(../../assets/img/estrelas/star8.png);
+  }
+  @keyframes animate
+  {
+    0%, 20%, 40%, 60%, 80%, 100%{
+      opacity: 1;
+    }
+
+    10%, 30%, 50%, 70%, 90%{
+      opacity: 1;
+    }
+  }
+  @keyframes backgroundmove
+  {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(2);
+    }
+  }
+
+    /** conquistas **/
+  .conquistas-planetas {
+    height: 80vh;
+    width: 100%;
+    background: #f3f3f3;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    border-top-left-radius: 46px;
+    border-top-right-radius: 46px;
+    .conquistas{
+      display: flex;
+      justify-content: center;
+      color: rgb(20, 0, 0);
+      top: 50px;
+      font-weight: bold;
+      font-size: 2.2em;
+      position: relative;
+      margin-bottom: 20px;
+  }
+  .descricao{
+      text-align: center;
+      color: #464646;
+      font-size: 1em;
+      margin-top: 70px;
+      font-weight: 500;
+  }
+  }
+  .planet {
+    padding: 9px;
+    top: 230px;
+    display: block;
     flex-direction: column;
-  }
-}
-
-
-// Terra
-.planetEarth{
-  position: relative;
-  min-width: 50%;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  background: #F3F3F3;
-  .loader{
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    animation: animate 4s linear infinite;
-    span{
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
-      background: #F3F3F3;
-      border-radius: 50%;
+    h3 {
+      text-align: center;
+      font-weight: bold;
+      color: #2b2b2b;
+      font-size: 1.5em;
+      margin-bottom: 20px;
     }
-    @keyframes animate{
-      0%{
-        transform: rotate(0deg);
-      }
-      100%{
-        transform: rotate(360deg);
-      }
+    h5 {
+      text-align: center;
+      color: #5c5c5c;
+      font-size: 1em;
+      margin-top: -10px;
+      font-weight: 300;
     }
-  }
-  .loader:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to top, transparent, rgba(0, 255, 249, 0.4));
-    background-size: 200px 360px;
-    background-repeat: no-repeat;
-    border-top-left-radius: 200px;
-    border-bottom-left-radius: 200px;
-  }
-  .loader:after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 10px;
-    height: 10px;
-    background: #00fff9;
-    border-radius: 50%;
-    z-index: 10;
-    box-shadow: 0 0 10px #00fff9,
-                0 0 20px #00fff9,
-                0 0 30px #00fff9,
-                0 0 40px #00fff9,
-                0 0 50px #00fff9,
-                0 0 60px #00fff9,
-                0 0 70px #00fff9,
-                0 0 80px #00fff9,
-                0 0 90px #00fff9,
-                0 0 100px #00fff9,
-  }
-}
-.earth{
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background: url(../../assets/img/earth.jpg);
-  border-radius: 50%;
-  background-size: cover;
-  box-shadow: inset 0 0 20px #03a9f4,
-              0 0 120px #03a9f4;
-  animation: animateEarth 20s linear infinite;
-}
-@keyframes animateEarth
-{
-  0%
-  {
-    background-position: 0;
-  }
-  100%
-  {
-    background-position: 162.5%;
-  }
-}
-
-//Marte
-.planetMars{
-  position: relative;
-  min-width: 50%;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  background: #F3F3F3;
-  .loader{
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    animation: animate 4s linear infinite;
-    span{
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
-      background: #F3F3F3;
-      border-radius: 50%;
+    .container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
-    @keyframes animate{
-      0%{
-        transform: rotate(0deg);
-      }
-      100%{
-        transform: rotate(360deg);
-      }
-    }
-  }
-  .loader:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to top, transparent, rgba(255, 87, 34, 0.4));
-    background-size: 200px 360px;
-    background-repeat: no-repeat;
-    border-top-left-radius: 200px;
-    border-bottom-left-radius: 200px;
-  }
-  .loader:after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 10px;
-    height: 10px;
-    background: #ff5722;
-    border-radius: 50%;
-    z-index: 10;
-    box-shadow: 0 0 10px #ff5722,
-                0 0 20px #ff5722,
-                0 0 30px #ff5722,
-                0 0 40px #ff5722,
-                0 0 50px #ff5722,
-                0 0 60px #ff5722,
-                0 0 70px #ff5722,
-                0 0 80px #ff5722,
-                0 0 90px #ff5722,
-                0 0 100px #ff5722,
-  }
-}
-.mars{
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background: url(../../assets/img/mars.jpg);
-  border-radius: 50%;
-  background-size: cover;
-  box-shadow: inset 0 0 20px #ff5722,
-              0 0 120px #ff5722;
-  animation: animateMars 6s linear infinite;
-}
-@keyframes animateMars
-{
-  0%
-  {
-    background-position: 0;
-  }
-  100%
-  {
-    background-position: -340px;
-  }
-}
+    max-height: 100%;
 
-
-// jupiter
-.planetJupiter{
-  position: relative;
-  min-width: 50%;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  background: #F3F3F3;
-  .loader{
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    animation: animate 4s linear infinite;
-    span{
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
-      background: #F3F3F3;
-      border-radius: 50%;
-    }
-    @keyframes animate{
-      0%{
-        transform: rotate(0deg);
-      }
-      100%{
-        transform: rotate(360deg);
-      }
-    }
-  }
-  .loader:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to top, transparent, #863600);
-    background-size: 200px 360px;
-    background-repeat: no-repeat;
-    border-top-left-radius: 200px;
-    border-bottom-left-radius: 200px;
-  }
-  .loader:after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 10px;
-    height: 10px;
-    background: #cf5300;
-    border-radius: 50%;
-    z-index: 10;
-    box-shadow: 0 0 10px #863600,
-                0 0 20px #863600,
-                0 0 30px #863600,
-                0 0 40px #863600,
-                0 0 50px #863600,
-                0 0 60px #863600,
-                0 0 70px #863600,
-                0 0 80px #863600,
-                0 0 90px #863600,
-                0 0 100px #863600,
-  }
-}
-.jupiter{
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background: url(../../assets/img/jupiter.png);
-  border-radius: 100%;
-  background-size: cover;
-  box-shadow: inset 0 0 20px #642800,
-              0 0 120px #642800;
-  animation: animateJupiter 15s linear infinite;
-}
-@keyframes animateJupiter
-{
-  0%
-  {
-    background-position: 0;
-  }
-  100%
-  {
-    background-position: -550px;
-  }
-}
-
-
-// saturno
-.planetSaturn{
-  position: relative;
-  min-width: 50%;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  background: #F3F3F3;
-  .loader{
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    animation: animate 4s linear infinite;
-    span{
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
-      background: #F3F3F3;
-      border-radius: 50%;
-    }
-    @keyframes animate{
-      0%{
-        transform: rotate(0deg);
-      }
-      100%{
-        transform: rotate(360deg);
-      }
-    }
-  }
-  .loader:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to top, transparent, #777777);
-    background-size: 200px 360px;
-    background-repeat: no-repeat;
-    border-top-left-radius: 200px;
-    border-bottom-left-radius: 200px;
-  }
-  .loader:after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 10px;
-    height: 10px;
-    background: #9c9c9c;
-    border-radius: 50%;
-    z-index: 10;
-    box-shadow: 0 0 10px #777777,
-                0 0 20px #777777,
-                0 0 30px #777777,
-                0 0 40px #777777,
-                0 0 50px #777777,
-                0 0 60px #777777,
-                0 0 70px #777777,
-                0 0 80px #777777,
-                0 0 90px #777777,
-                0 0 100px #777777,
-  }
-}
-.saturn{
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background: url(../../assets/img/saturn.jpg);
-  border-radius: 100%;
-  background-size: cover;
-  box-shadow: inset 0 0 20px #777777,
-              0 0 120px #777777;
-  animation: animateSaturn 15s linear infinite;
-
-}
-
-  @keyframes animateSaturn
-{
-  0%
-  {
-    background-position: 0;
-  }
-  100%
-  {
-    background-position: -550px;
   }
 
-}
-
-
-  // moon
-.planetMoon{
-  position: relative;
-  min-width: 50%;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  background: #F3F3F3;
-  .loader{
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    animation: animate 4s linear infinite;
-    span{
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
-      background: #F3F3F3;
-      border-radius: 50%;
-    }
-    @keyframes animate{
-      0%{
-        transform: rotate(0deg);
-      }
-      100%{
-        transform: rotate(360deg);
-      }
-    }
-  }
-  .loader:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to top, transparent, #b1b1b1);
-    background-size: 200px 360px;
-    background-repeat: no-repeat;
-    border-top-left-radius: 200px;
-    border-bottom-left-radius: 200px;
-  }
-  .loader:after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 10px;
-    height: 10px;
-    background: #ffffff;
-    border-radius: 50%;
-    z-index: 10;
-    box-shadow: 0 0 10px #cecece,
-                0 0 20px #cecece,
-                0 0 30px #cecece,
-                0 0 40px #cecece,
-                0 0 50px #cecece,
-                0 0 60px #cecece,
-                0 0 70px #cecece,
-                0 0 80px #cecece,
-                0 0 90px #cecece,
-                0 0 100px #cecece,
-  }
-}
-.moon{
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background: url(../../assets/img/moon2.png);
-  border-radius: 100%;
-  background-size: cover;
-  box-shadow: inset 0 0 20px #cecece,
-              0 0 120px #cecece;
-  animation: animateMoon 15s linear infinite;
-
-}
-
-  @keyframes animateMoon
-{
-  0%
-  {
-    background-position: 0;
-  }
-  100%
-  {
-    background-position: -550px;
-  }
-
-}
-
-
-  // sol
-  .planetSun{
+  // Terra
+  .planetEarth {
+    margin-top: -175%;
     position: relative;
     min-width: 50%;
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background: #F3F3F3;
-    .loader{
+    background: #f3f3f3;
+    .loader {
       position: relative;
-      width: 150px;
-      height: 150px;
+      width: 95px;
+      height: 95px;
       border-radius: 50%;
       animation: animate 4s linear infinite;
-      span{
+      span {
         position: absolute;
         top: 10px;
         left: 10px;
         right: 10px;
         bottom: 10px;
-        background: #F3F3F3;
+        background: #f3f3f3;
+        border-radius: 50%;
+      }
+      @keyframes animate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+    .loader:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(to top, transparent, rgba(0, 255, 249, 0.4));
+      background-size: 50px 90px;
+      background-repeat: no-repeat;
+      border-top-left-radius: 100px;
+      border-bottom-left-radius: 100px;
+    }
+    .loader:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 10px;
+      background: #008cff;
+      border-radius: 50%;
+      z-index: 10;
+      box-shadow: 0 0 10px #03a9f4, 0 0 20px #03a9f4, 0 0 30px #03a9f4,
+        0 0 40px #03a9f4, 0 0 50px #03a9f4, 0 0 60px #03a9f4, 0 0 70px #03a9f4,
+        0 0 80px #03a9f4, 0 0 90px #03a9f4, 0 0 100px #03a9f4;
+    }
+  }
+  .earth {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url(../../assets/img/earth.jpg);
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: inset 0 0 20px #03a9f4, 0 0 120px #03a9f4;
+    animation: animateEarth 20s linear infinite;
+  }
+  @keyframes animateEarth {
+    0% {
+      background-position: 0;
+    }
+    100% {
+      background-position: 162.5%;
+    }
+  }
+
+
+  //Marte
+  .planetMars {
+    margin-top: -175%;
+    position: relative;
+    min-width: 50%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #f3f3f3;
+    .loader {
+      position: relative;
+      width: 95px;
+      height: 95px;
+      border-radius: 50%;
+      animation: animate 4s linear infinite;
+      span {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        background: #f3f3f3;
         border-radius: 50%;
       }
       @keyframes animate{
@@ -528,21 +254,355 @@ ion-content{
         }
       }
     }
-    .loader:before{
+    .loader:before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       width: 50%;
       height: 100%;
-      background: linear-gradient(to top, transparent, #ff9d2d);
-      background-size: 200px 360px;
+      background: linear-gradient(to top, transparent, rgba(255, 87, 34, 0.4));
+      background-size: 50px 90px;
       background-repeat: no-repeat;
-      border-top-left-radius: 200px;
-      border-bottom-left-radius: 200px;
+      border-top-left-radius: 100px;
+      border-bottom-left-radius: 100px;
     }
-    .loader:after{
+    .loader:after {
       content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 10px;
+      background: #ff5722;
+      border-radius: 50%;
+      z-index: 10;
+      box-shadow: 0 0 10px #ff5722,
+                  0 0 20px #ff5722,
+                  0 0 30px #ff5722,
+                  0 0 40px #ff5722,
+                  0 0 50px #ff5722,
+                  0 0 60px #ff5722,
+                  0 0 70px #ff5722,
+                  0 0 80px #ff5722,
+                  0 0 90px #ff5722,
+                  0 0 100px #ff5722;
+    }
+  }
+  .mars {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url(../../assets/img/mars.jpg);
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: inset 0 0 20px #ff5722, 0 0 120px #ff5722;
+    animation: animateMars 10s linear infinite;
+  }
+  @keyframes animateMars {
+    0% {
+      background-position: 0;
+    }
+    100% {
+      background-position: 162.5px;
+    }
+  }
+
+
+// jupiter
+.planetJupiter {
+  margin-top: -175%;
+    position: relative;
+    min-width: 50%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #f3f3f3;
+    .loader {
+      position: relative;
+      width: 95px;
+      height: 95px;
+      border-radius: 50%;
+      animation: animate 4s linear infinite;
+      span {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        background: #f3f3f3;
+        border-radius: 50%;
+      }
+      @keyframes animate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+    .loader:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(to top, transparent, #863600);
+      background-size: 50px 90px;
+      background-repeat: no-repeat;
+      border-top-left-radius: 100px;
+      border-bottom-left-radius: 100px;
+    }
+    .loader:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 10px;
+      background: #cf5300;
+      border-radius: 50%;
+      z-index: 10;
+      box-shadow: 0 0 10px #863600, 0 0 20px #863600, 0 0 30px #863600,
+        0 0 40px #863600, 0 0 50px #863600, 0 0 60px #863600, 0 0 70px #863600,
+        0 0 80px #863600, 0 0 90px #863600, 0 0 100px #863600;
+    }
+  }
+  .jupiter {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url(../../assets/img/jupiter.png);
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: inset 0 0 20px #642800, 0 0 120px #642800;
+    animation: animateJupiter 15s linear infinite;
+  }
+  @keyframes animateJupiter {
+    0% {
+      background-position: 0;
+    }
+    100% {
+      background-position: -550px;
+    }
+  }
+
+  // saturno
+  .planetSaturn {
+    margin-top: -330%;
+    position: relative;
+    min-width: 50%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #f3f3f3;
+    .loader {
+      position: relative;
+      width: 95px;
+      height: 95px;
+      border-radius: 50%;
+      animation: animate 4s linear infinite;
+      span {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        background: #f3f3f3;
+        border-radius: 50%;
+      }
+      @keyframes animate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+    .loader:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(to top, transparent, #777777);
+      background-size: 50px 90px;
+      background-repeat: no-repeat;
+      border-top-left-radius: 100px;
+      border-bottom-left-radius: 100px;
+    }
+    .loader:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 10px;
+      background: #9c9c9c;
+      border-radius: 50%;
+      z-index: 10;
+      box-shadow: 0 0 10px #777777, 0 0 20px #777777, 0 0 30px #777777,
+        0 0 40px #777777, 0 0 50px #777777, 0 0 60px #777777, 0 0 70px #777777,
+        0 0 80px #777777, 0 0 90px #777777, 0 0 100px #777777;
+    }
+  }
+  .saturn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url(../../assets/img/saturn.jpg);
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: inset 0 0 20px #777777, 0 0 120px #777777;
+    animation: animateSaturn 15s linear infinite;
+  }
+
+  @keyframes animateSaturn {
+    0% {
+      background-position: 0;
+    }
+    100% {
+      background-position: -550px;
+    }
+  }
+
+  // moon
+  .planetMoon {
+    margin-top: -330%;
+    position: relative;
+    min-width: 50%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #f3f3f3;
+    .loader {
+      position: relative;
+      width: 95px;
+      height: 95px;
+      border-radius: 50%;
+      animation: animate 4s linear infinite;
+      span {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        background: #f3f3f3;
+        border-radius: 50%;
+      }
+      @keyframes animate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+    .loader:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(to top, transparent, #b1b1b1);
+      background-size: 50px 90px;
+      background-repeat: no-repeat;
+      border-top-left-radius: 100px;
+      border-bottom-left-radius: 100px;
+    }
+    .loader:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 10px;
+      background: #ffffff;
+      border-radius: 50%;
+      z-index: 10;
+      box-shadow: 0 0 10px #cecece, 0 0 20px #cecece, 0 0 30px #cecece,
+        0 0 40px #cecece, 0 0 50px #cecece, 0 0 60px #cecece, 0 0 70px #cecece,
+        0 0 80px #cecece, 0 0 90px #cecece, 0 0 100px #cecece;
+    }
+  }
+  .moon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url(../../assets/img/moon2.png);
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: inset 0 0 20px #cecece, 0 0 120px #cecece;
+    animation: animateMoon 15s linear infinite;
+  }
+
+  @keyframes animateMoon {
+    0% {
+      background-position: 0;
+    }
+    100% {
+      background-position: -550px;
+    }
+  }
+
+  // sol
+  .planetSun {
+    margin-top: -330%;
+    position: relative;
+    min-width: 50%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #f3f3f3;
+    .loader {
+      position: relative;
+      width: 95px;
+      height: 95px;
+      border-radius: 50%;
+      animation: animate 4s linear infinite;
+      span {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        background: #f3f3f3;
+        border-radius: 50%;
+      }
+      @keyframes animate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+    .loader:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(to top, transparent, #ff9d2d);
+      background-size: 50px 90px;
+      background-repeat: no-repeat;
+      border-top-left-radius: 100px;
+      border-bottom-left-radius: 100px;
+    }
+    .loader:after {
+      content: "";
       position: absolute;
       top: 0;
       left: 50%;
@@ -552,45 +612,30 @@ ion-content{
       background: #ffd8b9;
       border-radius: 50%;
       z-index: 10;
-      box-shadow: 0 0 10px #ff9d2d,
-                  0 0 20px #ff9d2d,
-                  0 0 30px #ff9d2d,
-                  0 0 40px #ff9d2d,
-                  0 0 50px #ff9d2d,
-                  0 0 60px #ff9d2d,
-                  0 0 70px #ff9d2d,
-                  0 0 80px #ff9d2d,
-                  0 0 90px #ff9d2d,
-                  0 0 100px #ff9d2d,
+      box-shadow: 0 0 10px #ff9d2d, 0 0 20px #ff9d2d, 0 0 30px #ff9d2d,
+        0 0 40px #ff9d2d, 0 0 50px #ff9d2d, 0 0 60px #ff9d2d, 0 0 70px #ff9d2d,
+        0 0 80px #ff9d2d, 0 0 90px #ff9d2d, 0 0 100px #ff9d2d;
     }
   }
-.sun{
+  .sun {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     background: url(../../assets/img/sun.png);
-    border-radius: 100%;
+    border-radius: 50%;
     background-size: cover;
-    box-shadow: inset 0 0 60px #ff6434,
-                0 0 120px #ff6434;
+    box-shadow: inset 0 0 60px #ff6434, 0 0 120px #ff6434;
     animation: animateSun 15s linear infinite;
-
   }
 
-    @keyframes animateSun
-  {
-    0%
-    {
+  @keyframes animateSun {
+    0% {
       background-position: 0;
     }
-    100%
-    {
+    100% {
       background-position: 162.5%;
     }
-
   }
-
-
 
 
 

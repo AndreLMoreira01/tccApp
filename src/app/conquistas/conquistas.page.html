@@ -1,79 +1,95 @@
-<!-- colocar 3 em cada row ????????????????????????????????????????????????????????????????????????????? -->
-<ion-content>
+<ion-content color="dark">
 
-  <ion-grid>
+  <ion-button color="transparent" routerLink="/home">
+    <ion-icon slot="icon-only" name="arrow-back" color="light"></ion-icon>
+  </ion-button>
 
-    <ion-row>
+  <!-- background -->
+  <div class="star star1"></div>
+  <div class="star star2"></div>
+  <div class="star star3"></div>
+  <div class="star star4"></div>
+  <div class="star star5"></div>
+  <div class="star star6"></div>
+  <div class="star star7"></div>
+  <div class="star star8"></div>
 
-      <ion-col>
 
-        <div class="planet planetEarth">
-          <h3>Terra</h3>
-          <div class="container">
-            <div class="loader"><span></span></div>
-            <div class="earth"></div>
+    <ion-grid class="conquistas-planetas">
+      <h3 class="conquistas">Conquistas</h3>
+      <h5 class="descricao">Aqui você encontra as medalhas conquistadas.</h5>
+
+      <ion-row>
+
+        <ion-col size="4">
+          <div class="planet planetEarth">
+            <div class="container">
+              <div class="loader"><span></span></div>
+              <div class="earth"></div>
+            </div>
+            <h3>Terra</h3>
+            <h5>Entre no aplicativo pela primeira vez</h5>
           </div>
-        </div>
-      </ion-col>
+        </ion-col>
 
-      <ion-col>
-        <div class="planet planetMars">
-          <h3>Marte</h3>
-          <div class="container">
-            <div class="loader"><span></span></div>
-            <div class="mars"></div>
+        <ion-col size="4">
+          <div class="planet planetMars">
+            <div class="container">
+              <div class="loader"><span></span></div>
+              <div class="mars"></div>
+            </div>
+            <h3>Marte</h3>
+            <h5>Leia todas as histórias</h5>
           </div>
-        </div>
-      </ion-col>
+        </ion-col>
 
-      <ion-col>
+        <ion-col size="4">
           <div class="planet planetJupiter">
-            <h3>Jupiter</h3>
             <div class="container">
               <div class="loader"><span></span></div>
               <div class="jupiter"></div>
             </div>
+            <h3>Jupiter</h3>
+            <h5>Jogue o Jogo dos Significados</h5>
           </div>
         </ion-col>
-    </ion-row>
+      </ion-row>
 
-
-    <ion-row>
-
-      <ion-col>
-
-        <div class="planet planetSaturn">
-          <h3>Saturno</h3>
-          <div class="container">
-            <div class="loader"><span></span></div>
-            <div class="saturn"></div>
+      <ion-row>
+        <ion-col size="4">
+          <div class="planet planetSaturn">
+            <div class="container">
+              <div class="loader"><span></span></div>
+              <div class="saturn"></div>
+            </div>
+            <h3>Saturno</h3>
+            <h5>Jogue o Genius</h5>
           </div>
-        </div>
-      </ion-col>
+        </ion-col>
 
-      <ion-col>
-
-        <div class="planet planetMoon">
-          <h3>Lua</h3>
-          <div class="container">
-            <div class="loader"><span></span></div>
-            <div class="moon"></div>
+        <ion-col size="4">
+          <div class="planet planetMoon">
+            <div class="container">
+              <div class="loader"><span></span></div>
+              <div class="moon"></div>
+            </div>
+            <h3>Lua</h3>
+            <h5>Vença uma partida do Jogo da Memória</h5>
           </div>
-        </div>
-      </ion-col>
+        </ion-col>
 
-      <ion-col>
-
-        <div class="planet planetSun">
-          <h3>Sol</h3>
-          <div class="container">
-            <div class="loader"><span></span></div>
-            <div class="sun"></div>
+        <ion-col size="4">
+          <div class="planet planetSun">
+            <div class="container">
+              <div class="loader"><span></span></div>
+              <div class="sun"></div>
+            </div>
+            <h3>Sol</h3>
+            <h5>Conquiste 1500 troféus</h5>
           </div>
-        </div>
-      </ion-col>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-    </ion-row>
-  </ion-grid>
 
 </ion-content>
