@@ -34,7 +34,11 @@ const routes: Routes = [
   {
     path: 'historias',
     loadChildren: () => import('./historias/historias.module').then( m => m.HistoriasPageModule)
+  },  {
+    path: 'j-frutas',
+    loadChildren: () => import('./j-frutas/j-frutas.module').then( m => m.JFrutasPageModule)
   },
+
 
 ];
 
