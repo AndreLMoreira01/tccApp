@@ -4,132 +4,56 @@
 
 ion-content {
   font-family: 'Carton Six';
-  place-items: center;
   --background: linear-gradient(to bottom, skyblue, cornflowerblue);
-  overflow: hidden;
 
-  /** login - nome **/
-.login {
-  font-size: large;
-  margin-right: 40pt;
-  margin-left: 40pt;
-  position: relative;
-  justify-content: space-between;
-}
-
-label {
+.area{
+  display: flex;
+  justify-content: center;
   align-items: center;
-  color: #ffffff;
-  position: absolute;
-  margin-top: -25px;
-  left: 10px;
-  line-height: 25px;
-  display: inline-flex;
-  column-gap: 10px;
-  align-items: center;
-  transition: transform .25s,
-  opacity .25s;
+  flex-flow: column;
+  label {
+    color: #ffffff;
+    transition: transform .25s,
+    opacity .25s;
+  }
+
+  label::before {
+    opacity: 0;
+  }
+
+  .login:focus-within label {
+    transform: translateX(26px);
+  }
+
+  .login:focus-within label::before {
+    opacity: 1;
+    transition-delay: .1s;
+  }
+
+  input {
+    background-color: #F0F0F0;
+    opacity: 100;
+    width: 250px;
+    height: 35px;
+    display: block;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    font-family: 'Carton Six';
+    font-weight: 400;
+  }
+
+  input::placeholder {
+    color: rgb(128, 128, 128);
+    transition: opacity .25s;
+  }
+
+  input:focus::placeholder {
+    opacity: 0;
+  }
 }
 
-label::before {
-  opacity: 0;
-}
-
-.login:focus-within label {
-  transform: translateX(26px);
-}
-
-.login:focus-within label::before {
-  opacity: 1;
-  transition-delay: .1s;
-}
-
-input {
-  background-color: #F0F0F0;
-  opacity: 100;
-  width: 250px;
-  height: 35px;
-  margin-top: 25px;
-  display: block;
-  padding: 10px;
-  border: none;
-  outline: none;
-  border-radius: 25px;
-  font-family: 'Carton Six';
-  font-weight: 400;
-}
-
-input::placeholder {
-  color: rgb(111, 113, 116);
-  transition: opacity .25s;
-}
-
-input:focus::placeholder {
-  opacity: 0;
-}
-
-/** login2 - senha **/
-.login2 {
-  font-size: large;
-  margin-top: 35px;
-  margin-right: 40pt;
-  margin-left: 40pt;
-  position: relative;
-  justify-content: space-between;
-}
-
-label {
-  margin-top: 50pt;
-  align-items: center;
-  color: #ffffff;
-  position: absolute;
-  margin-top: -25px;
-  left: 10px;
-  line-height: 30px;
-  display: inline-flex;
-  column-gap: 10px;
-  align-items: center;
-  transition: transform .25s,
-  opacity .25s;
-}
-
-label::before {
-  opacity: 0;
-}
-
-.login2:focus-within label {
-  transform: translateX(26px);
-}
-
-.login2:focus-within label::before {
-  opacity: 1;
-  transition-delay: .1s;
-}
-
-input {
-  box-shadow: 0 5px 5px rgb(64, 65, 65);
-  background-color: #F0F0F0;
-  opacity: 80%;
-  width: 250px;
-  height: 35px;
-  margin-top: 25px;
-  display: block;
-  padding: 10px;
-  border: none;
-  outline: none;
-  border-radius: 25px;
-  font-family: 'Carton Six';
-  font-weight: 400;
-}
-
-input::placeholder {
-  color: rgb(146, 148, 151);
-  transition: opacity .25s;
-}
-
-input:focus::placeholder {
-  opacity: 0;
-}
 
 /** botão - continuar **/
 .bottom1{
@@ -137,7 +61,7 @@ input:focus::placeholder {
   width: 250px;
   height: 45px;
   border-radius: 25%;
-  box-shadow: 0 10px 10px rgb(64, 65, 65);
+  box-shadow: 0 10px 10px rgb(110, 110, 110);
   opacity: 90%;
   font-family: 'Carton Six';
   font-size: 20px;
@@ -163,7 +87,7 @@ input:focus::placeholder {
 
  .cloud.two {
   opacity: 65%;
-  top: 35%;
+  top: 30%;
   width: 30px;
   height: 10px;
   animation-duration: 7s;
