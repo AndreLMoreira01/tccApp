@@ -1,47 +1,182 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-fab-button slot="end">
+      <ion-icon name="person-circle-outline" routerLink="/login"></ion-icon>
+    </ion-fab-button>
+  </ion-toolbar>
+</ion-header>
 
 <ion-content>
-  <div class="heading">
-    <h1>Bem Vindo</h1>
-  </div>
-  <div class="image">
-    <img src="https://www.reshot.com/preview-assets/icons/TL56XZQN4J/mushroom-game-TL56XZQN4J.svg" alt="welcome" width="12100" height="120"  class="blocktext">
-  </div>
-<div class="intro">
-<p>Introduzindo  o app</p>
-</div>
-  <div class="email-login">
-    <ion-button class="login" routerLink="/login">Login</ion-button>
-    <ion-button class="login" routerLink="/teste">Home</ion-button>
-    <ion-button class="login" routerLink="/cadastro">Cadastro</ion-button>
-    <ion-button class="login" routerLink="/historias">historias</ion-button>
-    <ion-button class="login" routerLink="/j-velha">velha</ion-button>
-    <ion-button class="login" routerLink="/conquistas">conquistas</ion-button>
-    <ion-button class="login" routerLink="/j-frutas">frutas</ion-button>
-  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-slides>
 
+          <ion-slide>
+            <div>
+              <img class="imagem-t"
+                src="https://www.reshot.com/preview-assets/illustrations/P5UQKFHZC2/coffe-lover-cartoon-P5UQKFHZC2-w1600.jpg">
+            </div>
+          </ion-slide>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Jogada: {{ player }}</ion-card-subtitle>
-      <ion-card-title *ngIf="winner">O jogador {{ winner }} venceu!</ion-card-title>
-    </ion-card-header>
+          <ion-slide>
+            <div>
+              <img class="imagem-t"
+                src="https://www.reshot.com/preview-assets/illustrations/3WCVUBYRZG/horro-eye-cartoon-3WCVUBYRZG-w1600.jpg">
+            </div>
+          </ion-slide>
 
-    <ion-card-content>
-      <ion-grid>
-        <ion-row>
-          <ion-col size="4" *ngFor="let val of squares; let i = index">
-            <app-square
-                [value]="val"
-                (click)="makeMove(i)">
-            </app-square>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-content>
-  </ion-card>
+          <ion-slide>
+            <div>
+              <img class="imagem-t"
+                src="https://www.reshot.com/preview-assets/illustrations/G8PDLMJBY4/wolf-fighter-character-G8PDLMJBY4-w1600.jpg">
+            </div>
+          </ion-slide>
 
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+    <h3>Histórias infantis</h3>
+    <ion-row>
+      <ion-col>
+        <div>
+          <img class="imagem-p" routerLink="/historias"
+            src="https://br.web.img3.acsta.net/pictures/210/506/21050616_20131017211827208.jpg">
+          <p>Aladdin</p>
+        </div>
+      </ion-col>
 
-  <ion-button expand="block" color="dark" (click)="newGame()">Novo Jogo</ion-button>
+      <ion-col>
+        <div>
+          <img class="imagem-p" routerLink="/historias"
+            src="https://images-na.ssl-images-amazon.com/images/I/71OjIa8EQzL.jpg">
+          <p>Alice no País Das Maravilhas</p>
+        </div>
+      </ion-col>
 
+      <ion-col>
+        <div>
+          <img class="imagem-p" routerLink="/historias"
+            src="https://images-na.ssl-images-amazon.com/images/I/81pNvn4iS4L.jpg">
+          <p>O Pequeno Príncipe</p>
+        </div>
+      </ion-col>
+    </ion-row>
 
+    <ion-row>
+      <ion-col>
+        <div>
+          <img class="imagem-p" routerLink="/historias"
+            src="https://br.web.img3.acsta.net/medias/nmedia/18/93/94/10/20287529.jpg">
+          <p>O Mágico de Oz</p>
+        </div>
+      </ion-col>
+
+      <ion-col>
+        <div>
+          <img class="imagem-p" routerLink="/historias"
+            src="https://www.escala.com.br/fotos/extragrande/727fe1/os-tres-porquinhos-colecao-meus-primeiros-classicos.jpg">
+          <p>Os Três Porquinhos</p>
+        </div>
+      </ion-col>
+
+      <ion-col>
+        <div>
+          <img class="imagem-p" routerLink="/historias"
+            src="https://br.web.img3.acsta.net/pictures/17/01/09/12/22/442219.jpg">
+          <p>A Bela e a Fera</p>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <h3>Histórias clássicas</h3>
+
+    <ion-row>
+      <ion-col>
+        <div>
+          <img class="imagem-p" routerLink="/historias"
+            src="https://cdnv2.moovin.com.br/editorarideel/imagens/produtos/det/b059f85ee2.jpg">
+          <p>Peter Pan</p>
+        </div>
+      </ion-col>
+
+      <ion-col>
+        <div>
+          <img class="imagem-p" routerLink="/historias"
+            src="https://images-na.ssl-images-amazon.com/images/I/81G5DqNT2SL.jpg">
+          <p>O Rei Leão</p>
+        </div>
+      </ion-col>
+
+      <ion-col>
+        <div>
+          <img class="imagem-p" routerLink="/historias"
+            src="https://images-na.ssl-images-amazon.com/images/I/91QZvpx-4xL.jpg">
+          <p>Dumbo</p>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <h3>Acesse os jogos</h3>
+    <ion-row>
+      <ion-col>
+        <div>
+          <img class="imagem-re" routerLink="/j-velha"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Jogo_da_velha_-_tic_tac_toe.png/1200px-Jogo_da_velha_-_tic_tac_toe.png">
+          <p>Jogo da Velha</p>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <img class="imagem-re" routerLink="/j-frutas"
+            src="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/as-frutas-sao-alimentos-importantes-para-nossa-saude-alem-serem-muito-saborosas-5bdaec2def6bb.jpg">
+          <p>Jodo das frutas</p>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div>
+          <img class="imagem-re"
+            src="https://estrela.vteximg.com.br/arquivos/ids/163355-1000-1000/Jogo-Genius-Produto-Estrela.jpg?v=636661399595430000">
+          <p>Genius</p>
+        </div>
+      </ion-col>
+
+      <ion-col>
+        <div>
+          <img class="imagem-re" src="https://i.pinimg.com/originals/ca/1d/21/ca1d215c591d2356acb0b071583798d1.png">
+          <p>Jogo dos significados</p>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <h3>Folclore</h3>
+    <ion-row>
+      <ion-col>
+        <div>
+          <img class="imagem-p" routerLink="/historias"
+            src="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/protetor-da-floresta.jpg">
+          <p>Curupira</p>
+        </div>
+      </ion-col>
+
+      <ion-col>
+        <div>
+          <img class="imagem-p" routerLink="/historias"
+            src="https://s4.static.brasilescola.uol.com.br/be/conteudo/images/saci-perere.jpg">
+          <p>Saci-Pererê</p>
+        </div>
+      </ion-col>
+
+      <ion-col>
+        <div>
+          <img class="imagem-p" routerLink="/historias"
+            src="https://s3.static.brasilescola.uol.com.br/be/2020/08/iara.jpg">
+          <p>Iara</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
