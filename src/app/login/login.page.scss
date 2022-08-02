@@ -6,62 +6,67 @@ ion-content {
   font-family: 'Carton Six';
   --background: linear-gradient(to bottom, skyblue, cornflowerblue);
 
-.area{
+  /** login - nome **/
+.area {
+  font-size: large;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
-  label {
-    color: #ffffff;
-    transition: transform .25s,
-    opacity .25s;
-  }
-
-  label::before {
-    opacity: 0;
-  }
-
-  .login:focus-within label {
-    transform: translateX(26px);
-  }
-
-  .login:focus-within label::before {
-    opacity: 1;
-    transition-delay: .1s;
-  }
-
-  input {
-    background-color: #F0F0F0;
-    opacity: 100;
-    width: 250px;
-    height: 35px;
-    display: block;
-    padding: 10px;
-    border: none;
-    outline: none;
-    border-radius: 25px;
-    font-family: 'Carton Six';
-    font-weight: 400;
-  }
-
-  input::placeholder {
-    color: rgb(128, 128, 128);
-    transition: opacity .25s;
-  }
-
-  input:focus::placeholder {
-    opacity: 0;
-  }
+label {
+  color: #ffffff;
+  transition: transform .25s,
+  opacity .25s;
+  display: inline-flex;
+  margin-top: 10px;
 }
 
+label::before {
+  opacity: 0;
+}
 
+.login:focus-within label {
+  transform: translateX(26px);
+}
+
+.login:focus-within label::before {
+  opacity: 1;
+  transition-delay: .1s;
+}
+
+input {
+  margin-top: 2px;
+  background-color: #F0F0F0;
+  opacity: 100;
+  width: 250px;
+  height: 35px;
+  display: block;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  font-family: 'Carton Six';
+  font-weight: 400;
+}
+
+input::placeholder {
+  color: rgb(128, 128, 128);
+  transition: opacity .25s;
+}
+
+input:focus::placeholder {
+  opacity: 0;
+}
+
+}
 /** botão - continuar **/
 .bottom1{
   margin-top: 12px;
   width: 250px;
   height: 45px;
   border-radius: 25%;
-  box-shadow: 0 10px 10px rgb(110, 110, 110);
+  box-shadow: 0 10px 10px rgb(64, 65, 65);
   opacity: 90%;
   font-family: 'Carton Six';
   font-size: 20px;
@@ -75,6 +80,7 @@ ion-content {
   margin-top: 90px;
 }
 
+
 /** background **/
 /** nuvens **/
 .cloud.one {
@@ -87,7 +93,7 @@ ion-content {
 
  .cloud.two {
   opacity: 65%;
-  top: 30%;
+  top: 35%;
   width: 30px;
   height: 10px;
   animation-duration: 7s;
@@ -159,7 +165,8 @@ ion-content {
   background-color: #6e14b3;
   border-radius: 50%;
   position: absolute;
-  top: 0.5%;
+  top: 10px;
+  border-left: 15px;
   left: 15px;
   animation: float 4.5s infinite;
 }
