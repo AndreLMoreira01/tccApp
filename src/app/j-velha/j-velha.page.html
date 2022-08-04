@@ -1,31 +1,106 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>jVelha</ion-title>
-  </ion-toolbar>
-</ion-header>
+<input type="checkbox" id="difficulty" checked />
+<input type="checkbox" id="sound" />
+<input type="checkbox" id="first" />
 
-<ion-content>
+<input type="checkbox" id="start" />
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Jogada: {{ player }}</ion-card-subtitle>
-      <ion-card-title *ngIf="winner">O jogador {{ winner }} venceu!</ion-card-title>
-    </ion-card-header>
+<form id="tictactoe">
+  <input type="radio" name="cell-0" id="cell-0-x" />
+  <input type="radio" name="cell-0" id="cell-0-o" />
+  <input type="radio" name="cell-1" id="cell-1-x" />
+  <input type="radio" name="cell-1" id="cell-1-o" />
+  <input type="radio" name="cell-2" id="cell-2-x" />
+  <input type="radio" name="cell-2" id="cell-2-o" />
+  <input type="radio" name="cell-3" id="cell-3-x" />
+  <input type="radio" name="cell-3" id="cell-3-o" />
+  <input type="radio" name="cell-4" id="cell-4-x" />
+  <input type="radio" name="cell-4" id="cell-4-o" />
+  <input type="radio" name="cell-5" id="cell-5-x" />
+  <input type="radio" name="cell-5" id="cell-5-o" />
+  <input type="radio" name="cell-6" id="cell-6-x" />
+  <input type="radio" name="cell-6" id="cell-6-o" />
+  <input type="radio" name="cell-7" id="cell-7-x" />
+  <input type="radio" name="cell-7" id="cell-7-o" />
+  <input type="radio" name="cell-8" id="cell-8-x" />
+  <input type="radio" name="cell-8" id="cell-8-o" />
 
-    <ion-card-content>
-      <ion-grid>
-        <ion-row>
-          <ion-col size="4" *ngFor="let val of squares; let i = index">
-            <app-square
-                [value]="val"
-                (click)="makeMove(i)">
-            </app-square>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-content>
-  </ion-card>
+  <div id="menu" class="scrim">
+    <div class="center">
+      <h1>Jogo da Velha</h1>
+      <div>
+        <h2>Dificuldade</h2>
+        <div class="toggle-group">
+          <span>Iniciante</span>
+          <label for="difficulty" class="toggle"></label>
+          <span>Avançado</span>
+        </div>
 
+        <h2>First turn</h2>
+        <div class="toggle-group">
+          <span>Player</span>
+          <label for="first" class="toggle"></label>
+          <span>Computer</span>
+        </div>
+        <label for="start" id="start-button" class="btn">Start Game</label>
+      </div>
+    </div>
+  </div>
 
-  <ion-button expand="block" color="dark" (click)="newGame()">Novo Jogo</ion-button>
-</ion-content>
+  <div id="board" class="center">
+    <div class="tile" id="tile-0">
+      <label for="cell-0-x"></label>
+      <div></div>
+    </div>
+    <div class="tile" id="tile-1">
+      <label for="cell-1-x"></label>
+      <div></div>
+    </div>
+    <div class="tile" id="tile-2">
+      <label for="cell-2-x"></label>
+      <div></div>
+    </div>
+    <div class="tile" id="tile-3">
+      <label for="cell-3-x"></label>
+      <div></div>
+    </div>
+    <div class="tile" id="tile-4">
+      <label for="cell-4-x"></label>
+      <div></div>
+    </div>
+    <div class="tile" id="tile-5">
+      <label for="cell-5-x"></label>
+      <div></div>
+    </div>
+    <div class="tile" id="tile-6">
+      <label for="cell-6-x"></label>
+      <div></div>
+    </div>
+    <div class="tile" id="tile-7">
+      <label for="cell-7-x"></label>
+      <div></div>
+    </div>
+    <div class="tile" id="tile-8">
+      <label for="cell-8-x"></label>
+      <div></div>
+    </div>
+  </div>
+  <div id="label-computer" class="btn">
+    Computer Move!
+    <label for="cell-0-o"></label>
+    <label for="cell-1-o"></label>
+    <label for="cell-2-o"></label>
+    <label for="cell-3-o"></label>
+    <label for="cell-4-o"></label>
+    <label for="cell-5-o"></label>
+    <label for="cell-6-o"></label>
+    <label for="cell-7-o"></label>
+    <label for="cell-8-o"></label>
+  </div>
+  <div id="end" class="scrim">
+    <div id="message" class="center">
+      <div>
+        <input type="reset" for="tictactoe" value="Play again" />
+      </div>
+    </div>
+  </div>
+</form>
