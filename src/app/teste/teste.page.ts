@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-teste',
@@ -6,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./teste.page.scss'],
 })
 export class TestePage implements OnInit {
+//importanto o alert
 
-  constructor() { }
+  constructor(private alertController: AlertController) { }
 
   ngOnInit() {
+  }
+  async mostraAlert() {
+    const alert = await this.alertController.create({
+      header: 'Você ganhou uma conquista!',
+      subHeader: 'Terra',
+      message: 'Entre no app pela primeira vez',
+      buttons: ['OK'],
+    });
+
+    await alert.present();
   }
 
 }
