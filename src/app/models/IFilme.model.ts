@@ -1,8 +1,8 @@
 export interface IFilme{
   nome: string;
-  lancamento: string;
-  duracao: string;
-  classificacao: number;
+  descricao:  string;
+  conteudo: string;
+  tipo: string;
   cartaz: string;
   generos: string[];
   pagina?: string;
