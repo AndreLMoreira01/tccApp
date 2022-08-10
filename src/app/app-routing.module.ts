@@ -34,9 +34,20 @@ const routes: Routes = [
   {
     path: 'historias',
     loadChildren: () => import('./historias/historias.module').then( m => m.HistoriasPageModule)
-  },  {
+  },
+  {
     path: 'j-frutas',
     loadChildren: () => import('./j-frutas/j-frutas.module').then( m => m.JFrutasPageModule)
+  },
+
+  {
+    path: 'tab1',
+    loadChildren: () => import('./tab1/tab1.module').then( m => m.Tab1PageModule)
+  },
+
+  {
+    path: 'dados-filme',
+    loadChildren: () => import('./dados-filme/dados-filme.module').then( m => m.DadosFilmePageModule)
   },
 
 
