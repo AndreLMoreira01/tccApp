@@ -48,7 +48,11 @@ const routes: Routes = [
   {
     path: 'dados-filme',
     loadChildren: () => import('./dados-filme/dados-filme.module').then( m => m.DadosFilmePageModule)
+  },  {
+    path: 'j-significados',
+    loadChildren: () => import('./j-significados/j-significados.module').then( m => m.JSignificadosPageModule)
   },
+
 
 
 ];
