@@ -20,14 +20,10 @@
         <div>
           <h1>{{filme.nome}}</h1>
           <p>{{filme.descricao}} - {{filme.conteudo}}</p>
-          <ion-badge color="light" *ngFor= "let genero of filme.generos">{{tipo}}</ion-badge>
+          <ion-badge color="light" *ngFor= "let genero of filme.generos"></ion-badge>
         </div>
 
       </ion-label>
-
-      <ion-chip color="success" outline>
-        <ion-label>{{filme.classificacao}}%</ion-label>
-      </ion-chip>
 
     </ion-item>
     <ion-item-options side="end">
