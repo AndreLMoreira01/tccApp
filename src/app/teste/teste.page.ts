@@ -13,6 +13,7 @@ export class TestePage implements OnInit {
   constructor(private alertController: AlertController) { }
 
   ngOnInit() {
+    this.mostraAlert()
   }
   async mostraAlert() {
     const alert = await this.alertController.create({
