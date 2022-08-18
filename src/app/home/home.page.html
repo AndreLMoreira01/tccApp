@@ -1,13 +1,9 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-fab-button slot="end">
-      <ion-icon name="person-circle-outline" routerLink="/login"></ion-icon>
-    </ion-fab-button>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
+<ion-content fullscreen>
 
+  <ion-fab-button slot="end">
+    <ion-icon name="person-circle-outline" routerLink="/login"></ion-icon>
+  </ion-fab-button>
 
   <ion-button routerLink="/conquistas">conquistas</ion-button>
 
@@ -17,10 +13,13 @@
         <ion-slides>
 
           <ion-slide>
-            <div>
-              <img class="imagem-t" routerLink="/historias"
-                src="https://www.reshot.com/preview-assets/illustrations/P5UQKFHZC2/coffe-lover-cartoon-P5UQKFHZC2-w1600.jpg">
-            </div>
+            <ion-card class="card">
+              <img class="imagem-t" routerLink="/historias" src="https://www.reshot.com/preview-assets/illustrations/P5UQKFHZC2/coffe-lover-cartoon-P5UQKFHZC2-w1600.jpg">
+              <ion-card-header>
+                <ion-card-subtitle> Histórias Infantis</ion-card-subtitle>
+                <ion-card-title>A Dama e o Vagabundo</ion-card-title>
+              </ion-card-header>
+            </ion-card>
           </ion-slide>
 
           <ion-slide>
