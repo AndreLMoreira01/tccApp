@@ -39,16 +39,6 @@ const routes: Routes = [
     path: 'j-frutas',
     loadChildren: () => import('./j-frutas/j-frutas.module').then( m => m.JFrutasPageModule)
   },
-
-  {
-    path: 'tab1',
-    loadChildren: () => import('./tab1/tab1.module').then( m => m.Tab1PageModule)
-  },
-
-  {
-    path: 'dados-filme',
-    loadChildren: () => import('./dados-filme/dados-filme.module').then( m => m.DadosFilmePageModule)
-  },
   {
     path: 'j-significados',
     loadChildren: () => import('./j-significados/j-significados.module').then( m => m.JSignificadosPageModule)
