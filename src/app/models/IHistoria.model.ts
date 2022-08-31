@@ -1,7 +1,9 @@
-export interface Historia{
+import { IConquista } from './IConquista.model';
+export interface IHistoria{
   idHistoria: number;
   nome: string;
+  tipo: string;
   descricao: string;
   conteudo: string;
-  tipo: string;
+  conquistas: IConquista;
 }

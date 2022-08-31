@@ -1,5 +1,5 @@
-export class Conquista{
-  idConquista?: number;
-  nome?: string;
-  descricao?: string;
+export interface IConquista{
+  idConquista: number;
+  nome: string;
+  descricao: string;
 }
