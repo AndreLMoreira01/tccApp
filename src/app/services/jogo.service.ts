@@ -19,8 +19,8 @@ export class JogoService{
     return this.http.get<IJogo>(`${apiUrl + this.requestMapping}/${idJogo}`);
     }
 
-      buscarConteudo(nome: string, descricao: string): Observable<IJogo[]>{
-        return this.http.get<IJogo[]>(`${apiUrl + this.requestMapping}?conteudo=${nome}&descricao=${descricao}`);
-      }
+    buscarConteudo(nome: string, descricao: string): Observable<IJogo[]>{
+      return this.http.get<IJogo[]>(`${apiUrl + this.requestMapping}?conteudo=${nome}&descricao=${descricao}`);
+    }
 
 }
