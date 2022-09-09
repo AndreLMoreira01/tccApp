@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 
+.titulolindo{
+  margin-top: 510px;
+
+  border-radius: 20px;
+}
 .historia-preview{
     width: 175px;
     height: 140px;
@@ -16,6 +21,19 @@
   .historia-preview3{
     margin-top: 345px;
     width: 205px;
+    height: 140px;
+    border-radius: 20px;
+  }
+
+  .historia-preview4{
+    width: 205px;
+    height: 140px;
+    border-radius: 20px;
+  }
+
+
+  .historia-preview5{
+    width: 805px;
     height: 140px;
     border-radius: 20px;
   }
@@ -101,7 +119,6 @@
       h3{
         font-family: 'Noto Sans', sans-serif;
         color: #8D1AE7;
-        font-weight: 580;
       }
       ion-col{
         height: 45px;
