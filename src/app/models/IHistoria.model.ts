@@ -7,3 +7,4 @@ export interface IHistoria{
   conteudo: string;
   conquistas: IConquista;
 }
+

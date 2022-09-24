@@ -8,21 +8,25 @@ import { AlertController } from '@ionic/angular';
 })
 export class JFrutasPage implements OnInit {
 
-  constructor(private alertController: AlertController) { }
+  historias = [
+    { id: 1, nome: 'Coraline', tipo: 'duduxo', descricao: 'eu nao sei' },
+    { id: 2, nome: 'Rei Leão', tipo: 'duduxo', descricao: 'eu nao sei'},
+    { id: 3, nome: 'João E Maria', tipo: 'duduxo', descricao: 'eu nao sei' },
+    { id: 4, nome: 'Turma da Mônica', tipo: 'duduxo', descricao: 'eu nao sei'}
+  ];
+
+  acharItens(index: number, itemObject: any) {
+    return itemObject.id;
+  }
+
+  filtro(){
+    
+  }
+
+  constructor() { }
 
   ngOnInit() {
-    this.mostraAlert()
   }
 
-  async mostraAlert() {
-    const alert = await this.alertController.create({
-      header: 'Você ganhou uma conquista!',
-      subHeader: 'Netuno',
-      message: 'Jogue o Jogo das Frutas',
-      buttons: ['OK'],
-    });
-
-    await alert.present();
-  }
 
 }

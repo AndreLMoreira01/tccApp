@@ -1,4 +1,6 @@
+import { HistoriaService } from './../services/historia.service';
 import { Component, OnInit } from '@angular/core';
+import { IHistoria } from '../models/IHistoria.model';
 
 @Component({
   selector: 'app-historias',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HistoriasPage implements OnInit {
 
-  constructor() { }
+  historias: IHistoria[] = [];
 
-  ngOnInit() {
+  constructor(private historiasService: HistoriaService ) { }
+
+  ngOnInit(): void {
+    this.historias = this.historiasService.listHistorias();
   }
 
 }
