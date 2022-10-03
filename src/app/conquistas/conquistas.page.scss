@@ -92,13 +92,11 @@ ion-content {
     /** conquistas **/
   .conquistas-planetas {
     margin-top: 58px;
-    height: 80vh;
+    min-height: 90vh;
+    max-height: 90vh;
     width: 100%;
     background: #f3f3f3;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    position: fixed;
+    position: absolute;
     border-top-left-radius: 46px;
     border-top-right-radius: 46px;
     .conquistas{
@@ -113,7 +111,7 @@ ion-content {
       margin-bottom: 20px;
   }
   .descricao{
-    z-index: 15;
+    z-index: 16;
       text-align: center;
       color: #464646;
       font-size: 1em;
@@ -156,10 +154,9 @@ ion-content {
 
   // Terra
   .planetEarth {
-    margin-top: -175%;
+    top: 5%;
     position: relative;
     min-width: 50%;
-    height: 100vh;
     justify-content: center;
     align-items: center;
     background: #f3f3f3;
@@ -238,10 +235,9 @@ ion-content {
 
   //Marte
   .planetMars {
-    margin-top: -175%;
+    top: 5%;
     position: relative;
     min-width: 50%;
-    height: 100vh;
     justify-content: center;
     align-items: center;
     background: #f3f3f3;
@@ -327,10 +323,9 @@ ion-content {
 
 // jupiter
 .planetJupiter {
-  margin-top: -175%;
+  top: 5%;
     position: relative;
     min-width: 50%;
-    height: 100vh;
     justify-content: center;
     align-items: center;
     background: #f3f3f3;
@@ -408,10 +403,9 @@ ion-content {
 
   // saturno
   .planetSaturn {
-    margin-top: -330%;
+    top: 20%;
     position: relative;
     min-width: 50%;
-    height: 100vh;
     justify-content: center;
     align-items: center;
     background: #f3f3f3;
@@ -490,10 +484,9 @@ ion-content {
 
   // moon
   .planetMoon {
-    margin-top: -330%;
+    top: 20%;
     position: relative;
     min-width: 50%;
-    height: 100vh;
     justify-content: center;
     align-items: center;
     background: #f3f3f3;
@@ -572,10 +565,9 @@ ion-content {
 
   // sol
   .planetSun {
-    margin-top: -330%;
+    top: 20%;
     position: relative;
     min-width: 50%;
-    height: 100vh;
     justify-content: center;
     align-items: center;
     background: #f3f3f3;
