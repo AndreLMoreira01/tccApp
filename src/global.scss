@@ -29,6 +29,7 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 
 .image1{
+<<<<<<< Updated upstream
     position: absolute;
     width: 50px;
     height: 50px;
@@ -83,3 +84,59 @@
       font-family: "Poppins", sans-serif;
     }
     }
+=======
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 15px;
+  top: 16px
+}
+
+.circle1{
+  position: absolute;
+  background-color: #FFFFFF;
+  width: 50px;
+  height: 50px;
+  right: 15px;
+  top: 16px;
+  border-radius: 100px;
+}
+
+.circle2{
+  height: 45vh;
+  width: 150%;
+  background-color: #A346F6;
+  box-shadow: 0 1px 10px var(--ion-color-light);
+  border-radius: 0 0 50% 50%;
+  margin-left: -14vh;
+  margin-top: -60px;
+  z-index: 10;
+}
+
+.conq{
+  position: absolute;
+  width: 94px;
+  height: 34px;
+  right: 75px;
+  top: 25px;
+  background: rgba(154, 26, 255, 0.7);
+  border-radius: 40px;
+  .conqs{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 0px;
+    display: block;
+  }
+  ion-label {
+    color: #fff;
+    margin-left: 10px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 1px var(--ion-color-medium);
+    font-family: "Poppins", sans-serif;
+  }
+  }
+>>>>>>> Stashed changes
