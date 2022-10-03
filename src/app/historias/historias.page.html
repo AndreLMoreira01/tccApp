@@ -1,15 +1,57 @@
-<ion-content color="light">
 
-  <div class="circle2"></div>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-list>
+  <ion-item>
+    <ion-select interface="popover" placeholder="Selecione uma História">
+      <ion-select-option>1</ion-select-option>
+      <ion-select-option>2</ion-select-option>
+      <ion-select-option>3</ion-select-option>
+      <ion-select-option>4</ion-select-option>
+      <ion-select-option>5</ion-select-option>
+      <ion-select-option>6</ion-select-option>
+      <ion-select-option>7</ion-select-option>
+      <ion-select-option>8</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
 
-  <div class="circle1"></div>
-  <img routerLink="/login" src="../../assets/img/image 1.svg" class="image1" />
+<ion-content>
 
-  <ion-chip color="light" class="conq" routerLink="/conquistas">
-    <ion-label class="ion-text-wrap">12</ion-label>
-    <img src="../../assets/img/conqs.svg" class="conqs" />
-  </ion-chip>
+  <ion-item class="header">
+    <ion-list>
+      <h4 class="cor">Título:</h4>
+      <p class="neg">Tipo:</p>
+      <p class="desc">Descricao:</p>
+    </ion-list>
 
-  <img class="hist" src="https://i.pinimg.com/originals/21/49/1d/21491da6b72c61598dbcf18c6ee0551d.jpg">
-  <h3>Alice no País das Maravilhas</h3>
+  </ion-item>
+
+
+<p class="conteudo">
+  Não espero nem solicito o crédito do leitor para a tão extraordinária e no
+  entanto tão familiar história que vou contar. Louco seria esperá-lo, num caso
+  cuja evidência até os meus próprios sentidos se recusam a aceitar. No
+  entanto não estou louco, e com toda a certeza que não estou a sonhar. Mas
+  porque posso morrer amanhã, quero aliviar hoje o meu espírito. O meu fim
+  imediato é mostrar ao mundo, simples, sucintamente e sem comentários,
+  uma série de meros acontecimentos domésticos. Nas suas consequências,
+  estes acontecimentos aterrorizaram-me, torturaram-me, destruíram-me. No
+  entanto, não procurarei esclarecê-los. O sentimento que em mim
+  despertaram foi quase exclusivamente o de terror; a muitos outros
+  parecerão menos terríveis do que extravagantes. Mais tarde, será possível
+  que se encontre uma inteligência qualquer que reduza a minha fantasia a
+  uma banalidade.
+</p>
+
+<ion-fab vertical="top" horizontal="end" slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="play"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
 </ion-content>
