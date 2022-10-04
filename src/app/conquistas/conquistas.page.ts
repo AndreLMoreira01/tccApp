@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IConquista } from '../models/IConquista.model';
+import { ConquistaService } from '../services/conquista.service';
 
 @Component({
   selector: 'app-conquistas',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConquistasPage implements OnInit {
 
-  constructor() { }
+  conquistas: IConquista[] = [];
 
-  ngOnInit() {
+  constructor(private conquistaService: ConquistaService ) { }
+
+  ngOnInit():  void{
+   this.carregarConquistas();
+  }
+
+  carregarConquistas(): void{
+
   }
 
 }
