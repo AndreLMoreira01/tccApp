@@ -1,9 +1,9 @@
-/** fonte importada **/
-@import url(//db.onlinewebfonts.com/c/304a216e4a6b83d00597af9802dfdd52?family=Carton+Six);
 
-
+*{
+    font-family: 'Poppins';
+}
 ion-content {
-  font-family: 'Carton Six';
+
   --background: linear-gradient(to bottom, skyblue, cornflowerblue);
 
   /** login - nome **/
@@ -46,7 +46,7 @@ input {
   border: none;
   outline: none;
   border-radius: 25px;
-  font-family: 'Carton Six';
+  font-family: 'Poppins';
   font-weight: 400;
 }
 
@@ -68,7 +68,7 @@ input:focus::placeholder {
   border-radius: 25%;
   box-shadow: 0 10px 10px rgb(64, 65, 65);
   opacity: 90%;
-  font-family: 'Carton Six';
+  font-family: 'Poppins';
   font-size: 20px;
 }
 
