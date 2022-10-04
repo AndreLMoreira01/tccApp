@@ -14,7 +14,12 @@ export class HistoriasPage implements OnInit {
   constructor(private historiasService: HistoriaService ) { }
 
   ngOnInit(): void {
-    this.historias = this.historiasService.listHistorias();
+    this.carregarHistorias();
+  }
+  
+  carregarHistorias(): void{
+
   }
 
 }
+
