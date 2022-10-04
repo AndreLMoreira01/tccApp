@@ -19,10 +19,6 @@ export class JFrutasPage implements OnInit {
     return itemObject.id;
   }
 
-  filtro(){
-    
-  }
-
   constructor() { }
 
   ngOnInit() {
