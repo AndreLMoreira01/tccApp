@@ -1,18 +1,39 @@
+*{
+  font-family: 'Poppins';
+}
 
-ion-content {
+ion-content{
+  .bg{
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    object-fit: cover;
+    background-repeat: no-repeat, no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    object-position: 22% 40%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}
 
-  --background: url("../../assets/img/bgjungle.jpg") no-repeat;
-  background-size: cover;
-  background-position: center center;
-  
   /** login - nome **/
 .area {
   font-size: large;
-  position: relative;
+  position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+
+margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
+
+
 label {
   color: #ffffff;
   transition: transform .25s,
@@ -36,7 +57,7 @@ label::before {
 
 input {
   margin-top: 2px;
-  background-color: #F0F0F0;
+  background-color: #e9e8e8;
   opacity: 100;
   width: 250px;
   height: 35px;
@@ -45,7 +66,7 @@ input {
   border: none;
   outline: none;
   border-radius: 25px;
-  font-family: 'Carton Six';
+  font-family: 'Poppins';
   font-weight: 400;
 }
 
@@ -67,16 +88,6 @@ input:focus::placeholder {
   border-radius: 25%;
   box-shadow: 0 10px 10px rgb(64, 65, 65);
   opacity: 90%;
-  font-family: 'Carton Six';
+  font-family: 'Poppins';
   font-size: 20px;
-}
-
-/** logo **/
-.logo {
-  width: 175px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 90px;
-}
-
 }
