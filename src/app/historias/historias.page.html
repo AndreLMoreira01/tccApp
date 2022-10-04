@@ -7,47 +7,33 @@
   </ion-toolbar>
 </ion-header>
 <ion-list>
-  <ion-item>
-    <ion-select interface="popover" placeholder="Selecione uma História">
-      <ion-select-option>1</ion-select-option>
-      <ion-select-option>2</ion-select-option>
-      <ion-select-option>3</ion-select-option>
-      <ion-select-option>4</ion-select-option>
-      <ion-select-option>5</ion-select-option>
-      <ion-select-option>6</ion-select-option>
-      <ion-select-option>7</ion-select-option>
-      <ion-select-option>8</ion-select-option>
-    </ion-select>
-  </ion-item>
+
+<ion-select>
+  <ion-select-option *ngFor="let item of historias" [value]="item">{{ item.nome }} </ion-select-option>
+
+
+</ion-select>
+
+<ion-item lines="none">
+<ion-label>Current value: {{ currentHistoria | json }}</ion-label>
+</ion-item>
+
 </ion-list>
 
 <ion-content>
 
-  <ion-item class="header">
+  <ion-item class="header" *ngFor="let item of historias; trackBy:buscarHistoria" >
     <ion-list>
-      <h4 class="cor">Título:</h4>
-      <p class="neg">Tipo:</p>
-      <p class="desc">Descricao:</p>
+      <h4 class="cor">{{item.nome}}</h4>
+      <p class="neg">{{item.tipo}}</p>
+      <p class="desc">{{item.descricao}}</p>
+      <p>{{item.tipo}}</p>
+      <p class="conteudo">
+        A HISTORIA SERA AQUI
+        </p>
     </ion-list>
 
   </ion-item>
-
-
-<p class="conteudo">
-  Não espero nem solicito o crédito do leitor para a tão extraordinária e no
-  entanto tão familiar história que vou contar. Louco seria esperá-lo, num caso
-  cuja evidência até os meus próprios sentidos se recusam a aceitar. No
-  entanto não estou louco, e com toda a certeza que não estou a sonhar. Mas
-  porque posso morrer amanhã, quero aliviar hoje o meu espírito. O meu fim
-  imediato é mostrar ao mundo, simples, sucintamente e sem comentários,
-  uma série de meros acontecimentos domésticos. Nas suas consequências,
-  estes acontecimentos aterrorizaram-me, torturaram-me, destruíram-me. No
-  entanto, não procurarei esclarecê-los. O sentimento que em mim
-  despertaram foi quase exclusivamente o de terror; a muitos outros
-  parecerão menos terríveis do que extravagantes. Mais tarde, será possível
-  que se encontre uma inteligência qualquer que reduza a minha fantasia a
-  uma banalidade.
-</p>
 
 <ion-fab vertical="top" horizontal="end" slot="fixed">
   <ion-fab-button>
