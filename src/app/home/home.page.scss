@@ -105,16 +105,19 @@
   ion-slide{
     padding-bottom: 20px;
   }
-  .title{
-    position: absolute;
-    bottom: 0;
-    color: white;
-    text-align: left;
-    font-weight: bold;
-    padding: 10px;
-    text-shadow: 1px 1px 2px grey;
 
-  }
+}
+
+.nomehistoria{
+  font-family: 'Poppins';
+  font-size: 1.2rem;
+  line-height: 5px;
+}
+
+.nomeautor{
+  margin-top: -8px;
+  font-family: 'Poppins';
+  font-size: 15px;
 }
 
 

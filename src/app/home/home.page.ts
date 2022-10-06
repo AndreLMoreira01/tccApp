@@ -14,9 +14,11 @@ import { AlertController } from '@ionic/angular';
 
 export class HomePage {
   historias = [
-    { id: 1, nome: 'Coraline', autor: 'autor', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
-    { id: 2, nome: 'hist', autor: 'autor', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
-    { id: 3, nome: 'oria', autor: 'autor', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'}
+    { id: 1, nome: 'Coraline', autor: 'Neil Gaymer', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
+    { id: 2, nome: 'Aladdin', autor: 'Bidu', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
+    { id: 3, nome: 'Alice no País das Maravilhas', autor: 'Marco', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
+    { id: 4, nome: 'Dumbo', autor: 'Tim Burton', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
+    { id: 5, nome: 'A Bela e a Fera', autor: 'Disney', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'}
 
   ];
 
