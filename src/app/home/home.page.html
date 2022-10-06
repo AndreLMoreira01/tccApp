@@ -10,8 +10,7 @@
     <img src="../../assets/img/conqs.svg" class="conqs" />
   </ion-chip>
 
-
-      <ion-card  routerLink="/historias">
+      <ion-card routerLink="/historias">
         <img src="../../assets/img/historia1.svg" />
         <ion-card-header>
           <ion-card-subtitle>TOP 1</ion-card-subtitle>
@@ -19,14 +18,16 @@
         </ion-card-header>
       </ion-card>
 
-
-      <ion-item *ngFor="let historia of historias; trackBy:buscarHistoria" class="historia-preview">
-        <ion-item>
-          <img src="../../assets/img/historias/aladdin.png" />
-         </ion-item>
-        <ion-item>{{ historia.nome }}</ion-item>
-        <ion-item> {{historia.autor}}</ion-item>
-      </ion-item>
+      <div class="ion-padding">
+        <span class="section-title">Histórias infantis</span>
+        <ion-slides [options]="null">
+          <ion-slide *ngFor="let historia of historias; trackBy:buscarHistoria" class="historia-preview">
+            <img class="img" src="../../assets/img/historias/aladdin.png" />
+            <b class="nomehistoria">{{ historia.nome }}</b>
+            <p class="nomeautor"> {{historia.autor}}</p>
+          </ion-slide>
+        </ion-slides>
+      </div>
 
 
 </ion-content>

@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable @angular-eslint/use-lifecycle-interface */
 /* eslint-disable @typescript-eslint/member-ordering */
 import { Component } from '@angular/core';
@@ -9,10 +10,11 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 
-//alert quando abre o app
+
 export class HomePage {
   historias = [
-    { id: 1, nome: 'Coraline', autor: 'autor', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'}
+    { id: 1, nome: 'Coraline', autor: 'autor', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo', img:'src="../../assets/img/historias/alice.png"'},
+    { id: 2, nome: 'Coraline', autor: 'autor', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'}
   ];
 
   buscarHistoria(index: number, itemObject: any) {
@@ -23,6 +25,8 @@ export class HomePage {
 
    }
 
+
+   //alert quando abre o app
    async mostraAlert() {
     const alert = await this.alertController.create({
       header: 'Você ganhou uma conquista!',
@@ -33,6 +37,7 @@ export class HomePage {
 
     await alert.present();
   }
+
 
 
  ngOnInit() {
