@@ -20,12 +20,12 @@
       </ion-card>
 
 
-      <ion-item *ngFor="let item of historias; trackBy:buscarHistoria" class="historia-preview">
+      <ion-item *ngFor="let historia of historias; trackBy:buscarHistoria" class="historia-preview">
         <ion-item>
           <img src="../../assets/img/historias/aladdin.png" />
          </ion-item>
-        <ion-item>{{ item.nome }}</ion-item>
-        <ion-item> {{item.autor}}</ion-item>
+        <ion-item>{{ historia.nome }}</ion-item>
+        <ion-item> {{historia.autor}}</ion-item>
       </ion-item>
 
 

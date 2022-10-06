@@ -1,5 +1,7 @@
+/* eslint-disable @angular-eslint/use-lifecycle-interface */
+/* eslint-disable @typescript-eslint/member-ordering */
 import { Component } from '@angular/core';
-
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -10,28 +12,30 @@ import { Component } from '@angular/core';
 //alert quando abre o app
 export class HomePage {
   historias = [
-    { id: 1, nome: 'Coraline', autor: 'autor', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
-    { id: 2, nome: 'Coraline', autor: 'autor', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
-    { id: 3, nome: 'Coraline', autor: 'autor', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
-    { id: 4, nome: 'Coraline', autor: 'autor', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
-    { id: 5, nome: 'Coraline', autor: 'autor', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
-    { id: 6, nome: 'Coraline', autor: 'autor', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
-    { id: 7, nome: 'Coraline', autor: 'autor', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
-    { id: 8, nome: 'Coraline', autor: 'autor', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
-    { id: 9, nome: 'Coraline', autor: 'autor', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
-    { id: 10, nome: 'Coraline', autor: 'autor', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
-    { id: 11, nome: 'Coraline', autor: 'autor', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
-    { id: 12, nome: 'Coraline', autor: 'autor', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
+    { id: 1, nome: 'Coraline', autor: 'autor', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'}
   ];
 
   buscarHistoria(index: number, itemObject: any) {
     return itemObject.id;
   }
 
-  constructor() {
+  constructor(private alertController: AlertController) {
 
    }
 
+   async mostraAlert() {
+    const alert = await this.alertController.create({
+      header: 'Você ganhou uma conquista!',
+      subHeader: 'Terra',
+      message: 'Entre no app pela primeira vez',
+      buttons: ['OK'],
+    });
+
+    await alert.present();
+  }
+
+
  ngOnInit() {
+  this.mostraAlert();
   }
 }
