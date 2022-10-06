@@ -1,5 +1,12 @@
+/* eslint-disable @typescript-eslint/member-ordering */
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { AlertController, ModalController } from '@ionic/angular';
+import { Question, QuestionAnswer } from '../models/question';
+import { PrizeInfo } from '../models/prize-info';
+import { QuestionService } from '../services/question.service';
+import { EndingPage } from '../ending/ending.page';
+import { environment } from 'src/environments/environment';
+
 
 @Component({
   selector: 'app-j-significados',
@@ -8,20 +15,58 @@ import { AlertController } from '@ionic/angular';
 })
 export class JSignificadosPage implements OnInit {
 
-  constructor(private alertController: AlertController) { }
+  curQuesion: Question;
+  prizeInfo: PrizeInfo;
+  timeLeft: number;
+  private intervalId: any;
 
-  ngOnInit() {
-    this.mostraAlert()
+  constructor(
+    private questionService: QuestionService,
+    private modalCtrl: ModalController
+    ) { }
+
+private loadQuestion() {
+this.curQuesion = this.questionService.nextQuestion();
+this.prizeInfo = this.questionService.getPrizeInfo();
+}
+
+async finish(title: string, message: string, endingType: string) {
+  const modal = await this.modalCtrl.create({
+    component: EndingPage,
+    componentProps: { title, message, endingType },
+    backdropDismiss: false,
+    swipeToClose: false,
+    keyboardClose: false
+  });
+
+  modal.present();
+}
+
+
+ngOnInit(): void {
+  this.loadQuestion();
+  this.intervalId = setInterval(() => {
+    if(--this.timeLeft === 0) {
+      clearInterval(this.intervalId);
+      this.finish('Fim de jogo', 'Seu tempo acabou!', 'wrongAnswer');
+      return;
+    }
+  }, 1000);
+}
+
+
+  giveUp() {
+    this.finish('Fim de jogo', 'Você parou!', 'quit');
+    clearInterval(this.intervalId);
   }
 
-  async mostraAlert() {
-    const alert = await this.alertController.create({
-      header: 'Você ganhou uma conquista!',
-      subHeader: 'Júpiter',
-      message: 'Jogue o Jogo dos Significados',
-      buttons: ['OK'],
-    });
-
-    await alert.present();
+  doAnswer(answer: QuestionAnswer) {
+    if(answer.isRight) {
+      this.loadQuestion();
+    } else {
+      this.finish('Fim de jogo', 'Você errou!', 'wrongAnswer');
+      clearInterval(this.intervalId);
+    }
   }
+
 }
