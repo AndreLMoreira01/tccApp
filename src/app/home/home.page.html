@@ -20,11 +20,13 @@
 
       <div class="ion-padding">
         <span class="section-title">Histórias infantis</span>
-        <ion-slides [options]="null">
+        <ion-slides class="slides" [options]="slideOpts">
           <ion-slide *ngFor="let historia of historias; trackBy:buscarHistoria" class="historia-preview">
-            <img class="img" src="../../assets/img/historias/aladdin.png" />
-            <b class="nomehistoria">{{ historia.nome }}</b>
-            <p class="nomeautor"> {{historia.autor}}</p>
+            <div>
+            <img class="img" src="https://epipoca.com.br/wp-content/uploads/2021/03/aladdin-2019-Deviant-Art-1920x1080-1.jpg" />
+            <b class="nomehistoria">{{historia.nome}}</b>
+            <p class="nomeautor">{{historia.autor}}</p>
+          </div>
           </ion-slide>
         </ion-slides>
       </div>
