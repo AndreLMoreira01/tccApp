@@ -18,8 +18,19 @@ export class HomePage {
     { id: 2, nome: 'Aladdin', autor: 'Bidu', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
     { id: 3, nome: 'Alice no País das Maravilhas', autor: 'Marco', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
     { id: 4, nome: 'Dumbo', autor: 'Tim Burton', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
-    { id: 5, nome: 'A Bela e a Fera', autor: 'Disney', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'}
+    { id: 5, nome: 'O Pequeno Princípe', autor: 'Disney', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
+    { id: 6, nome: 'O mágico de Oz', autor: 'Disney', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
+    { id: 7, nome: 'Peter Pan', autor: 'Disney', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'}
+  ];
 
+  historiasClassicas = [
+    { id: 1, nome: 'O Rei Leão', autor: 'Neil Gaymer', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
+    { id: 2, nome: 'Peter Pan', autor: 'Bidu', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
+    { id: 3, nome: 'Dumbo', autor: 'Marco', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
+    { id: 4, nome: 'A Branca de Neve', autor: 'Tim Burton', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
+    { id: 5, nome: 'Chapéuzinho Vermelho', autor: 'Disney', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
+    { id: 6, nome: 'O mágico de Oz', autor: 'Disney', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
+    { id: 7, nome: 'Peter Pan', autor: 'Disney', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'}
   ];
 
   buscarHistoria(index: number, itemObject: any) {

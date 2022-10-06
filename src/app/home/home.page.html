@@ -18,7 +18,7 @@
         </ion-card-header>
       </ion-card>
 
-      <div class="ion-padding">
+      <div class="ion-no-padding">
         <span class="section-title">Histórias infantis</span>
         <ion-slides class="slides" [options]="slideOpts">
           <ion-slide *ngFor="let historia of historias; trackBy:buscarHistoria" class="historia-preview">
@@ -30,6 +30,21 @@
           </ion-slide>
         </ion-slides>
       </div>
+
+      <div class="ion-no-padding">
+        <p class="section-title2">Histórias clássicas</p>
+        <ion-slides class="slides2" [options]="slideOpts">
+          <ion-slide *ngFor="let historia of historiasClassicas; trackBy:buscarHistoria" class="historia-preview">
+            <div>
+            <img class="img" src="https://disneyplusbrasil.com.br/wp-content/uploads/2021/01/Peter-Pan.jpg" />
+            <b class="nomehistoria">{{historia.nome}}</b>
+            <p class="nomeautor">{{historia.autor}}</p>
+          </div>
+          </ion-slide>
+        </ion-slides>
+      </div>
+
+
 
       <ion-item  routerLink="/j-significados">
         </ion-item>
