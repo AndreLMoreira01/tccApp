@@ -35,8 +35,8 @@ async finish(title: string, message: string, endingType: string) {
     component: EndingPage,
     componentProps: { title, message, endingType },
     backdropDismiss: false,
-    swipeToClose: false,
-    keyboardClose: false
+    swipeToClose: true,
+    keyboardClose: true
   });
 
   modal.present();
