@@ -44,6 +44,7 @@
   }
 
   .circle2{
+    position: static;
     height: 45vh;
     width: 150%;
     background-color: #A346F6;
@@ -137,4 +138,25 @@
     border-radius: 10px;
     box-shadow: -1px 11px 13px -6px rgb(87, 86, 86);
   }
+}
+
+
+.games{
+  align-items: center;
+  height: 60vh;
+  background-color: #A346F6;
+  box-shadow: 0 1px 10px var(--ion-color-light);
+  top: 40%;
+  z-index: 10;
+
+}
+
+
+.titleGames{
+  margin-top: 6%;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+  font-family: 'Poppins';
 }
