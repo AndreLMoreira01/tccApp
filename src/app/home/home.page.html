@@ -20,7 +20,7 @@
 
       <div class="ion-no-padding">
         <span class="section-title">Histórias infantis</span>
-        <ion-slides class="slides" [options]="slideOpts">
+        <ion-slides class="slides" [options]="slideOpts" routerLink="/historias">
           <ion-slide *ngFor="let historia of historias; trackBy:buscarHistoria" class="historia-preview">
             <div>
             <img class="img" src="https://epipoca.com.br/wp-content/uploads/2021/03/aladdin-2019-Deviant-Art-1920x1080-1.jpg" />
@@ -33,7 +33,7 @@
 
       <div class="ion-no-padding">
         <p class="section-title2">Histórias clássicas</p>
-        <ion-slides class="slides2" [options]="slideOpts">
+        <ion-slides class="slides2" [options]="slideOpts" routerLink="/historias">
           <ion-slide *ngFor="let historia of historiasClassicas; trackBy:buscarHistoria" class="historia-preview">
             <div>
             <img class="img" src="https://disneyplusbrasil.com.br/wp-content/uploads/2021/01/Peter-Pan.jpg" />
