@@ -8,6 +8,7 @@
   <p>{{ message }}</p>
   <h2>Você ganhou {{ prizeWon }} Troféus</h2>
 
-  <ion-button routerLink="/j-significados">Iniciar novo jogo</ion-button>
-  <ion-button routerLink="/home">Sair</ion-button>
+
+  <ion-button (click)="confirm()" routerLink="/j-significados">Iniciar novo jogo</ion-button>
+  <ion-button (click)="confirm()" routerLink="/home">Sair</ion-button>
 </ion-content>

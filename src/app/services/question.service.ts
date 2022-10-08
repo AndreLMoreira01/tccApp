@@ -11,12 +11,12 @@ export class QuestionService {
   private questionCount = 0;
   private questions: Question[] = [
     {
-      title: 'O menino comprou maçã',
+      title: 'Qual o significado da palavra abaixo? P U R P L E',
       answers: [
-        {description: 'Apple', isRight: true},
-        {description: 'Banana', isRight: false},
-        {description: 'Peach', isRight: false},
-        {description: 'Orange', isRight: false},
+        {description: 'Roxo', isRight: true},
+        {description: 'Azul', isRight: false},
+        {description: 'Branco', isRight: false},
+        {description: 'Verde', isRight: false},
       ],
       level: 1
     },
