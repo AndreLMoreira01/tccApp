@@ -26,19 +26,8 @@ export class HistoriasPage implements OnInit {
     { id: 12, nome: 'Coraline', autor: 'autor', descricao: 'duduxo', tipo: 'eu nao sei', conquista: 'tipo'},
   ];
 
-  buscarHistoria(index: number, itemObject: any) {
-    return itemObject.id;
-  }
   compareWith(o1, o2) {
-    if (!o1 || !o2) {
-      return o1 === o2;
-    }
-
-    if (Array.isArray(o2)) {
-      return o2.some((o) => o.id === o1.id);
-    }
-
-    return o1.id === o2.id;
+    return o1 && o2 ? o1.id === o2.id : o1 === o2;
   }
 
   handleChange(ev) {

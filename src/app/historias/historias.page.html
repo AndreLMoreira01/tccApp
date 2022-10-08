@@ -6,38 +6,24 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-<ion-list>
-
-<ion-select>
-  <ion-select-option *ngFor="let item of historias" [value]="item">{{ item.nome }} </ion-select-option>
 
 
-</ion-select>
 
-<ion-item lines="none">
-<ion-label>Current value: {{ currentHistoria | json }}</ion-label>
-</ion-item>
-
-</ion-list>
 
 <ion-content>
-
-  <ion-item class="header" *ngFor="let item of historias; trackBy:buscarHistoria" >
-    <ion-list>
-      <h4 class="cor">{{item.nome}}</h4>
-      <p class="neg">{{item.tipo}}</p>
-      <p class="desc">{{item.descricao}}</p>
-      <p>{{item.tipo}}</p>
-      <p class="conteudo">
-        A HISTORIA SERA AQUI
-        </p>
-    </ion-list>
-
-  </ion-item>
-
-<ion-fab vertical="top" horizontal="end" slot="fixed">
-  <ion-fab-button>
-    <ion-icon name="play"></ion-icon>
-  </ion-fab-button>
-</ion-fab>
+  <ion-list>
+    <ion-item>
+      <ion-select
+        [compareWith]="compareWith"
+        placeholder="Selecione a historia"
+        (ionChange)="handleChange($event)"
+      >
+        <ion-select-option *ngFor="let historia of historias" [value]="historia">{{ historia.nome }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label> {{ currentHistoria | json }}</ion-label>
+    </ion-item>
+  </ion-list>
+  
 </ion-content>
