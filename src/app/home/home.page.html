@@ -1,4 +1,5 @@
 <ion-content color="light">
+
   <div class="circle2"></div>
 
   <div class="circle1"></div>
@@ -9,7 +10,6 @@
     <img src="../../assets/img/conqs.svg" class="conqs" />
   </ion-chip>
 
-<<<<<<< Updated upstream
       <ion-card routerLink="/historias">
         <img src="../../assets/img/historia1.svg" />
         <ion-card-header>
@@ -44,94 +44,10 @@
         </ion-slides>
       </div>
 
-=======
-  <ion-card routerLink="/historias">
-    <img src="../../assets/img/historia1.svg" />
-    <ion-card-header>
-      <ion-card-subtitle>TOP 1</ion-card-subtitle>
-      <ion-card-title>A Dama e o Vagabundo</ion-card-title>
-    </ion-card-header>
-  </ion-card>
->>>>>>> Stashed changes
 
-  <div class="ion-no-padding">
-    <span class="section-title">Histórias infantis</span>
-    <ion-slides class="slides" [options]="slideOpts">
-      <ion-slide
-        *ngFor="let historia of historias; trackBy:buscarHistoria"
-        class="historia-preview"
-      >
-        <div>
-          <img
-            class="img"
-            src="https://epipoca.com.br/wp-content/uploads/2021/03/aladdin-2019-Deviant-Art-1920x1080-1.jpg"
-          />
-          <b class="nomehistoria">{{historia.nome}}</b>
-          <p class="nomeautor">{{historia.autor}}</p>
+
+        <div class="games"><p class="titleGames">Acesse os jogos</p>
+          <img routerLink="/j-significados" src="../../assets/img/significados.png">
         </div>
-      </ion-slide>
-    </ion-slides>
-  </div>
 
-  <div class="ion-no-padding">
-    <p class="section-title2">Histórias clássicas</p>
-    <ion-slides class="slides2" [options]="slideOpts">
-      <ion-slide
-        *ngFor="let historia of historiasClassicas; trackBy:buscarHistoria"
-        class="historia-preview"
-      >
-        <div>
-          <img
-            class="img"
-            src="https://disneyplusbrasil.com.br/wp-content/uploads/2021/01/Peter-Pan.jpg"
-          />
-          <b class="nomehistoria">{{historia.nome}}</b>
-          <p class="nomeautor">{{historia.autor}}</p>
-        </div>
-      </ion-slide>
-    </ion-slides>
-  </div>
-
-  <div class="games">
-    <p class="titleGames">Acesse os jogos</p>
-
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <div>
-            <img
-              class="ftGame"
-              routerLink="/j-significados"
-              src="../../assets/img/significados.png"
-            />
-            <p>Peter Pan</p>
-          </div>
-        </ion-col>
-        <ion-col>
-          <div>
-            <img
-              class="ftGame"
-              routerLink="/j-significados"
-              src="../../assets/img/significados.png"
-            />
-            <p>O Rei Leão</p>
-          </div>
-        </ion-col>
-      </ion-row>
-
-      <ion-row>
-        <ion-col>
-          <div>
-            <img
-              class="ftGame"
-              routerLink="/j-significados"
-              src="../../assets/img/significados.png"
-            />
-            <p>Jogo dos significados</p>
-          </div>
-        </ion-col>
-
-      </ion-row>
-    </ion-grid>
-  </div>
 </ion-content>
