@@ -144,7 +144,7 @@
 .games{
   align-items: center;
   height: 60vh;
-  background-color: #A346F6;
+  background-color: #8D1AE7;
   box-shadow: 0 1px 10px var(--ion-color-light);
   top: 40%;
   z-index: 10;
@@ -159,4 +159,11 @@
   font-weight: 700;
   font-size: 1.5rem;
   font-family: 'Poppins';
+}
+
+.ftGame{
+  align-items: center;
+
+
+  max-height: 209px;
 }
