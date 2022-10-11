@@ -36,7 +36,7 @@
         <ion-slides class="slides2" [options]="slideOpts" routerLink="/historias">
           <ion-slide *ngFor="let historia of historiasClassicas; trackBy:buscarHistoria" class="historia-preview">
             <div>
-            <img class="img" src="https://disneyplusbrasil.com.br/wp-content/uploads/2021/01/Peter-Pan.jpg" />
+            <img class="img" src="http://complemento.veja.abril.com.br/entretenimento/a-bela-e-a-fera/images/abre.jpg" />
             <b class="nomehistoria">{{historia.nome}}</b>
             <p class="nomeautor">{{historia.autor}}</p>
           </div>
@@ -45,9 +45,48 @@
       </div>
 
 
+        <div class="games">
+          <div class="ion-no-padding">
+            <h3 class="titleGames">Acesse os jogos</h3>
+            <ion-slides class="slides2" [options]="slideOpts">
+              <ion-slide class="historia-preview">
+                <div>
+                  <img class="img" routerLink="/j-velha" src="../../assets/img/velha.png">
+                  <b class="title">Tic Tac Toe</b>
+              </div>
+              </ion-slide>
 
-        <div class="games"><p class="titleGames">Acesse os jogos</p>
-          <img routerLink="/j-significados" src="../../assets/img/significados.png">
+              <ion-slide class="historia-preview">
+                <div>
+                  <img class="img" routerLink="/j-significados" src="../../assets/img/significados.png">
+                  <b class="title">Jogo dos Significados</b>
+                </div>
+              </ion-slide>
+
+              <ion-slide class="historia-preview">
+                <div>
+                  <img class="img" routerLink="/j-frutas" src="../../assets/img/frutas.png">
+                  <b class="title">Jogo das Frutas</b>
+              </div>
+              </ion-slide>
+
+            </ion-slides>
+          </div>
+        </div>
+
+
+
+        <div class="ion-no-padding">
+          <p class="section-title3">Clássicos brasileiros</p>
+          <ion-slides class="slides3" [options]="slideOpts" routerLink="/historias">
+            <ion-slide *ngFor="let historia of historiasBrasileiras; trackBy:buscarHistoria" class="historia-preview">
+              <div>
+              <img class="img" src="https://s2.glbimg.com/CkEgjw7OCcfvcyCn2lqfaK9uTa8=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/h/y/Dd5DIbR32gmcog4IcMWg/curupira-001.jpg" />
+              <b class="nomehistoria">{{historia.nome}}</b>
+              <p class="nomeautor">{{historia.autor}}</p>
+            </div>
+            </ion-slide>
+          </ion-slides>
         </div>
 
 </ion-content>

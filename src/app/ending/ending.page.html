@@ -1,12 +1,7 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>{{ title }}</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content>
-  <p>{{ message }}</p>
-  <h2>Você ganhou {{ prizeWon }} Troféus</h2>
+  <p class="title">{{ message }}</p>
+  <h2>Você ganhou <b>{{ prizeWon }}</b> Troféus</h2>
 
 
   <ion-button (click)="confirm()" routerLink="/j-significados">Iniciar novo jogo</ion-button>
