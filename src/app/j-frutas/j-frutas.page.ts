@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { AlertController, ModalController } from '@ionic/angular';
+import { PrizeInfo } from '../models/prize-info';
+import { Question, QuestionAnswer } from '../models/question';
+import { QuestionService } from '../services/question.service';
+import { EndingPage } from '../ending/ending.page';
 
 @Component({
   selector: 'app-j-frutas',
@@ -8,21 +12,59 @@ import { AlertController } from '@ionic/angular';
 })
 export class JFrutasPage implements OnInit {
 
-  historias = [
-    { id: 1, nome: 'Coraline', tipo: 'duduxo', descricao: 'eu nao sei' },
-    { id: 2, nome: 'Rei Leão', tipo: 'duduxo', descricao: 'eu nao sei'},
-    { id: 3, nome: 'João E Maria', tipo: 'duduxo', descricao: 'eu nao sei' },
-    { id: 4, nome: 'Turma da Mônica', tipo: 'duduxo', descricao: 'eu nao sei'}
-  ];
+  curQuesion: Question;
+  prizeInfo: PrizeInfo;
+  timeLeft: number;
+  private intervalId: any;
 
-  acharItens(index: number, itemObject: any) {
-    return itemObject.id;
+  constructor(
+    private questionService: QuestionService,
+    private modalCtrl: ModalController
+    ) { }
+
+private loadQuestion() {
+this.curQuesion = this.questionService.nextQuestion();
+}
+
+async finish(title: string, message: string, endingType: string) {
+  const modal = await this.modalCtrl.create({
+    component: EndingPage,
+    componentProps: { title, message, endingType },
+    backdropDismiss: false,
+    swipeToClose: true,
+    keyboardClose: true
+  });
+
+  modal.present();
+}
+
+
+ngOnInit(): void {
+  this.loadQuestion();
+  this.intervalId = setInterval(() => {
+    if(--this.timeLeft === 0) {
+      clearInterval(this.intervalId);
+      this.finish('Fim de jogo', 'Seu tempo acabou!', 'wrongAnswer');
+      return;
+    }
+  }, 1000);
+}
+
+
+  giveUp() {
+    this.finish('Fim de jogo', 'Você parou!', 'quit');
+    clearInterval(this.intervalId);
   }
 
-  constructor() { }
-
-  ngOnInit() {
+  doAnswer(answer: QuestionAnswer) {
+    if(answer.isRight) {
+      this.loadQuestion();
+    } else {
+      this.finish('Fim de jogo', 'Oops! Você errou!', 'wrongAnswer');
+      clearInterval(this.intervalId);
+    }
   }
+
 
 
 }

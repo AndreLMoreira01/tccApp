@@ -5,7 +5,7 @@ import { Question, QuestionAnswer } from '../models/question';
 import { PrizeInfo } from '../models/prize-info';
 import { QuestionService } from '../services/question.service';
 import { EndingPage } from '../ending/ending.page';
-import { environment } from 'src/environments/environment';
+
 
 
 @Component({

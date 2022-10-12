@@ -1,3 +1,105 @@
-.cor{
-  color: aqua;
+$box-color: #232231;
+$box-color-secondary: #ff0400;
+$background: #000000;
+$background-secondary: #75326a;
+
+ion-content{
+    // --ion-background-color:#01406b;
+    --background: linear-gradient(#01406b, #022c5e)
+}
+
+.question-box {
+    // background-color: $box-color;
+    background-image: linear-gradient(to bottom right, $box-color, $box-color-secondary);
+    border-bottom: 1px solid rgb(19, 19, 19);
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .question {
+        padding: 10px;
+        color: #fff;
+        min-height: 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .time {
+            width: 54px;
+            height: 54px;
+            border-radius: 100%;
+            background-color: transparent;
+            border: 5px solid lighten($box-color, 20%);
+            // color: #333;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+}
+
+
+.answers {
+    padding: 10px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+    div {
+        display: inline-flex;
+        align-items: center;
+        padding: 12px;
+        background-color: rgb(20, 20, 20);
+        border-radius: 5px;
+        margin-bottom: 10px;
+
+        .number {
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            background-color: #7738b2;
+            border-radius: 100%;
+            color: #fff;
+            margin-right: 10px;
+        }
+
+        .answer {
+            font-weight: bold;
+            color: $background;
+        }
+    }
+}
+
+.info {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding: 5px;
+    justify-content: space-evenly;
+    color: #fff;
+    *{margin: 0; padding: 0;}
+
+    div {
+        text-align: center;
+        border-radius: 5px;
+        padding: 5px;
+        flex-basis: 30%;
+    }
+}
+
+
+.stop-container {
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #f00;
 }
