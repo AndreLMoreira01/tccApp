@@ -1,10 +1,16 @@
+<ion-content>
+
+  <div class="container"></div>
+  <div class="bg"></div>
+
 <input type="checkbox" id="difficulty" checked />
 <input type="checkbox" id="sound" />
 <input type="checkbox" id="first" />
 
 <input type="checkbox" id="start" />
 
-<form id="tictactoe">
+<div class="box"></div>
+<form>
   <input type="radio" name="cell-0" id="cell-0-x" />
   <input type="radio" name="cell-0" id="cell-0-o" />
   <input type="radio" name="cell-1" id="cell-1-x" />
@@ -35,13 +41,13 @@
           <span>Avançado</span>
         </div>
 
-        <h2>First turn</h2>
+        <h2>PRIMEIRO A JOGAR</h2>
         <div class="toggle-group">
           <span>Jogador</span>
           <label for="first" class="toggle"></label>
           <span>IA</span>
         </div>
-        <label for="start" id="start-button" class="btn">Começar</label>
+        <label for="start" id="start-button" class="btn">COMEÇAR</label>
       </div>
     </div>
   </div>
@@ -99,8 +105,12 @@
   <div id="end" class="scrim">
     <div id="message" class="center">
       <div>
-        <input type="reset" for="tictactoe" value="Play again" />
+        <input type="reset" for="tictactoe" value="Jogar novamente" />
       </div>
     </div>
   </div>
 </form>
+
+
+
+</ion-content>
