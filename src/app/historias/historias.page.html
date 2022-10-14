@@ -21,8 +21,8 @@
         <ion-select-option *ngFor="let historia of historias" [value]="historia">{{ historia.nome }}</ion-select-option>
       </ion-select>
     </ion-item>
-    <ion-item lines="none">
-      <ion-label> {{ currentHistoria | json }}</ion-label>
+    <ion-item >
+      {{currentHistoria | json }}
     </ion-item>
   </ion-list>
   
