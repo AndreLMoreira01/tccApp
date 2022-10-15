@@ -1,0 +1,75 @@
+
+<ion-content class="container">
+
+  <ion-button color="transparent" routerLink="/home">
+    <ion-icon slot="icon-only" name="arrow-back" color="light"></ion-icon>
+  </ion-button>
+
+
+  <div class="user">
+  <img src="../../assets/img/image 1.svg" class="profile"/>
+<h2 class="name">Luana Moreira</h2>
+<h3 class="badge">6/6 conquistas</h3>
+<h3 class="verified"></h3>
+  </div>
+
+  <img src="https://cdn-icons-png.flaticon.com/512/7595/7595571.png" class="verified-icon">
+
+
+
+  <div class="details">
+    <div class="ion-no-padding">
+      <p class="section-title">Histórias Favoritas</p>
+      <ion-slides class="slides" [options]="slideOpts">
+        <ion-slide class="historia-preview">
+          <div>
+          <img class="img" src="http://complemento.veja.abril.com.br/entretenimento/a-bela-e-a-fera/images/abre.jpg" />
+          <b class="nomehistoria">A Bela e a Fera</b>
+        </div>
+        </ion-slide>
+
+        <ion-slide class="historia-preview">
+          <div>
+          <img class="img" src="https://www.irmaos.com/wp-content/uploads/2019/12/pod392-1.jpg" />
+          <b class="nomehistoria">O Pequeno Príncipe</b>
+        </div>
+        </ion-slide>
+
+        <ion-slide class="historia-preview">
+          <div>
+          <img class="img" src="https://epipoca.com.br/wp-content/uploads/2021/03/aladdin-2019-Deviant-Art-1920x1080-1.jpg" />
+          <b class="nomehistoria">Aladdin</b>
+        </div>
+        </ion-slide>
+
+      </ion-slides>
+    </div>
+
+    <p class="section-title2">Itens salvos</p>
+      <ion-slides class="slides2" [options]="slideOpts">
+        <ion-slide class="historia-preview2">
+          <div>
+          <img class="img" src="https://www.historiaparadormir.com.br/wp-content/uploads/2018/01/branca-de-neve.jpg" />
+          <b class="nomehistoria">A Branca de Neve</b>
+        </div>
+        </ion-slide>
+
+        <ion-slide class="historia-preview2">
+          <div>
+          <img class="img" src="https://s2.glbimg.com/CkEgjw7OCcfvcyCn2lqfaK9uTa8=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/h/y/Dd5DIbR32gmcog4IcMWg/curupira-001.jpg" />
+          <b class="nomehistoria">Curupira</b>
+        </div>
+        </ion-slide>
+
+        <ion-slide class="historia-preview2">
+          <div>
+          <img class="img" src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/9D87255DE3F9F4AFD69DB02A9857A9273AF0480078A028847EEC7E9587423BF3/scale?width=1200&aspectRatio=1.78&format=jpeg" />
+          <b class="nomehistoria">Dumbo</b>
+        </div>
+        </ion-slide>
+
+      </ion-slides>
+  </div>
+
+
+</ion-content>
