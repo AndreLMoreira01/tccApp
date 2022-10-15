@@ -1,98 +1,163 @@
-$box-color: #ef6f6a;
-$box-color-secondary: #ec4743;
-$background: #01406b;
-$background-secondary: #022c5e;
+*{
+  font-family: 'Poppins';
+}
 
 ion-content{
-    // --ion-background-color:#01406b;
-    --background: linear-gradient(#01406b, #022c5e)
+  ion-button{
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  .image1{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 15px;
+    top: 16px
+  }
+
+  .circle1{
+    position: absolute;
+    background-color: #FFFFFF;
+    width: 50px;
+    height: 50px;
+    right: 15px;
+    top: 16px;
+    border-radius: 100px;
+  }
+
+  .conq{
+    position: absolute;
+    width: 115px;
+    height: 34px;
+    right: 75px;
+    top: 25px;
+    background: rgba(154, 26, 255, 0.7);
+    border-radius: 40px;
+    .conqs{
+      width: 30px;
+      height: 30px;
+      margin-left: 10px;
+      margin-top: 0px;
+      display: block;
+    }
+    ion-label {
+      color: #fff;
+      margin-left: 5px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-shadow: 1px 1px 1px var(--ion-color-medium);
+      font-family: "Poppins", sans-serif;
+    }
+    }
+.bg{
+  position: absolute;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    object-fit: cover;
+    background-repeat: no-repeat, no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    object-position: 22% 40%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .question-box {
-    // background-color: $box-color;
-    background-image: linear-gradient(to bottom right, $box-color, $box-color-secondary);
-    border-bottom: 1px solid #fff;
+  .question {
+    color: rgb(0, 0, 0);
+    min-height: 120px;
+  position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 80;
+  margin-top: 10%;
+  margin-left: 9%;
+  width: 80%;
+  height: 50px;
+  min-width: 20px;
+  background: rgba(255, 255, 255, 0.774);
+  font-size: 1.3rem;
+  border-radius: 15px;
+  opacity: 80;
+  display: flex;
+  justify-content: center;
+  position: absolute;
 
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-    .question {
-        padding: 10px;
-        color: #fff;
-        min-height: 120px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
 
         .time {
             width: 54px;
             height: 54px;
             border-radius: 100%;
             background-color: transparent;
-            border: 5px solid lighten($box-color, 20%);
             // color: #333;
             display: inline-flex;
             flex-direction: column;
             justify-content: center;
             text-align: center;
+              position: absolute;
         }
     }
 }
 
 
 .answers {
+  position: relative;
     padding: 10px;
     padding-top: 20px;
     display: flex;
     flex-direction: column;
-
+    margin-top: 30vh;
+  .letter{
+    margin-top: 10px;
+    margin-left: 3px;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100%;
+    margin-right: 10px;
+    position: absolute;
+  }
     div {
         display: inline-flex;
         align-items: center;
         padding: 12px;
-        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.774);
         border-radius: 5px;
         margin-bottom: 10px;
-
-        .number {
+            .option{
+              
+              position:relative;
+              color: #000;
+              font-size:1.2rem;
+            }
+        .circle {
             width: 30px;
             height: 30px;
             display: inline-flex;
             flex-direction: column;
             justify-content: center;
             text-align: center;
-            background-color: #3868b2;
+            background-color: #8D1AE7;
             border-radius: 100%;
             color: #fff;
             margin-right: 10px;
+
         }
 
         .answer {
-            font-weight: bold;
-            color: $background;
+            font-weight: 500;
         }
     }
 }
-
-.info {
-    display: flex;
-    margin-top: 10px;
-    margin-bottom: 50px;
-    padding: 5px;
-    justify-content: space-evenly;
-    color: #fff;
-    *{margin: 0; padding: 0;}
-
-    div {
-        text-align: center;
-        border-radius: 5px;
-        padding: 5px;
-        flex-basis: 30%;
-    }
-}
-
 
 .stop-container {
     position: fixed;
@@ -102,4 +167,5 @@ ion-content{
     display: flex;
     justify-content: center;
     background-color: #f00;
+}
 }
