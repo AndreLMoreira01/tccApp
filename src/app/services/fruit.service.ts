@@ -23,9 +23,9 @@ import { Question } from '../models/question';
       {
         title: 'Qual o significado da palavra abaixo? P U R P L E',
         answers: [
-          {description: 'Roxo', isRight: true},
+          {description: 'Roxo', isRight: false},
           {description: 'Azul', isRight: false},
-          {description: 'Branco', isRight: false},
+          {description: 'Branco', isRight: true},
           {description: 'Verde', isRight: false},
         ],
         level: 1
@@ -34,8 +34,8 @@ import { Question } from '../models/question';
       {
         title: 'Qual o significado da palavra abaixo? P U R P L E',
         answers: [
-          {description: 'Roxo', isRight: true},
-          {description: 'Azul', isRight: false},
+          {description: 'Roxo', isRight: false},
+          {description: 'Azul', isRight: true},
           {description: 'Branco', isRight: false},
           {description: 'Verde', isRight: false},
         ],
@@ -57,9 +57,9 @@ import { Question } from '../models/question';
         title: 'Marcela comeu kiwi',
         answers: [
           {description: 'De dois em dois anos', isRight: false},
-          {description: 'De oito em oitro anos', isRight: false},
+          {description: 'De oito em oitro anos', isRight: true},
           {description: 'Ocorre todos os anos', isRight: false},
-          {description: 'De quatro em quatro anos', isRight: true},
+          {description: 'De quatro em quatro anos', isRight: false},
         ],
         level: 1
       },
@@ -69,8 +69,8 @@ import { Question } from '../models/question';
         answers: [
           {description: 'De dois em dois anos', isRight: false},
           {description: 'De oito em oitro anos', isRight: false},
-          {description: 'Ocorre todos os anos', isRight: false},
-          {description: 'De quatro em quatro anos', isRight: true},
+          {description: 'Ocorre todos os anos', isRight: true},
+          {description: 'De quatro em quatro anos', isRight: false},
         ],
         level: 1
       },

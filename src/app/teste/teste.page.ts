@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { IJogo } from '../models/IJogo';
+import { JogoService } from '../services/jogo.service';
 
 
 @Component({
@@ -8,22 +11,23 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./teste.page.scss'],
 })
 export class TestePage implements OnInit {
-//importanto o alert
 
-  constructor(private alertController: AlertController) { }
+jogo: IJogo;
 
+  constructor(private jogoService: JogoService, private route: ActivatedRoute) { }
+
+public buscarId(): void {
+  const idJogo = Number(this.route.snapshot.paramMap.get('idJogo'));
+  this.jogoService.buscarId(1).subscribe(retornoJogo => {
+    this.jogo = retornoJogo;
+  }) 
+    
+  }
+  
   ngOnInit() {
-    this.mostraAlert()
+    this.buscarId();
   }
-  async mostraAlert() {
-    const alert = await this.alertController.create({
-      header: 'Você ganhou uma conquista!',
-      subHeader: 'Terra',
-      message: 'Entre no app pela primeira vez',
-      buttons: ['OK'],
-    });
-
-    await alert.present();
-  }
-
+  
 }
+
+
