@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { IJogo } from '../models/IJogo';
-import { JogoService } from '../services/jogo.service';
 
 
 @Component({
@@ -11,20 +8,21 @@ import { JogoService } from '../services/jogo.service';
 })
 export class TestePage implements OnInit {
 
-jogo: IJogo;
 
-  constructor(private jogoService: JogoService, private route: ActivatedRoute) { }
+  constructor() { }
 
-public buscarId(): void {
-  const idJogo = Number(this.route.snapshot.paramMap.get('idJogo'));
-  this.jogoService.buscarId(1).subscribe(retornoJogo => {
-    this.jogo = retornoJogo;
-  }) 
-    
+  logs: string[] = [];
+
+  pushLog(msg) {
+    this.logs.unshift(msg);
+  }
+
+  handleChange(e) {
+    this.pushLog('a: ' + e.detail.value);
   }
   
   ngOnInit() {
-    this.buscarId();
+ 
   }
   
 }

@@ -63,6 +63,14 @@ const routes: Routes = [
   {
     path: 'intro-j',
     loadChildren: () => import('./intro-j/intro-j.module').then( m => m.IntroJPageModule)
+  },
+  {
+    path: 'pork',
+    loadChildren: () => import('./pork/pork.module').then( m => m.PorkPageModule)
+  },
+  {
+    path: 'alladin',
+    loadChildren: () => import('./alladin/alladin.module').then( m => m.AlladinPageModule)
   }
 
 
