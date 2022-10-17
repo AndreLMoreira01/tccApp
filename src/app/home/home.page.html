@@ -22,10 +22,10 @@
 
       <div class="ion-no-padding">
         <span class="section-title">Histórias infantis</span>
-        <ion-slides class="slides" [options]="slideOpts" routerLink="/historias">
+        <ion-slides class="slides" [options]="slideOpts" routerLink="/alladin">
           <ion-slide *ngFor="let historia of historias; trackBy:buscarHistoria" class="historia-preview">
             <div>
-            <img class="img" src="https://epipoca.com.br/wp-content/uploads/2021/03/aladdin-2019-Deviant-Art-1920x1080-1.jpg" />
+            <img class="img" src="../../assets/img/alladin.jpg" />
             <b class="nomehistoria">{{historia.nome}}</b>
             <p class="nomeautor">{{historia.autor}}</p>
           </div>
@@ -35,7 +35,7 @@
 
       <div class="ion-no-padding">
         <p class="section-title2">Histórias clássicas</p>
-        <ion-slides class="slides2" [options]="slideOpts" routerLink="/historias">
+        <ion-slides class="slides2" [options]="slideOpts" routerLink="/pork">
           <ion-slide *ngFor="let historia of historiasClassicas; trackBy:buscarHistoria" class="historia-preview">
             <div>
             <img class="img" src="http://complemento.veja.abril.com.br/entretenimento/a-bela-e-a-fera/images/abre.jpg" />
