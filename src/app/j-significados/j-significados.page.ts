@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/member-ordering */
 import { Component, OnInit } from '@angular/core';
-import { AlertController, ModalController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
 import { Question, QuestionAnswer } from '../models/question';
 import { PrizeInfo } from '../models/prize-info';
 import { QuestionService } from '../services/question.service';

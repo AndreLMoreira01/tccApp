@@ -58,6 +58,10 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'intro-j',
+    loadChildren: () => import('./intro-j/intro-j.module').then( m => m.IntroJPageModule)
   }
 
 
