@@ -67,6 +67,36 @@ ion-content{
     overflow: hidden;
 }
 
+.progress-bar {
+  position: relative;
+  width: 80%;
+  height: 15px;
+  border-radius: 20px;
+  display: flex;
+  margin: auto;
+  margin-top: 7vh;
+  z-index: 15;
+  background:
+   repeating-linear-gradient(135deg,#62BB3D 0 10px,#7be94c 0 20px) 0/0%  no-repeat,
+   repeating-linear-gradient(135deg,#ddd  0 10px,#eee  0 20px) 0/100%;
+  animation: progressbar 4s infinite;
+ }
+ @keyframes progressbar {
+   100% {background-size:100%}
+ }
+
+ .shadow {
+  position: relative;
+  width: 83%;
+  height: 25px;
+  border-radius: 20px;
+  display: flex;
+  margin: auto;
+  margin-top: -20px;
+  background: rgb(255, 255, 255);
+ }
+
+
 .question-box {
   .question {
     color: rgb(0, 0, 0);
@@ -134,7 +164,7 @@ ion-content{
         border-radius: 5px;
         margin-bottom: 10px;
             .option{
-              
+
               position:relative;
               color: #000;
               font-size:1.2rem;
