@@ -52,44 +52,7 @@ export class HomePage {
    }
 
 
-   //alert quando abre o app
-   async mostraAlert() {
-    const alert = await this.alertController.create({
-      cssClass: 'alert-planets',
-      header: 'Você desbloqueou uma conquista!',
-      message: `
-      <img class="gif" src="../../assets/img/testeTerra.gif">`,
-      buttons: [
-        {
-          text: 'Open modal',
-          cssClass: 'btns-modal-alert',
-          handler: (blah) => {
-            console.log('Confirm Cancel: blah');
-          }
-        },
-        {
-          text: 'Cancel',
-          role: 'cancel',
-          cssClass: 'modal-button-cancel',
-          handler: (blah) => {
-            console.log('Confirm Cancel: blah');
-          }
-        }, {
-          text: 'Okay',
-          handler: () => {
-            console.log('Confirm Okay');
-          }
-        }
-      ]
-    });
-
-    await alert.present();
-  }
-
-
-
  ngOnInit() {
-  this.mostraAlert();
   }
 
 

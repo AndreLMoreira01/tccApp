@@ -51,7 +51,8 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },  {
+  },
+  {
     path: 'ending',
     loadChildren: () => import('./ending/ending.module').then( m => m.EndingPageModule)
   },
