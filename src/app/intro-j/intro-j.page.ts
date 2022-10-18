@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
-import { EndingPage } from '../ending/ending.page';
-
+import { IHistoria } from '../models/IHistoria.model';
+import { HistoriaService } from '../services/historia.service';
 
 
 @Component({
@@ -11,25 +10,18 @@ import { EndingPage } from '../ending/ending.page';
 })
 export class IntroJPage implements OnInit {
 
-  constructor(private modalCtrl: ModalController) { }
+  historias: IHistoria[] = [];
 
-  async finish(title: string, message: string, endingType: string) {
-    const modal = await this.modalCtrl.create({
-      component: EndingPage,
-      componentProps: { title, message, endingType },
-      backdropDismiss: false,
-      swipeToClose: true,
-      keyboardClose: true
-    });
+  constructor(private historiaService: HistoriaService) { }
 
-    modal.present();
+  ngOnInit() {
+    this.listarHistorias();
   }
 
-
-
-  ngOnInit(): void {
-        this.finish('Fim de jogo', 'Seu tempo acabou!', 'wrongAnswer');
-        return;
-      }
-
+  listarHistorias() {
+    this.historiaService.buscarHistoria().subscribe(retornoHistoria => {
+      this.historias = retornoHistoria;
+    }
+    );
+  }
 }

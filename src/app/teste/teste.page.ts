@@ -11,20 +11,11 @@ export class TestePage implements OnInit {
 
   constructor() { }
 
-  logs: string[] = [];
 
-  pushLog(msg) {
-    this.logs.unshift(msg);
-  }
-
-  handleChange(e) {
-    this.pushLog('a: ' + e.detail.value);
-  }
-  
   ngOnInit() {
- 
+
   }
-  
+
 }
 
 
