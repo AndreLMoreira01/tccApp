@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { EndingPage } from '../ending/ending.page';
 import { IHistoria } from '../models/IHistoria.model';
 import { HistoriaService } from '../services/historia.service';
+
 
 
 @Component({
@@ -11,11 +14,10 @@ import { HistoriaService } from '../services/historia.service';
 export class IntroJPage implements OnInit {
 
   historias: IHistoria[] = [];
-
   constructor(private historiaService: HistoriaService) { }
 
   ngOnInit() {
-    this.listarHistorias();
+ this.listarHistorias();
   }
 
   listarHistorias() {
@@ -24,4 +26,7 @@ export class IntroJPage implements OnInit {
     }
     );
   }
+
+
+
 }
