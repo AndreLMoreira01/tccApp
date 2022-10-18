@@ -22,7 +22,7 @@
 
       <div class="ion-no-padding">
         <span class="section-title">Histórias infantis</span>
-        <ion-slides class="slides" [options]="slideOpts" routerLink="/alladin">
+        <ion-slides class="slides" [options]="slideOpts" routerLink="/alladin" (click)="unlockMars()">
           <ion-slide *ngFor="let historia of historias; trackBy:buscarHistoria" class="historia-preview">
             <div>
             <img class="img" src="../../assets/img/alladin.jpg" />

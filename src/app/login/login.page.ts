@@ -15,7 +15,7 @@ export class LoginPage implements OnInit {
   }
 
   unlockEarth(){
-    this.showModal('Você desbloqueou a Terra');
+    this.showModal('O planeta foi desbloqueado');
   }
 
   async showModal( msg ){

@@ -1,3 +1,5 @@
+import { AlertMarsComponent } from './../alert-mars/alert-mars.component';
+import { ModalController } from '@ionic/angular';
 /* eslint-disable @typescript-eslint/semi */
 /* eslint-disable max-len */
 /* eslint-disable @angular-eslint/use-lifecycle-interface */
@@ -47,14 +49,28 @@ export class HomePage {
     return itemObject.id;
   }
 
-  constructor(private alertController: AlertController) {
+  constructor(private modalController: ModalController) {
 
    }
 
-
- ngOnInit() {
+   ngOnInit() {
   }
 
+
+   unlockMars(){
+    this.showModal('O planeta foi desbloqueado');
+  }
+
+  async showModal( msg ){
+
+    const modal = await this.modalController.create({
+      component: AlertMarsComponent,
+      componentProps: { message: msg },
+      cssClass: 'alert-mars'
+    });
+
+      await modal.present();
+    }
 
   public slideOpts = {
     slidesPerView: 1.5,
