@@ -5,7 +5,16 @@
 </ion-header>
 
 <ion-content>
-<ion-item >
-{{historia?.nomehistoria}}
-</ion-item>
+
+
+  <img [src]="historia?.imagem">
+
+  <ion-card-header class="ion-text-start" >
+    <ion-card-title >{{historia?.nomehistoria}}</ion-card-title>
+    <ion-card-subtitle>{{historia?.tipo}}</ion-card-subtitle>
+  </ion-card-header>
+
+<p>
+  {{historia?.conteudo}}
+</p>
 </ion-content>
