@@ -5,6 +5,7 @@ export interface IHistoria{
   tipo: string;
   descricao: string;
   conteudo: string;
+  imagem: string;
   conquistas: IConquista;
 }
 

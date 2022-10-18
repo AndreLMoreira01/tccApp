@@ -71,7 +71,11 @@ const routes: Routes = [
   {
     path: 'alladin',
     loadChildren: () => import('./alladin/alladin.module').then( m => m.AlladinPageModule)
+  },  {
+    path: 'cucu',
+    loadChildren: () => import('./cucu/cucu.module').then( m => m.CucuPageModule)
   }
+
 
 
 ];
