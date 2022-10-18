@@ -1,3 +1,4 @@
+import { AlertJupiterComponent } from './../alert-jupiter/alert-jupiter.component';
 import { AlertMarsComponent } from './../alert-mars/alert-mars.component';
 import { ModalController } from '@ionic/angular';
 /* eslint-disable @typescript-eslint/semi */
@@ -61,6 +62,10 @@ export class HomePage {
     this.showModal('O planeta foi desbloqueado');
   }
 
+  unlockJupiter(){
+    this.showModalB('O planeta foi desbloqueado');
+  }
+
   async showModal( msg ){
 
     const modal = await this.modalController.create({
@@ -71,6 +76,17 @@ export class HomePage {
 
       await modal.present();
     }
+
+    async showModalB( msg ){
+
+      const modal = await this.modalController.create({
+        component: AlertJupiterComponent,
+        componentProps: { message: msg },
+        cssClass: 'alert-jupiter'
+      });
+
+        await modal.present();
+      }
 
   public slideOpts = {
     slidesPerView: 1.5,
