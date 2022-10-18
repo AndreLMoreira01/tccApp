@@ -8,6 +8,7 @@ import { ModalController } from '@ionic/angular';
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { AlertSaturnComponent } from '../alert-saturn/alert-saturn.component';
+import { AlertMoonComponent } from '../alert-moon/alert-moon.component';
 
 @Component({
   selector: 'app-home',
@@ -71,6 +72,11 @@ export class HomePage {
     this.showModalC('O planeta foi desbloqueado');
   }
 
+  unlockMoon(){
+    this.showModalD('O planeta foi desbloqueado');
+  }
+
+
   async showModal( msg ){
 
     const modal = await this.modalController.create({
@@ -103,6 +109,17 @@ export class HomePage {
 
           await modal.present();
         }
+
+        async showModalD( msg ){
+
+          const modal = await this.modalController.create({
+            component: AlertMoonComponent,
+            componentProps: { message: msg },
+            cssClass: 'alert-moon'
+          });
+
+            await modal.present();
+          }
 
   public slideOpts = {
     slidesPerView: 1.5,
