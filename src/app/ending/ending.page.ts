@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { QuestionService } from '../services/question.service';
 import { ModalController } from '@ionic/angular';
+import { AlertSunComponent } from '../alert-sun/alert-sun.component';
 
 @Component({
   selector: 'app-ending',
@@ -21,6 +22,7 @@ export class EndingPage implements OnInit {
     private modalCtrl: ModalController)
    { }
 
+
   get prizeWon() {
     const prizeInfo = this.questionService.getPrizeInfo();
     return prizeInfo[this.endingType];
@@ -30,7 +32,24 @@ export class EndingPage implements OnInit {
     return this.modalCtrl.dismiss('confirm');
   }
 
+  unlockSun(){
+    this.showModal('O planeta foi desbloqueado');
+  }
+
+  async showModal( msg ){
+
+    const modal = await this.modalCtrl.create({
+      component: AlertSunComponent,
+      componentProps: { message: msg },
+      cssClass: 'alert-sun'
+    });
+
+      await modal.present();
+    }
+
   ngOnInit(): void {
     console.log(this.questionService.getPrizeInfo());
   }
+
+
 }
