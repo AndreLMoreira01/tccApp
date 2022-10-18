@@ -7,6 +7,7 @@ import { ModalController } from '@ionic/angular';
 /* eslint-disable @typescript-eslint/member-ordering */
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import { AlertSaturnComponent } from '../alert-saturn/alert-saturn.component';
 
 @Component({
   selector: 'app-home',
@@ -66,6 +67,10 @@ export class HomePage {
     this.showModalB('O planeta foi desbloqueado');
   }
 
+  unlockSaturn(){
+    this.showModalC('O planeta foi desbloqueado');
+  }
+
   async showModal( msg ){
 
     const modal = await this.modalController.create({
@@ -87,6 +92,17 @@ export class HomePage {
 
         await modal.present();
       }
+
+      async showModalC( msg ){
+
+        const modal = await this.modalController.create({
+          component: AlertSaturnComponent,
+          componentProps: { message: msg },
+          cssClass: 'alert-saturn'
+        });
+
+          await modal.present();
+        }
 
   public slideOpts = {
     slidesPerView: 1.5,
