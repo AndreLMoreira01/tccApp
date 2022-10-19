@@ -1,7 +1,6 @@
 import { EndingBComponent } from './../ending-b/ending-b.component';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ModalController } from '@ionic/angular';
 import { IHistoria } from '../models/IHistoria.model';
 import { HistoriaService } from '../services/historia.service';
 
@@ -15,7 +14,7 @@ import { HistoriaService } from '../services/historia.service';
 export class IntroJPage implements OnInit {
 
   historia: IHistoria;
-  
+
   constructor(private historiaService: HistoriaService,
     private activatedRoute: ActivatedRoute
     ) { }
