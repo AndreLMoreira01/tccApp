@@ -1,6 +1,7 @@
+import { HomePage } from './home/home.page';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouteReuseStrategy } from '@angular/router';
+import { RouteReuseStrategy, Routes } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
@@ -22,4 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class AppModule {}
 
+const routes: Routes = [
+  { path: 'home', component: HomePage },
+];
 

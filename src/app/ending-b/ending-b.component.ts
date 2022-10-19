@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { AlertSunComponent } from '../alert-sun/alert-sun.component';
 import { QuestionService } from '../services/question.service';
@@ -21,7 +22,9 @@ export class EndingBComponent implements OnInit {
 
 
   constructor(private questionService: QuestionService,
-    private modalCtrl: ModalController)
+    private modalCtrl: ModalController,
+    private router: Router
+    )
    { }
 
 
@@ -42,6 +45,12 @@ export class EndingBComponent implements OnInit {
     this.modalCtrl.dismiss();
   }
 
+  backHome(){
+    this.router.navigate(['/home']);
+    this.modalCtrl.dismiss();
+    this.showModal('O planeta foi desbloqueado');
+  }
+
   async showModal( msg ){
 
     const modal = await this.modalCtrl.create({
@@ -52,6 +61,7 @@ export class EndingBComponent implements OnInit {
 
       await modal.present();
     }
+
 
   ngOnInit(): void {
     console.log(this.questionService.getPrizeInfo());
