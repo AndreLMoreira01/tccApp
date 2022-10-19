@@ -1,8 +1,8 @@
-import { EndingBComponent } from './../ending-b/ending-b.component';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { IHistoria } from '../models/IHistoria.model';
-import { HistoriaService } from '../services/historia.service';
+import { IJogo } from '../models/IJogo';
+import { JogoService } from '../services/jogo.service';
+
 
 
 
@@ -13,20 +13,20 @@ import { HistoriaService } from '../services/historia.service';
 })
 export class IntroJPage implements OnInit {
 
-  historia: IHistoria;
+  jogo: IJogo;
 
-  constructor(private historiaService: HistoriaService,
+  constructor(private jogoService: JogoService ,
     private activatedRoute: ActivatedRoute
     ) { }
 
     ngOnInit() {
-    this.exibirHistoria();
+    this.exibirJogo();
     }
 
-   exibirHistoria() {
-    const id = Number(this.activatedRoute.snapshot.paramMap.get('idHistoria'));
-    this.historiaService.buscarHistoiraPeloId(1).subscribe(retorno => {
-      this.historia = retorno;
+    exibirJogo() {
+    const id = Number(this.activatedRoute.snapshot.paramMap.get('idJogo'));
+    this.jogoService.buscarJogoPeloId(1).subscribe(retorno => {
+      this.jogo = retorno;
     });
   }
 
