@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { IHistoria } from '../models/IHistoria.model';
+import { HistoriaService } from '../services/historia.service';
 
 @Component({
   selector: 'app-cucu',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CucuPage implements OnInit {
 
-  constructor() { }
+  historia: IHistoria;
 
-  ngOnInit() {
+  constructor(private historiaService: HistoriaService,
+    private activatedRoute: ActivatedRoute
+    ) { }
+
+    ngOnInit() {
+    this.exibirHistoria();
+    }
+
+   exibirHistoria() {
+    const id = Number(this.activatedRoute.snapshot.paramMap.get('idHistoria'));
+    this.historiaService.buscarHistoiraPeloId(id).subscribe(retorno => {
+      this.historia = retorno;
+    });
   }
+ 
 
 }
