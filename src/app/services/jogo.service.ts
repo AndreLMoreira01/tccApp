@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { apiUrl } from '../app.api';
+import { API } from '../app.api';
 import { Observable } from 'rxjs';
 import { IJogo } from '../models/IJogo';
 
@@ -11,16 +11,19 @@ import { IJogo } from '../models/IJogo';
 
 export class JogoService{
 
-  private requestMapping = '/jogos';
+  private url =  API + '/jogos';
 
   constructor(private http: HttpClient) {}
 
-  buscarId(idJogo: number): Observable<IJogo>{
-    return this.http.get<IJogo>(`${apiUrl + this.requestMapping}/${idJogo}`);
-    }
+  buscarJogoPeloId(idJogo: number): Observable<IJogo> {
+    return this.http.get<IJogo>(`${this.url}/${idJogo}`).pipe(
+      (retorno => retorno)
+    );
+  }
 
-    buscarConteudo(nome: string, descricao: string): Observable<IJogo[]>{
-      return this.http.get<IJogo[]>(`${apiUrl + this.requestMapping}?conteudo=${nome}&descricao=${descricao}`);
+  buscarJogo(): Observable<IJogo[]> {
+    return this.http.get<IJogo[]>(`${this.url}/todos`).pipe(
+      (retorno => retorno));
     }
 
 }
