@@ -53,10 +53,6 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'ending',
-    loadChildren: () => import('./ending/ending.module').then( m => m.EndingPageModule)
-  },
-  {
     path: 'profile',
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   },
@@ -71,7 +67,8 @@ const routes: Routes = [
   {
     path: 'alladin',
     loadChildren: () => import('./alladin/alladin.module').then( m => m.AlladinPageModule)
-  },  {
+  },
+  {
     path: 'cucu',
     loadChildren: () => import('./cucu/cucu.module').then( m => m.CucuPageModule)
   }

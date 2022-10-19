@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/member-ordering */
 import { Component, OnInit } from '@angular/core';
 import { AlertController, ModalController } from '@ionic/angular';
 import { PrizeInfo } from '../models/prize-info';
 import { Question, QuestionAnswer } from '../models/question';
 import { QuestionService } from '../services/question.service';
-import { EndingPage } from '../ending/ending.page';
+import { EndingBComponent } from '../ending-b/ending-b.component';
 
 @Component({
   selector: 'app-j-frutas',
@@ -28,7 +29,7 @@ this.curQuesion = this.questionService.nextQuestion();
 
 async finish(title: string, message: string, endingType: string) {
   const modal = await this.modalCtrl.create({
-    component: EndingPage,
+    component: EndingBComponent,
     componentProps: { title, message, endingType },
     backdropDismiss: false,
     swipeToClose: true,

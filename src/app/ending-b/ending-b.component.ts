@@ -1,14 +1,15 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { QuestionService } from '../services/question.service';
 import { ModalController } from '@ionic/angular';
 import { AlertSunComponent } from '../alert-sun/alert-sun.component';
+import { QuestionService } from '../services/question.service';
 
 @Component({
-  selector: 'app-ending',
-  templateUrl: './ending.page.html',
-  styleUrls: ['./ending.page.scss'],
+  selector: 'app-ending-b',
+  templateUrl: './ending-b.component.html',
+  styleUrls: ['./ending-b.component.scss'],
 })
-export class EndingPage implements OnInit {
+export class EndingBComponent implements OnInit {
+
   @Input()
   title: string;
 
@@ -17,6 +18,7 @@ export class EndingPage implements OnInit {
 
   @Input()
   endingType: string; // quit, wrongAnser, win (ainda vai ser tratado)
+
 
   constructor(private questionService: QuestionService,
     private modalCtrl: ModalController)
@@ -36,6 +38,10 @@ export class EndingPage implements OnInit {
     this.showModal('O planeta foi desbloqueado');
   }
 
+  closeModal(){
+    this.modalCtrl.dismiss();
+  }
+
   async showModal( msg ){
 
     const modal = await this.modalCtrl.create({
@@ -53,3 +59,6 @@ export class EndingPage implements OnInit {
 
 
 }
+
+
+

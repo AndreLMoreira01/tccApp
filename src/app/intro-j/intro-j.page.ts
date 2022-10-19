@@ -1,6 +1,6 @@
+import { EndingBComponent } from './../ending-b/ending-b.component';
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { EndingPage } from '../ending/ending.page';
 import { IHistoria } from '../models/IHistoria.model';
 import { HistoriaService } from '../services/historia.service';
 

@@ -1,12 +1,10 @@
+import { EndingBComponent } from './../ending-b/ending-b.component';
 /* eslint-disable @typescript-eslint/member-ordering */
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { Question, QuestionAnswer } from '../models/question';
 import { PrizeInfo } from '../models/prize-info';
 import { QuestionService } from '../services/question.service';
-import { EndingPage } from '../ending/ending.page';
-
-
 
 @Component({
   selector: 'app-j-significados',
@@ -32,7 +30,7 @@ this.prizeInfo = this.questionService.getPrizeInfo();
 
 async finish(title: string, message: string, endingType: string) {
   const modal = await this.modalCtrl.create({
-    component: EndingPage,
+    component: EndingBComponent,
     componentProps: { title, message, endingType },
     backdropDismiss: false,
     swipeToClose: true,
