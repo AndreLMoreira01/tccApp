@@ -2,7 +2,7 @@ import { IConquista } from './IConquista.model';
 
 export interface IJogo{
   idJogo: number;
-  nome: string;
+  nomejogo: string;
   descricao: string;
   conquistas: IConquista;
 }

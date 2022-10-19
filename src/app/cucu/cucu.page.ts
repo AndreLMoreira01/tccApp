@@ -20,12 +20,11 @@ export class CucuPage implements OnInit {
     this.exibirHistoria();
     }
 
-   exibirHistoria() {
-    const id = Number(this.activatedRoute.snapshot.paramMap.get('idHistoria'));
-    this.historiaService.buscarHistoiraPeloId(id).subscribe(retorno => {
-      this.historia = retorno;
-    });
-  }
- 
+    exibirHistoria() {
+      const id = Number(this.activatedRoute.snapshot.paramMap.get('idHistoria'));
+      this.historiaService.buscarHistoiraPeloId(1).subscribe(retorno => {
+        this.historia = retorno;
+      });
+    }
 
 }

@@ -9,16 +9,20 @@ import { API } from '../app.api';
 })
 export class ConquistaService{
 
-private requestMapping = '/conquistas';
+
+private url =  API + '/conquistas';
 
 constructor(private http: HttpClient) {}
 
-buscarId(idConquista: number): Observable<IConquista>{
-return this.http.get<IConquista>(`${API + this.requestMapping}/${idConquista}`);
-}
+buscarConquista(): Observable<IConquista[]> {
+  return this.http.get<IConquista[]>(`${this.url}/todos`).pipe(
+    (retorno => retorno));
+  }
 
-buscarConquista(nome: string, descricao: string): Observable<IConquista[]>{
-return this.http.get<IConquista[]>(`${API + this.requestMapping}?nome=${nome}&descricao=${descricao}`);
-}
+  buscarConquistaPeloId(idConquista: number): Observable<IConquista> {
+    return this.http.get<IConquista>(`${this.url}/${idConquista}`).pipe(
+      (retorno => retorno)
+    );
+  }
 
 }

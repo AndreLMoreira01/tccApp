@@ -9,11 +9,15 @@
 
 <ion-content>
 
-    
-    <ion-card-header class="ion-text-start" >
-      <ion-card-title >Curupira</ion-card-title>
-      <ion-card-subtitle>Folclore brasileiro</ion-card-subtitle>
-    </ion-card-header>
 
+  <img [src]="historia?.imagem">
 
+  <ion-card-header>
+    <ion-card-title >{{historia?.nomehistoria}}</ion-card-title>
+    <ion-card-subtitle>{{historia?.tipo}}</ion-card-subtitle>
+  </ion-card-header>
+
+<p>
+  {{historia?.conteudo}}
+</p>
 </ion-content>
