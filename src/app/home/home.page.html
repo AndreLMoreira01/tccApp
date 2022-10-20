@@ -13,19 +13,15 @@
   </ion-chip>
 
       <ion-card routerLink="/historias">
-        <img [src]="historia?.imagem">
-        <ion-card-header>
-          <ion-card-subtitle>TOP 1</ion-card-subtitle>
-          <ion-card-title>{{historia?.nomehistoria}}</ion-card-title>
-        </ion-card-header>
+
       </ion-card>
 
       <div class="ion-no-padding">
         <span class="section-title">Histórias infantis</span>
         <ion-slides class="slides" [options]="slideOpts" routerLink="/alladin" (click)="unlockMars()">
-          <ion-slide *ngFor="let historia of historias; trackBy:listarHistorias" class="historia-preview">
+          <ion-slide *ngFor="let historia of historias" class="historia-preview">
             <div>
-              <img [src]="historia?.imagem">
+              <img [src]="historia.imagem">
             <b class="nomehistoria">{{historia.nomehistoria}}</b>
             <p class="nomeautor">{{historia.tipo}}</p>
           </div>
@@ -36,7 +32,7 @@
       <div class="ion-no-padding">
         <span class="section-title">Histórias clássicas</span>
         <ion-slides class="slides" [options]="slideOpts" routerLink="/alladin" (click)="unlockMars()">
-          <ion-slide *ngFor="let historia of historias; trackBy:listarHistorias" class="historia-preview">
+          <ion-slide *ngFor="let historia of historias" class="historia-preview">
             <div>
               <img [src]="historia.imagem">
             <b class="nomehistoria">{{historia.nomehistoria}}</b>
@@ -51,7 +47,7 @@
           <div class="ion-no-padding">
             <h3 class="titleGames">Acesse os jogos</h3>
             <ion-slides class="slides2" [options]="slideOpts">
-              <ion-slide *ngFor="let jogo of jogos; trackBy:listarHistorias" class="historia-preview">
+              <ion-slide *ngFor="let jogo of jogos" class="historia-preview">
                 <div (click)="unlockSaturn()">
                   <img [src]="jogo.imagem">
                   <b class="title">Tic Tac Toe</b>
