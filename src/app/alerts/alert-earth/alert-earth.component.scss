@@ -16,37 +16,13 @@
   justify-content: center;
   align-items: center;
 
-  h3{
-    color: #ededed;
-    font-weight: 600;
-    position: relative;
-    bottom: 5%;
-    left: 6px;
-  }
-  p{
-    text-align: center;
-    color: #494949;
-    font-size: 1.1em;
-    margin-top: -25px;
-    font-weight: 500;
-    padding: 5px;
-    padding-bottom: 45px;
-  }
-
-  .banner{
-    position: relative;
-    top: -13%;
-    height: 50px;
-    width: 100%;
-    background: #79299E;
-  }
-
   .close{
     position: relative;
     width: 40px;
     height: 40px;
     margin-top: 1vh;
-    margin-left: 35vh;  }
+    margin-left: 35vh;
+  }
 
   .conquistas-planetas {
     margin-top: 58px;
@@ -91,9 +67,11 @@
       align-items: center;
       flex-direction: column;
     }
+
   }
 
-  .planetMoon {
+  // Terra
+  .planetEarth {
     position: relative;
     min-width: 50%;
     justify-content: center;
@@ -130,7 +108,7 @@
       left: 0;
       width: 50%;
       height: 100%;
-      background: linear-gradient(to top, transparent, #b1b1b1);
+      background: linear-gradient(to top, transparent, rgba(0, 255, 249, 0.4));
       background-size: 100px 160px;
       background-repeat: no-repeat;
       border-top-left-radius: 300px;
@@ -144,34 +122,56 @@
       transform: translateX(-50%);
       width: 20px;
       height: 20px;
-      background: #ffffff;
+      background: #008cff;
       border-radius: 50%;
       z-index: 10;
-      box-shadow: 0 0 10px #cecece, 0 0 20px #cecece, 0 0 30px #cecece,
-        0 0 40px #cecece, 0 0 50px #cecece, 0 0 60px #cecece, 0 0 70px #cecece,
-        0 0 80px #cecece, 0 0 90px #cecece, 0 0 100px #cecece;
+      box-shadow: 0 0 10px #03a9f4, 0 0 20px #03a9f4, 0 0 30px #03a9f4,
+        0 0 40px #03a9f4, 0 0 50px #03a9f4, 0 0 60px #03a9f4, 0 0 70px #03a9f4,
+        0 0 80px #03a9f4, 0 0 90px #03a9f4, 0 0 100px #03a9f4;
     }
   }
-  .moon {
+  .earth {
     position: absolute;
     width: 150px;
     height: 150px;
-    background: url(../../assets/img/moon2.png);
+    background: url(../../../assets/img/earth.jpg);
     border-radius: 50%;
     background-size: cover;
-    box-shadow: inset 0 0 20px #cecece, 0 0 120px #cecece;
-    animation: animateMoon 15s linear infinite;
+    box-shadow: inset 0 0 20px #03a9f4, 0 0 120px #03a9f4;
+    animation: animateEarth 15s linear infinite;
   }
-
-  @keyframes animateMoon {
+  @keyframes animateEarth {
     0% {
       background-position: 0;
     }
     100% {
-      background-position: -550px;
+      background-position: 162.5%;
     }
   }
 
+  h3{
+    color: #ededed;
+    font-weight: 600;
+    position: relative;
+    bottom: 5%;
+    left: 6px;
+  }
+  p{
+    text-align: center;
+    color: #494949;
+    font-size: 1.1em;
+    margin-top: -10px;
+    font-weight: 500;
+    padding: 5px;
+    padding-bottom: 15px;
+  }
 
+  .banner{
+    position: relative;
+    top: -8%;
+    height: 50px;
+    width: 100%;
+    background: #79299E;
+  }
 
 }

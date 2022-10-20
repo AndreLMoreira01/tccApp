@@ -1,5 +1,5 @@
-import { AlertJupiterComponent } from './../alert-jupiter/alert-jupiter.component';
-import { AlertMarsComponent } from './../alert-mars/alert-mars.component';
+import { AlertJupiterComponent } from './../alerts/alert-jupiter/alert-jupiter.component';
+import { AlertMarsComponent } from './../alerts/alert-mars/alert-mars.component';
 import { ModalController } from '@ionic/angular';
 /* eslint-disable @typescript-eslint/semi */
 /* eslint-disable max-len */
@@ -7,8 +7,8 @@ import { ModalController } from '@ionic/angular';
 /* eslint-disable @typescript-eslint/member-ordering */
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
-import { AlertSaturnComponent } from '../alert-saturn/alert-saturn.component';
-import { AlertMoonComponent } from '../alert-moon/alert-moon.component';
+import { AlertSaturnComponent } from '../alerts/alert-saturn/alert-saturn.component';
+import { AlertMoonComponent } from '../alerts/alert-moon/alert-moon.component';
 import { IHistoria } from '../models/IHistoria.model';
 import { HistoriaService } from '../services/historia.service';
 import { IJogo } from '../models/IJogo';

@@ -27,16 +27,15 @@
     text-align: center;
     color: #494949;
     font-size: 1.1em;
-    margin-top: -10px;
+    margin-top: -25px;
     font-weight: 500;
     padding: 5px;
-    padding-bottom: 15px;
-
+    padding-bottom: 45px;
   }
 
   .banner{
     position: relative;
-    top: -8%;
+    top: -13%;
     height: 50px;
     width: 100%;
     background: #79299E;
@@ -59,6 +58,28 @@
     position: absolute;
     border-top-left-radius: 46px;
     border-top-right-radius: 46px;
+    .conquistas{
+      z-index: 15;
+      display: flex;
+      justify-content: center;
+      color: rgb(20, 0, 0);
+      top: 50px;
+      font-weight: bold;
+      font-size: 2.2em;
+      position: relative;
+      margin-bottom: 20px;
+  }
+  .descricao{
+    z-index: 16;
+      text-align: center;
+      color: #464646;
+      font-size: 1em;
+      margin-top: 70px;
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+      top: 50px;
+  }
   }
   .planet {
     height: 100%;
@@ -71,9 +92,10 @@
       align-items: center;
       flex-direction: column;
     }
+
   }
 
-  .planetSun {
+  .planetMars {
     position: relative;
     min-width: 50%;
     justify-content: center;
@@ -94,66 +116,67 @@
         background: #f3f3f3;
         border-radius: 50%;
       }
-      @keyframes animate {
-        0% {
+      @keyframes animate{
+        0%{
           transform: rotate(0deg);
         }
-        100% {
+        100%{
           transform: rotate(360deg);
         }
       }
     }
     .loader:before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
       width: 50%;
       height: 100%;
-      background: linear-gradient(to top, transparent, #ff9d2d);
+      background: linear-gradient(to top, transparent, rgba(255, 87, 34, 0.4));
       background-size: 100px 160px;
       background-repeat: no-repeat;
       border-top-left-radius: 300px;
       border-bottom-left-radius: 300px;
     }
     .loader:after {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 50%;
       transform: translateX(-50%);
       width: 20px;
       height: 20px;
-      background: #ffd8b9;
+      background: #ff5722;
       border-radius: 50%;
       z-index: 10;
-      box-shadow: 0 0 10px #ff9d2d, 0 0 20px #ff9d2d, 0 0 30px #ff9d2d,
-        0 0 40px #ff9d2d, 0 0 50px #ff9d2d, 0 0 60px #ff9d2d, 0 0 70px #ff9d2d,
-        0 0 80px #ff9d2d, 0 0 90px #ff9d2d, 0 0 100px #ff9d2d;
+      box-shadow: 0 0 10px #ff5722,
+                  0 0 20px #ff5722,
+                  0 0 30px #ff5722,
+                  0 0 40px #ff5722,
+                  0 0 50px #ff5722,
+                  0 0 60px #ff5722,
+                  0 0 70px #ff5722,
+                  0 0 80px #ff5722,
+                  0 0 90px #ff5722,
+                  0 0 100px #ff5722;
     }
   }
-  .sun {
+  .mars {
     position: absolute;
     width: 150px;
     height: 150px;
-    background: url(../../assets/img/sun.png);
+    background: url(../../../assets/img/mars.jpg);
     border-radius: 50%;
     background-size: cover;
-    box-shadow: inset 0 0 60px #ff6434, 0 0 120px #ff6434;
-    animation: animateSun 15s linear infinite;
+    box-shadow: inset 0 0 20px #ff5722, 0 0 120px #ff5722;
+    animation: animateMars 10s linear infinite;
   }
-
-  @keyframes animateSun {
+  @keyframes animateMars {
     0% {
       background-position: 0;
     }
     100% {
-      background-position: 162.5%;
+      background-position: 162.5px;
     }
   }
-
-
-
-
-
 }

@@ -1,4 +1,4 @@
-import { AlertEarthComponent } from './../alert-earth/alert-earth.component';
+import { AlertEarthComponent } from '../alerts/alert-earth/alert-earth.component';
 import { ModalController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 

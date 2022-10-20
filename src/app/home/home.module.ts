@@ -1,4 +1,4 @@
-import { AlertEarthComponent } from './../alert-earth/alert-earth.component';
+import { AlertEarthComponent } from '../alerts/alert-earth/alert-earth.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';

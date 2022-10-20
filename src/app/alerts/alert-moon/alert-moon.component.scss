@@ -27,16 +27,15 @@
     text-align: center;
     color: #494949;
     font-size: 1.1em;
-    margin-top: -10px;
+    margin-top: -25px;
     font-weight: 500;
     padding: 5px;
-    padding-bottom: 15px;
-
+    padding-bottom: 45px;
   }
 
   .banner{
     position: relative;
-    top: -8%;
+    top: -13%;
     height: 50px;
     width: 100%;
     background: #79299E;
@@ -47,8 +46,7 @@
     width: 40px;
     height: 40px;
     margin-top: 1vh;
-    margin-left: 35vh;
-  }
+    margin-left: 35vh;  }
 
   .conquistas-planetas {
     margin-top: 58px;
@@ -59,6 +57,28 @@
     position: absolute;
     border-top-left-radius: 46px;
     border-top-right-radius: 46px;
+    .conquistas{
+      z-index: 15;
+      display: flex;
+      justify-content: center;
+      color: rgb(20, 0, 0);
+      top: 50px;
+      font-weight: bold;
+      font-size: 2.2em;
+      position: relative;
+      margin-bottom: 20px;
+  }
+  .descricao{
+    z-index: 16;
+      text-align: center;
+      color: #464646;
+      font-size: 1em;
+      margin-top: 70px;
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+      top: 50px;
+  }
   }
   .planet {
     height: 100%;
@@ -73,7 +93,7 @@
     }
   }
 
-  .planetSaturn {
+  .planetMoon {
     position: relative;
     min-width: 50%;
     justify-content: center;
@@ -110,7 +130,7 @@
       left: 0;
       width: 50%;
       height: 100%;
-      background: linear-gradient(to top, transparent, #777777);
+      background: linear-gradient(to top, transparent, #b1b1b1);
       background-size: 100px 160px;
       background-repeat: no-repeat;
       border-top-left-radius: 300px;
@@ -124,26 +144,26 @@
       transform: translateX(-50%);
       width: 20px;
       height: 20px;
-      background: #9c9c9c;
+      background: #ffffff;
       border-radius: 50%;
       z-index: 10;
-      box-shadow: 0 0 10px #777777, 0 0 20px #777777, 0 0 30px #777777,
-        0 0 40px #777777, 0 0 50px #777777, 0 0 60px #777777, 0 0 70px #777777,
-        0 0 80px #777777, 0 0 90px #777777, 0 0 100px #777777;
+      box-shadow: 0 0 10px #cecece, 0 0 20px #cecece, 0 0 30px #cecece,
+        0 0 40px #cecece, 0 0 50px #cecece, 0 0 60px #cecece, 0 0 70px #cecece,
+        0 0 80px #cecece, 0 0 90px #cecece, 0 0 100px #cecece;
     }
   }
-  .saturn {
+  .moon {
     position: absolute;
     width: 150px;
     height: 150px;
-    background: url(../../assets/img/saturn.jpg);
+    background: url(../../../assets/img/moon2.png);
     border-radius: 50%;
     background-size: cover;
-    box-shadow: inset 0 0 20px #777777, 0 0 120px #777777;
-    animation: animateSaturn 15s linear infinite;
+    box-shadow: inset 0 0 20px #cecece, 0 0 120px #cecece;
+    animation: animateMoon 15s linear infinite;
   }
 
-  @keyframes animateSaturn {
+  @keyframes animateMoon {
     0% {
       background-position: 0;
     }
@@ -151,6 +171,7 @@
       background-position: -550px;
     }
   }
+
 
 
 }
