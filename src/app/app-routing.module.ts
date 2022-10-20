@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'intro',
+    redirectTo: 'historia',
     pathMatch: 'full'
   },
   {
