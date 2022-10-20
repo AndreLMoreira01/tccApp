@@ -7,15 +7,10 @@
 <ion-content>
 
 
+<p>{{historia?.nomehistoria}}</p>
+  <img [src]="historia?.imagem">
+  <p>{{historia?.tipo}}</p>
+  <p>{{historia?.conteudo}}</p>
 
 
-  <ion-select>
-  <ion-select-option *ngFor="let historia of historias" [value]="historia">{{ historia.nomehistoria }}</ion-select-option>
-</ion-select>
-
-<ion-item *ngFor="let historia of historias">
-  <p>nome: {{historia.nomehistoria}}</p>
-  <p>tipo: {{historia.tipo}}</p>
-  <p>conteudo: {{historia.conteudo}}</p>
-</ion-item>
 </ion-content>

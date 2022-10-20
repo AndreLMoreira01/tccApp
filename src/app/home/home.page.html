@@ -16,21 +16,21 @@
 
       </ion-card>
 
-      <div class="ion-no-padding">
-        <span class="section-title">Histórias infantis</span>
+      <div>
+        <span>Histórias infantis</span>
         <ion-slides class="slides" [options]="slideOpts" routerLink="/alladin" (click)="unlockMars()">
           <ion-slide *ngFor="let historia of historias" class="historia-preview">
             <div>
               <img [src]="historia.imagem">
-            <b class="nomehistoria">{{historia.nomehistoria}}</b>
-            <p class="nomeautor">{{historia.tipo}}</p>
+            <b >{{historia.nomehistoria}}</b>
+            <p >{{historia.tipo}}</p>
           </div>
           </ion-slide>
         </ion-slides>
       </div>
 
-      <div class="ion-no-padding">
-        <span class="section-title">Histórias clássicas</span>
+      <div >
+        <span >Histórias clássicas</span>
         <ion-slides class="slides" [options]="slideOpts" routerLink="/alladin" (click)="unlockMars()">
           <ion-slide *ngFor="let historia of historias" class="historia-preview">
             <div>

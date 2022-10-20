@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { IHistoria } from '../models/IHistoria.model';
 import { HistoriaService } from '../services/historia.service';
 
@@ -10,11 +11,14 @@ import { HistoriaService } from '../services/historia.service';
 export class HistoriasPage implements OnInit {
 
   historias: IHistoria[] = [];
-  constructor(private historiaService: HistoriaService) { }
+  historia: IHistoria;
+
+  constructor(private historiaService: HistoriaService, private activatedRoute: ActivatedRoute) { }
 
 
   ngOnInit(): void {
     this.listarHistorias();
+    this.exibirHistoria();
   }
 
   listarHistorias() {
@@ -22,6 +26,13 @@ export class HistoriasPage implements OnInit {
       this.historias = retornoHistoria;
     }
     );
+  }
+
+  exibirHistoria() {
+    const id = Number(this.activatedRoute.snapshot.paramMap.get('idHistoria'));
+    this.historiaService.buscarHistoiraPeloId(1).subscribe(retorno => {
+      this.historia = retorno;
+    });
   }
 
 
