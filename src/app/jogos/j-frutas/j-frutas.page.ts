@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/member-ordering */
 import { Component, OnInit } from '@angular/core';
 import { AlertController, ModalController } from '@ionic/angular';
-import { PrizeInfo } from '../models/prize-info';
-import { Question, QuestionAnswer } from '../models/question';
-import { QuestionService } from '../services/question.service';
-import { EndingBComponent } from '../ending-b/ending-b.component';
+import { PrizeInfo } from '../../models/prize-info';
+import { Question, QuestionAnswer } from '../../models/question';
+import { QuestionService } from '../../services/question.service';
+import { EndingBComponent } from '../../jogos/ending-b/ending-b.component';
 
 @Component({
   selector: 'app-j-frutas',

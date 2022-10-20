@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
-import { AlertSunComponent } from '../alerts/alert-sun/alert-sun.component';
-import { QuestionService } from '../services/question.service';
+import { AlertSunComponent } from '../../alerts/alert-sun/alert-sun.component';
+import { QuestionService } from '../../services/question.service';
 
 @Component({
   selector: 'app-ending-b',

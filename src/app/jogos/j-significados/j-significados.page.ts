@@ -1,10 +1,10 @@
-import { EndingBComponent } from './../ending-b/ending-b.component';
+import { EndingBComponent } from '../../jogos/ending-b/ending-b.component';
 /* eslint-disable @typescript-eslint/member-ordering */
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { Question, QuestionAnswer } from '../models/question';
-import { PrizeInfo } from '../models/prize-info';
-import { QuestionService } from '../services/question.service';
+import { Question, QuestionAnswer } from '../../models/question';
+import { PrizeInfo } from '../../models/prize-info';
+import { QuestionService } from '../../services/question.service';
 
 @Component({
   selector: 'app-j-significados',

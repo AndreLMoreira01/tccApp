@@ -29,7 +29,7 @@ const routes: Routes = [
   },
   {
     path: 'j-velha',
-    loadChildren: () => import('./j-velha/j-velha.module').then( m => m.JVelhaPageModule)
+    loadChildren: () => import('./jogos/j-velha/j-velha.module').then( m => m.JVelhaPageModule)
   },
   {
     path: 'historias',
@@ -37,11 +37,11 @@ const routes: Routes = [
   },
   {
     path: 'j-frutas',
-    loadChildren: () => import('./j-frutas/j-frutas.module').then( m => m.JFrutasPageModule)
+    loadChildren: () => import('./jogos/j-frutas/j-frutas.module').then( m => m.JFrutasPageModule)
   },
   {
     path: 'j-significados',
-    loadChildren: () => import('./j-significados/j-significados.module').then( m => m.JSignificadosPageModule)
+    loadChildren: () => import('./jogos/j-significados/j-significados.module').then( m => m.JSignificadosPageModule)
   },
   {
     path: 'intro',
