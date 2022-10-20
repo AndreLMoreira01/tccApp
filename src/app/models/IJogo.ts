@@ -4,5 +4,6 @@ export interface IJogo{
   idJogo: number;
   nomejogo: string;
   descricao: string;
+  imagem: string;
   conquistas: IConquista;
 }
