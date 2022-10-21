@@ -6,11 +6,10 @@
 
 <ion-content>
 
-
-<p>{{historia?.nomehistoria}}</p>
-  <img [src]="historia?.imagem">
-  <p>{{historia?.tipo}}</p>
-  <p>{{historia?.conteudo}}</p>
-
-
+ 
+  <ion-item *ngFor="let historia of historias">
+    <img [src]="historia.imagem">
+    <p> {{historia.nomehistoria}}</p>
+    </ion-item>
+ 
 </ion-content>
