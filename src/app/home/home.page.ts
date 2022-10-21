@@ -41,6 +41,7 @@ export class HomePage {
    ngOnInit(): void {
     this.listarHistorias();
     this.listarJogos();
+    this.exibirHistoria();
   }
   listarHistorias() {
     this.historiaService.buscarHistoria().subscribe(retornoHistoria => {

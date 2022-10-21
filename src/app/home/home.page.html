@@ -13,10 +13,10 @@
   </ion-chip>
 
   <ion-card routerLink="/historias">
-    <img src="../../assets/img/historia1.svg" />
+    <img class="img" [src]="historia?.imagem">
     <ion-card-header>
       <ion-card-subtitle>TOP 1</ion-card-subtitle>
-      <ion-card-title>A Dama e o Vagabundo</ion-card-title>
+      <ion-card-title>{{historia?.nomehistoria}}</ion-card-title>
     </ion-card-header>
   </ion-card>
 
@@ -51,9 +51,9 @@
         <div class="games">
         <div class="ion-no-padding">
           <h3 class="titleGames">Acesse os Jogos</h3>
-          <ion-slides class="slides2" [options]="slideOpts" routerLink="/intro-j" (click)="unlockMars()">
+          <ion-slides class="slides2" [options]="slideOpts"  (click)="unlockMars()">
             <ion-slide *ngFor="let jogo of jogos" class="historia-preview">
-              <div>
+              <div [routerLink]="jogo.rota">
                 <img class="img" [src]="jogo.imagem">
               <b class="title">{{jogo.nomejogo}}</b>
             </div>
