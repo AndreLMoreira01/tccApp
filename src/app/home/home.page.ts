@@ -28,8 +28,6 @@ export class HomePage {
 
   jogos: IJogo[] = [];
 
-  jogo: IJogo;
-
   historia: IHistoria;
 
   constructor(
@@ -42,6 +40,7 @@ export class HomePage {
 
    ngOnInit(): void {
     this.listarHistorias();
+    this.listarJogos();
   }
   listarHistorias() {
     this.historiaService.buscarHistoria().subscribe(retornoHistoria => {
@@ -57,12 +56,6 @@ export class HomePage {
     );
   }
 
-  exibirJogo() {
-    const id = Number(this.activatedRoute.snapshot.paramMap.get('idJogo'));
-    this.jogoService.buscarJogoPeloId(1).subscribe(retorno => {
-      this.jogo = retorno;
-    });
-  }
 
   exibirHistoria() {
     const id = Number(this.activatedRoute.snapshot.paramMap.get('idHistoria'));
