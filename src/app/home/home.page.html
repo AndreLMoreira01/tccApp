@@ -20,48 +20,63 @@
     </ion-card-header>
   </ion-card>
 
-  
-    <div>
-      <span>Histórias infantis</span>
+
+    <div class="ion-no-padding">
+      <p class="section-title">Histórias infantis</p>
       <ion-slides class="slides" [options]="slideOpts" routerLink="/historias" (click)="unlockMars()">
         <ion-slide *ngFor="let historia of historias" class="historia-preview">
           <div>
-            <img [src]="historia.imagem">
-          <b >{{historia.nomehistoria}}</b>
-          <p >{{historia.tipo}}</p>
+            <img class="img" [src]="historia.imagem">
+          <b class="nomehistoria">{{historia.nomehistoria}}</b>
+          <p class="nomeautor">{{historia.autor}}</p>
         </div>
         </ion-slide>
       </ion-slides>
     </div>
 
 
-        <div >
-          <span >Histórias clássicas</span>
-          <ion-slides class="slides" [options]="slideOpts" routerLink="/historias" (click)="unlockMars()">
+        <div class="ion-no-padding">
+          <p class="section-title2">Histórias clássicas</p>
+          <ion-slides class="slides2" [options]="slideOpts2" routerLink="/historias" (click)="unlockMars()">
             <ion-slide *ngFor="let historia of historias" class="historia-preview">
               <div>
-                <img [src]="historia.imagem">
+                <img class="img" [src]="historia.imagem">
               <b class="nomehistoria">{{historia.nomehistoria}}</b>
-              <p class="nomeautor">{{historia.tipo}}</p>
+              <p class="nomeautor">{{historia.autor}}</p>
             </div>
             </ion-slide>
           </ion-slides>
         </div>
 
-        <div>
-          <span >Jogos</span>
-          <ion-slides class="slides" [options]="slideOpts" routerLink="/intro-j" (click)="unlockMars()">
+        <div class="games">
+        <div class="ion-no-padding">
+          <h3 class="titleGames">Acesse os Jogos</h3>
+          <ion-slides class="slides2" [options]="slideOpts" routerLink="/intro-j" (click)="unlockMars()">
             <ion-slide *ngFor="let jogo of jogos" class="historia-preview">
               <div>
-                <img [src]="jogo.imagem">
-              <b>{{jogo.nomejogo}}</b>
+                <img class="img" [src]="jogo.imagem">
+              <b class="title">{{jogo.nomejogo}}</b>
             </div>
             </ion-slide>
           </ion-slides>
         </div>
+      </div>
+
+
+      <div class="ion-no-padding">
+        <p class="section-title3">Histórias clássicas</p>
+        <ion-slides class="slides3" [options]="slideOpts" routerLink="/historias" (click)="unlockMars()">
+          <ion-slide *ngFor="let historia of historias" class="historia-preview">
+            <div>
+              <img class="img" [src]="historia.imagem">
+            <b class="nomehistoria">{{historia.nomehistoria}}</b>
+            <p class="nomeautor">{{historia.autor}}</p>
+          </div>
+          </ion-slide>
+        </ion-slides>
+      </div>
 
 
 
-      
 
 </ion-content>
