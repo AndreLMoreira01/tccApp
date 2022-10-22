@@ -32,7 +32,7 @@ const routes: Routes = [
     loadChildren: () => import('./jogos/j-velha/j-velha.module').then( m => m.JVelhaPageModule)
   },
   {
-    path: 'historias/:idHistoria',
+    path: 'historias',
     loadChildren: () => import('./historias/historias.module').then( m => m.HistoriasPageModule)
   },
   {

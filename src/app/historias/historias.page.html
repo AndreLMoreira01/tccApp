@@ -1,19 +1,27 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title></ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
 
- 
-  <ion-card routerLink="/historias">
-    <img class="img" [src]="historia?.imagem">
-    <ion-card-header>
-      <ion-card-subtitle>TOP 1</ion-card-subtitle>
-      <ion-card-title>{{historia?.nomehistoria}}</ion-card-title>
-    </ion-card-header>
-  </ion-card>
- 
-  <p>{{historia?.conteudo}}</p>
+  <ion-button color="transparent" routerLink="/home">
+    <ion-icon slot="icon-only" name="arrow-back" color="light" ></ion-icon>
+  </ion-button>
+
+
+  <div class="circle2"></div>
+
+  <ion-chip color="purple" class="type" routerLink="/conquistas">
+    <ion-label class="ion-text-wrap">{{historia?.tipo}}</ion-label>
+  </ion-chip>
+
+    <img [src]="historia?.imagem" class="imagem">
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/2048px-Heart_coraz%C3%B3n.svg.png" class="likes">
+    <h3 class="nLikes">36 curtidas</h3>
+    <h3 class="nViews">42 views</h3>
+
+    <h2 class="title">{{historia?.nomehistoria}}</h2>
+    <h3 class="subtitle">{{historia?.descricao}}</h3>
+    <div class="bar"></div>
+
+    <h3 class="container">
+     {{historia?.conteudo}}
+  </h3>
 </ion-content>
