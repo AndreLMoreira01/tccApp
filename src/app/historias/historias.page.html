@@ -7,9 +7,13 @@
 <ion-content>
 
  
-  <ion-item *ngFor="let historia of historias">
-    <img [src]="historia.imagem">
-    <p> {{historia.nomehistoria}}</p>
-    </ion-item>
+  <ion-card routerLink="/historias">
+    <img class="img" [src]="historia?.imagem">
+    <ion-card-header>
+      <ion-card-subtitle>TOP 1</ion-card-subtitle>
+      <ion-card-title>{{historia?.nomehistoria}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
  
+  <p>{{historia?.conteudo}}</p>
 </ion-content>
