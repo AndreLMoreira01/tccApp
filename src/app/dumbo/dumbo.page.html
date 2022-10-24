@@ -1,9 +1,23 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>dumbo</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
 
+  <ion-button color="transparent" routerLink="/home">
+    <ion-icon slot="icon-only" name="arrow-back" color="light" ></ion-icon>
+  </ion-button>
+
+
+  <div class="circle2"></div>
+
+  <ion-chip color="purple" class="type" routerLink="/conquistas">
+    <ion-label class="ion-text-wrap">{{historia?.tipo}}</ion-label>
+  </ion-chip>
+
+    <img [src]="historia?.imagem" class="imagem">
+
+    <h2 class="title">{{historia?.nomehistoria}}</h2>
+    <h3 class="subtitle">{{historia?.descricao}}</h3>
+    <div class="bar"></div>
+
+    <h3 class="container">
+     {{historia?.conteudo}}
+  </h3>
 </ion-content>

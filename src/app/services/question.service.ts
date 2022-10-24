@@ -11,7 +11,7 @@ export class QuestionService {
   private questionCount = 0;
   private questions: Question[] = [
     {
-      title: 'Qual o significado da palavra abaixo? P U R P L E',
+      title: 'Qual o significado da palavra PURPLE? ',
       answers: [
         {description: 'Roxo', isRight: true},
         {description: 'Azul', isRight: false},
@@ -22,18 +22,62 @@ export class QuestionService {
     },
 
     {
-      title: 'A menina comprou uva',
+      title: 'Qual é a cor do sol?',
       answers: [
-        {description: 'Goku', isRight: true},
-        {description: 'Freeza', isRight: false},
-        {description: 'Mabel', isRight: false},
-        {description: 'Leon Kennedy', isRight: false},
+        {description: 'Green', isRight: false},
+        {description: 'Blue', isRight: false},
+        {description: 'Red', isRight: false},
+        {description: 'Yellow', isRight: true},
       ],
       level: 1
     },
 
     {
-      title: 'Ele comprou morango',
+      title: 'Qual é a cor do sorvete napolitano?',
+      answers: [
+        {description: 'Black and White', isRight: false},
+        {description: 'Brown, White and Pink', isRight: true},
+        {description: 'Purple', isRight: false},
+        {description: 'Black', isRight: false},
+      ],
+      level: 1
+    },
+
+    {
+      title: 'Do you have an apple?',
+      answers: [
+        {description: 'Você tem uma maça?', isRight: true},
+        {description: 'Você tem um macaco?', isRight: false},
+        {description: 'Você tem um dragão?', isRight: false},
+        {description: 'We do not know', isRight: false},
+      ],
+      level: 1
+    },
+
+    {
+      title: 'What is a car?',
+      answers: [
+        {description: 'É um esporte', isRight: false},
+        {description: 'De oito em oitro anos', isRight: false},
+        {description: 'É um meio de tranposte', isRight: true},
+        {description: 'De quatro em quatro anos', isRight: false},
+      ],
+      level: 1
+    },
+
+    {
+      title: 'Bianca comprou melancia',
+      answers: [
+        {description: 'Bianca Bought a Watermelon', isRight: false},
+        {description: 'Bianca Bought a car', isRight: false},
+        {description: 'Bianca Bought an apple', isRight: false},
+        {description: 'Bianca Bought a window', isRight: true},
+      ],
+      level: 1
+    },
+
+    {
+      title: 'Bianca comprou melancia',
       answers: [
         {description: 'De dois em dois anos', isRight: false},
         {description: 'De oito em oitro anos', isRight: false},
@@ -44,7 +88,7 @@ export class QuestionService {
     },
 
     {
-      title: 'Lucas comeu banana',
+      title: 'Bianca comprou melancia',
       answers: [
         {description: 'De dois em dois anos', isRight: false},
         {description: 'De oito em oitro anos', isRight: false},
@@ -55,7 +99,7 @@ export class QuestionService {
     },
 
     {
-      title: 'Marcela comeu kiwi',
+      title: 'Bianca comprou melancia',
       answers: [
         {description: 'De dois em dois anos', isRight: false},
         {description: 'De oito em oitro anos', isRight: false},
