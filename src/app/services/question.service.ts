@@ -11,7 +11,7 @@ export class QuestionService {
   private questionCount = 0;
   private questions: Question[] = [
     {
-      title: 'Qual o significado da palavra PURPLE? ',
+      title: 'PURPLE',
       answers: [
         {description: 'Roxo', isRight: true},
         {description: 'Azul', isRight: false},
@@ -22,102 +22,100 @@ export class QuestionService {
     },
 
     {
-      title: 'Qual é a cor do sol?',
+      title: 'YELLOW',
       answers: [
-        {description: 'Green', isRight: false},
-        {description: 'Blue', isRight: false},
-        {description: 'Red', isRight: false},
-        {description: 'Yellow', isRight: true},
+        {description: 'Amarelo', isRight: true},
+        {description: 'Azul', isRight: false},
+        {description: 'Vermelho', isRight: false},
+        {description: 'Preto', isRight: false},
       ],
       level: 1
     },
 
     {
-      title: 'Qual é a cor do sorvete napolitano?',
+      title: 'GREEN',
       answers: [
-        {description: 'Black and White', isRight: false},
-        {description: 'Brown, White and Pink', isRight: true},
-        {description: 'Purple', isRight: false},
-        {description: 'Black', isRight: false},
+        {description: 'Preto', isRight: false},
+        {description: 'Verde', isRight: true},
+        {description: 'Laranja', isRight: false},
+        {description: 'Branco', isRight: false},
       ],
       level: 1
     },
 
     {
-      title: 'Do you have an apple?',
+      title: 'BROWN',
       answers: [
-        {description: 'Você tem uma maça?', isRight: true},
-        {description: 'Você tem um macaco?', isRight: false},
-        {description: 'Você tem um dragão?', isRight: false},
-        {description: 'We do not know', isRight: false},
+        {description: 'Marrom', isRight: true},
+        {description: 'Amarelo', isRight: false},
+        {description: 'Roxo', isRight: false},
+        {description: 'Vermelho', isRight: false},
       ],
       level: 1
     },
 
     {
-      title: 'What is a car?',
+      title: 'BLUE',
       answers: [
-        {description: 'É um esporte', isRight: false},
-        {description: 'De oito em oitro anos', isRight: false},
-        {description: 'É um meio de tranposte', isRight: true},
-        {description: 'De quatro em quatro anos', isRight: false},
+        {description: 'Azul', isRight: true},
+        {description: 'Verde', isRight: false},
+        {description: 'Vermelho', isRight: false},
+        {description: 'Amarelo', isRight: false},
       ],
       level: 1
     },
 
     {
-      title: 'Bianca comprou uma melancia',
+      title: 'GREY',
       answers: [
-        {description: 'Bianca Bought a Watermelon', isRight: true},
-        {description: 'Bianca Bought a car', isRight: false},
-        {description: 'Bianca Bought an apple', isRight: false},
-        {description: 'Bianca Bought a window', isRight: false},
+        {description: 'Cinza', isRight: true},
+        {description: 'Branco', isRight: false},
+        {description: 'Laranja', isRight: false},
+        {description: 'Preto', isRight: false},
       ],
       level: 1
     },
 
     {
-      title: 'I have a cat',
+      title: 'NAVY BLUE',
       answers: [
-        {description: 'Eu tenho um cachorro', isRight: false},
-        {description: 'Eu tenho um gato', isRight: true},
-        {description: 'Eu tenho um papagaio', isRight: false},
-        {description: 'Olhe é uma Arara-azul', isRight: false},
+        {description: 'Verde água', isRight: false},
+        {description: 'Azul marinho', isRight: true},
+        {description: 'Azul escuro', isRight: false},
+        {description: 'Azul ciano', isRight: false},
       ],
       level: 1
     },
 
     {
-      title: 'She was there',
+      title: 'COLORFUL',
       answers: [
-        {description: 'Ela disse adeuss', isRight: false},
-        {description: 'Ele me disse oi', isRight: false},
-        {description: 'Eu estava lá', isRight: false},
-        {description: 'Ela estava lá', isRight: true},
-      ],
-      level: 1
-    },
-
-
-    {
-      title: 'Eu nunca estive aqui',
-      answers: [
-        {description: 'I have never been here before', isRight: true},
-        {description: 'I have a pen', isRight: false},
-        {description: 'I am a god', isRight: false},
-        {description: 'Do you know me?', isRight: false},
+        {description: 'Cinza', isRight: false},
+        {description: 'Branco', isRight: false},
+        {description: 'Transparente', isRight: false},
+        {description: 'Colorido', isRight: true},
       ],
       level: 1
     },
 
 
     {
-      title: 'This is it',
+      title: 'SILVER',
       answers: [
-        {description: 'Como tudo deve ser', isRight: false},
-        {description: 'É isso', isRight: true},
-        {description: 'Eu te amo', isRight: false},
-        {description: 'Cade você?', isRight: false},
+        {description: 'Prata', isRight: true},
+        {description: 'Preto', isRight: false},
+        {description: 'Branco', isRight: false},
+        {description: 'Verde', isRight: false},
+      ],
+      level: 1
+    },
+    {
+      title: 'PINK',
+      answers: [
+        {description: 'Roxo', isRight: false},
+        {description: 'Rosa', isRight: true},
+        {description: 'Vermelho', isRight: false},
+        {description: 'Laranja', isRight: false},
       ],
       level: 1
     }
@@ -126,22 +124,16 @@ export class QuestionService {
   ];
 
   private questionPrizes = [
-    1000, //1
-    2000,
-    3000,
-    4000,
-    5000, //5
-    10000, //10
-    20000,
-    30000,
-    40000,
-    50000,
-    100000,
-    200000,
-    300000,
-    400000,
-    500000,
-    1000000
+    20, //1
+    40,
+    80,
+    120,
+    160, //5
+    200, //10
+    400,
+    800,
+    1000,
+    1500
   ];
 
   constructor() {
