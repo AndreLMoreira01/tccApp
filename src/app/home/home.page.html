@@ -15,15 +15,15 @@
   <ion-card routerLink="/historias">
     <img class="img" [src]="historia?.imagem">
     <ion-card-header>
-      <ion-card-subtitle>TOP 1</ion-card-subtitle>
-      <ion-card-title>{{historia?.nomehistoria}}</ion-card-title>
+      <ion-card-subtitle  class="nomeautor">TOP 1</ion-card-subtitle>
+      <ion-card-title class="nomehistoria">{{historia?.nomehistoria}}</ion-card-title>
     </ion-card-header>
   </ion-card>
 
 
   <div class="ion-no-padding">
     <p class="section-title">Destaques</p>
-    <ion-slides class="slides" [options]="slideOpts"   (click)="unlockMars()">
+    <ion-slides class="slides" [options]="slideOpts"  (click)="unlockMars()">
       <ion-slide class="historia-preview">
         <div routerLink="/historias">
           <img class="img"  src="../../assets/img/historias/coraline.jpg">
