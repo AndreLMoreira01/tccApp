@@ -615,6 +615,7 @@ input[id*='-8-o']:checked ~ #board #tile-8 div::before {
 }
 
 #message {
+  color: #000;
   text-align: center;
   font-size: 2rem;
   line-height: 2.2rem;
