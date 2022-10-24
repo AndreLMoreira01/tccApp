@@ -51,7 +51,7 @@
         <div class="games">
         <div class="ion-no-padding">
           <h3 class="titleGames">Acesse os Jogos</h3>
-          <ion-slides class="slides2" [options]="slideOpts"  (click)="unlockMars()">
+          <ion-slides class="slides2" [options]="slideOpts4"  (click)="unlockMars()">
             <ion-slide *ngFor="let jogo of jogos" class="historia-preview">
               <div [routerLink]="jogo.rota">
                 <img class="img" [src]="jogo.imagem">
@@ -65,7 +65,7 @@
 
       <div class="ion-no-padding">
         <p class="section-title3">Histórias clássicas</p>
-        <ion-slides class="slides3" [options]="slideOpts" routerLink="/historias" (click)="unlockMars()">
+        <ion-slides class="slides3" [options]="slideOpts3" routerLink="/historias" (click)="unlockMars()">
           <ion-slide *ngFor="let historia of historias" class="historia-preview">
             <div>
               <img class="img" [src]="historia.imagem">
