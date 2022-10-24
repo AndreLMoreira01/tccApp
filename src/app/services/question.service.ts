@@ -115,9 +115,9 @@ export class QuestionService {
       title: 'This is it',
       answers: [
         {description: 'Como tudo deve ser', isRight: false},
-        {description: 'É isso', isRight: false},
+        {description: 'É isso', isRight: true},
         {description: 'Eu te amo', isRight: false},
-        {description: 'Cade você?', isRight: true},
+        {description: 'Cade você?', isRight: false},
       ],
       level: 1
     }
