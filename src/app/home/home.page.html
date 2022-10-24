@@ -90,10 +90,17 @@
         <div class="ion-no-padding">
           <h3 class="titleGames">Acesse os Jogos</h3>
           <ion-slides class="slides2" [options]="slideOpts4">
-            <ion-slide *ngFor="let jogo of jogos" class="historia-preview">
-              <div [routerLink]="jogo.rota">
-                <img class="img" [src]="jogo.imagem">
-              <b class="title">{{jogo.nomejogo}}</b>
+            <ion-slide class="historia-preview" routerLink="/j-velha" (click)="unlockSaturn()">
+              <div>
+                <img class="img" src="../../assets/img/jogos/velha.png">
+              <b class="title">Tic Tac Toe</b>
+            </div>
+            </ion-slide>
+
+            <ion-slide class="historia-preview" routerLink="/j-significados" (click)="unlockJupiter()">
+              <div>
+                <img class="img" src="../../assets/img/jogos/significados.png">
+              <b class="title">Jogo dos Significados</b>
             </div>
             </ion-slide>
           </ion-slides>
