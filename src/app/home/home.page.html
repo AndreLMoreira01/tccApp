@@ -27,32 +27,32 @@
       <ion-slide class="historia-preview">
         <div routerLink="/historias">
           <img class="img"  src="../../assets/img/historias/coraline.jpg">
-        <b></b>
-        <p></p>
+          <b class="nomehistoria">Coraline</b>
+          <p class="nomeautor">Neil Gaiman</p>
       </div>
       </ion-slide>
 
       <ion-slide class="historia-preview">
         <div routerLink="/dumbo">
           <img class="img"  src="../../assets/img/historias/dumbo.jpg">
-        <b></b>
-        <p></p>
+          <b class="nomehistoria">Dumbo</b>
+          <p class="nomeautor">Dick Huemer</p>
       </div>
       </ion-slide>
 
       <ion-slide class="historia-preview">
         <div routerLink="/porco">
           <img class="img"  src="../../assets/img/historias/porquinhos.jpg">
-        <b></b>
-        <p></p>
+          <b class="nomehistoria">Os Três Porquinhos</b>
+          <p class="nomeautor">Joseph Jacobs</p>
       </div>
       </ion-slide>
 
       <ion-slide class="historia-preview">
         <div routerLink="/emilia">
           <img class="img"  src="../../assets/img/historias/emilia.jpg">
-        <b></b>
-        <p></p>
+        <b class="nomehistoria">Emilia</b>
+        <p class="nomeautor">Monteiro Lobato</p>
       </div>
       </ion-slide>
     </ion-slides>
@@ -61,8 +61,8 @@
 
     <div class="ion-no-padding">
       <p class="section-title">Histórias infantis</p>
-      <ion-slides class="slides" [options]="slideOpts"  (click)="unlockMars()">
-        <ion-slide *ngFor="let historia of historias" class="historia-preview" [routerLink]="['/historias/' + historia.idHistoria]">
+      <ion-slides class="slides" [options]="slideOpts"  routerLink="/historias" (click)="unlockMars()">
+        <ion-slide *ngFor="let historia of historias" class="historia-preview">
           <div>
             <img class="img" [src]="historia.imagem">
           <b class="nomehistoria">{{historia.nomehistoria}}</b>

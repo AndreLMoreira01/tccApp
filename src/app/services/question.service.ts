@@ -66,12 +66,12 @@ export class QuestionService {
     },
 
     {
-      title: 'Bianca comprou melancia',
+      title: 'Bianca comprou uma melancia',
       answers: [
-        {description: 'Bianca Bought a Watermelon', isRight: false},
+        {description: 'Bianca Bought a Watermelon', isRight: true},
         {description: 'Bianca Bought a car', isRight: false},
         {description: 'Bianca Bought an apple', isRight: false},
-        {description: 'Bianca Bought a window', isRight: true},
+        {description: 'Bianca Bought a window', isRight: false},
       ],
       level: 1
     },
