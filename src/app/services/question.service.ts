@@ -77,48 +77,51 @@ export class QuestionService {
     },
 
     {
-      title: 'Bianca comprou melancia',
+      title: 'I have a cat',
       answers: [
-        {description: 'De dois em dois anos', isRight: false},
-        {description: 'De oito em oitro anos', isRight: false},
-        {description: 'Ocorre todos os anos', isRight: false},
-        {description: 'De quatro em quatro anos', isRight: true},
+        {description: 'Eu tenho um cachorro', isRight: false},
+        {description: 'Eu tenho um gato', isRight: true},
+        {description: 'Eu tenho um papagaio', isRight: false},
+        {description: 'Olhe é uma Arara-azul', isRight: false},
       ],
       level: 1
     },
 
     {
-      title: 'Bianca comprou melancia',
+      title: 'She was there',
       answers: [
-        {description: 'De dois em dois anos', isRight: false},
-        {description: 'De oito em oitro anos', isRight: false},
-        {description: 'Ocorre todos os anos', isRight: false},
-        {description: 'De quatro em quatro anos', isRight: true},
+        {description: 'Ela disse adeuss', isRight: false},
+        {description: 'Ele me disse oi', isRight: false},
+        {description: 'Eu estava lá', isRight: false},
+        {description: 'Ela estava lá', isRight: true},
       ],
       level: 1
     },
 
+
     {
-      title: 'Bianca comprou melancia',
+      title: 'Eu nunca estive aqui',
       answers: [
-        {description: 'De dois em dois anos', isRight: false},
-        {description: 'De oito em oitro anos', isRight: false},
-        {description: 'Ocorre todos os anos', isRight: false},
-        {description: 'De quatro em quatro anos', isRight: true},
+        {description: 'I have never been here before', isRight: true},
+        {description: 'I have a pen', isRight: false},
+        {description: 'I am a god', isRight: false},
+        {description: 'Do you know me?', isRight: false},
       ],
       level: 1
     },
 
+
     {
-      title: 'Bianca comprou melancia',
+      title: 'This is it',
       answers: [
-        {description: 'De dois em dois anos', isRight: false},
-        {description: 'De oito em oitro anos', isRight: false},
-        {description: 'Ocorre todos os anos', isRight: false},
-        {description: 'De quatro em quatro anos', isRight: true},
+        {description: 'Como tudo deve ser', isRight: false},
+        {description: 'É isso', isRight: false},
+        {description: 'Eu te amo', isRight: false},
+        {description: 'Cade você?', isRight: true},
       ],
       level: 1
-    },
+    }
+
 
   ];
 
