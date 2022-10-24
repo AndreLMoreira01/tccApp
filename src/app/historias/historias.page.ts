@@ -17,16 +17,9 @@ export class HistoriasPage implements OnInit {
 
 
   ngOnInit(): void {
-    this.listarHistorias();
     this.exibirHistoria();
   }
 
-  listarHistorias() {
-    this.historiaService.buscarHistoria().subscribe(retornoHistoria => {
-      this.historias = retornoHistoria;
-    }
-    );
-  }
 
   exibirHistoria() {
     const id = Number(this.activatedRoute.snapshot.paramMap.get('idHistoria'));

@@ -63,7 +63,20 @@ const routes: Routes = [
   {
     path: 'alladin',
     loadChildren: () => import('./historia-preview/alladin/alladin.module').then( m => m.AlladinPageModule)
+  },
+  {
+    path: 'dumbo',
+    loadChildren: () => import('./dumbo/dumbo.module').then( m => m.DumboPageModule)
+  },
+  {
+    path: 'porco',
+    loadChildren: () => import('./porco/porco.module').then( m => m.PorcoPageModule)
+  },
+  {
+    path: 'emilia',
+    loadChildren: () => import('./emilia/emilia.module').then( m => m.EmiliaPageModule)
   }
+
 
 
 
