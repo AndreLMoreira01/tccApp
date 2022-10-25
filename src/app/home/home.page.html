@@ -61,8 +61,8 @@
 
     <div class="ion-no-padding">
       <p class="section-title">Histórias infantis</p>
-      <ion-slides class="slides" [options]="slideOpts"  routerLink="/historias">
-        <ion-slide *ngFor="let historia of historias" class="historia-preview">
+      <ion-slides class="slides" [options]="slideOpts">
+        <ion-slide *ngFor="let historia of historias" class="historia-preview" [routerLink]="['/historias/' + historia.idHistoria]">
           <div>
             <img class="img" [src]="historia.imagem">
           <b class="nomehistoria">{{historia.nomehistoria}}</b>
