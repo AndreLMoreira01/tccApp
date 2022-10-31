@@ -23,7 +23,7 @@ export class HistoriasPage implements OnInit {
 
   exibirHistoria() {
     const id = Number(this.activatedRoute.snapshot.paramMap.get('idHistoria'));
-    this.historiaService.buscarHistoiraPeloId(1).subscribe(retorno => {
+    this.historiaService.buscarHistoiraPeloId(id).subscribe(retorno => {
       this.historia = retorno;
     });
   }

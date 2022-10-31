@@ -30,6 +30,7 @@ export class HomePage {
 
   historia: IHistoria;
 
+
   constructor(
     private historiaService: HistoriaService,
     private jogoService: JogoService,
@@ -39,10 +40,11 @@ export class HomePage {
    }
 
    ngOnInit(): void {
+    this.exibirHistoria();
     this.listarHistorias();
     this.listarJogos();
-    this.exibirHistoria();
   }
+
   listarHistorias() {
     this.historiaService.buscarHistoria().subscribe(retornoHistoria => {
       this.historias = retornoHistoria;
@@ -60,10 +62,18 @@ export class HomePage {
 
   exibirHistoria() {
     const id = Number(this.activatedRoute.snapshot.paramMap.get('idHistoria'));
+    this.historiaService.buscarHistoiraPeloId(id).subscribe(retorno => {
+      this.historia = retorno;
+    });
+  }
+
+  exibirHistoria1() {
+    const id = Number(this.activatedRoute.snapshot.paramMap.get('idHistoria'));
     this.historiaService.buscarHistoiraPeloId(1).subscribe(retorno => {
       this.historia = retorno;
     });
   }
+
 
 
    unlockMars(){

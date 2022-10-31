@@ -21,49 +21,11 @@
   </ion-card>
 
 
-  <div class="ion-no-padding" >
-    <p class="section-title">Destaques</p>
-    <ion-slides class="slides" [options]="slideOpts5">
-      <ion-slide class="historia-preview">
-        <div routerLink="/historias">
-          <img class="img"  src="../../assets/img/historias/coraline.jpg">
-          <b class="nomehistoria">Coraline</b>
-          <p class="nomeautor">Neil Gaiman</p>
-      </div>
-      </ion-slide>
-
-      <ion-slide class="historia-preview">
-        <div routerLink="/porco">
-          <img class="img"  src="../../assets/img/historias/porquinhos.jpg">
-          <b class="nomehistoria">Os Três Porquinhos</b>
-          <p class="nomeautor">Joseph Jacobs</p>
-      </div>
-      </ion-slide>
-
-      <ion-slide class="historia-preview" (click)="unlockMars()">
-        <div routerLink="/emilia">
-          <img class="img"  src="../../assets/img/historias/emilia.jpg">
-        <b class="nomehistoria">Emilia</b>
-        <p class="nomeautor">Monteiro Lobato</p>
-      </div>
-      </ion-slide>
-
-      <ion-slide class="historia-preview">
-        <div routerLink="/dumbo">
-          <img class="img"  src="../../assets/img/historias/dumbo.jpg">
-          <b class="nomehistoria">Dumbo</b>
-          <p class="nomeautor">Dick Huemer</p>
-      </div>
-      </ion-slide>
-    </ion-slides>
-  </div>
-
-
     <div class="ion-no-padding">
       <p class="section-title">Histórias infantis</p>
       <ion-slides class="slides" [options]="slideOpts">
-        <ion-slide *ngFor="let historia of historias" class="historia-preview" [routerLink]="['/historias/' + historia.idHistoria]">
-          <div>
+        <ion-slide *ngFor="let historia of historias" class="historia-preview">
+          <div [routerLink]="['/historias/' + historia.idHistoria]">
             <img class="img" [src]="historia.imagem">
           <b class="nomehistoria">{{historia.nomehistoria}}</b>
           <p class="nomeautor">{{historia.autor}}</p>
@@ -77,7 +39,7 @@
           <p class="section-title2">Histórias clássicas</p>
           <ion-slides class="slides2" [options]="slideOpts2" routerLink="/historias">
             <ion-slide *ngFor="let historia of historias" class="historia-preview">
-              <div>
+              <div [routerLink]="['/historias/' + historia.idHistoria]">
                 <img class="img" [src]="historia.imagem">
               <b class="nomehistoria">{{historia.nomehistoria}}</b>
               <p class="nomeautor">{{historia.autor}}</p>
@@ -87,32 +49,25 @@
         </div>
 
         <div class="games">
-        <div class="ion-no-padding">
-          <h3 class="titleGames">Acesse os Jogos</h3>
-          <ion-slides class="slides2" [options]="slideOpts4">
-            <ion-slide class="historia-preview" routerLink="/j-velha" (click)="unlockSaturn()">
-              <div>
-                <img class="img" src="../../assets/img/jogos/velha.png">
-              <b class="title">Tic Tac Toe</b>
-            </div>
-            </ion-slide>
-
-            <ion-slide class="historia-preview" routerLink="/j-significados" (click)="unlockJupiter()">
-              <div>
-                <img class="img" src="../../assets/img/jogos/significados.png">
-              <b class="title">Jogo dos Significados</b>
-            </div>
-            </ion-slide>
-          </ion-slides>
-        </div>
-      </div>
+          <div class="ion-no-padding">
+            <h3 class="titleGames">Acesse os Jogos</h3>
+            <ion-slides class="slides2" [options]="slideOpts"  (click)="unlockMars()">
+              <ion-slide *ngFor="let jogo of jogos" class="historia-preview">
+                <div [routerLink]="jogo.rota">
+                  <img class="img" [src]="jogo.imagem">
+                <b class="title">{{jogo.nomejogo}}</b>
+              </div>
+              </ion-slide>
+              </ion-slides>
+              </div>
+              </div>
 
 
       <div class="ion-no-padding">
         <p class="section-title3">Histórias clássicas</p>
         <ion-slides class="slides3" [options]="slideOpts3" routerLink="/historias">
           <ion-slide *ngFor="let historia of historias" class="historia-preview">
-            <div>
+            <div [routerLink]="['/historias/' + historia.idHistoria]">
               <img class="img" [src]="historia.imagem">
             <b class="nomehistoria">{{historia.nomehistoria}}</b>
             <p class="nomeautor">{{historia.autor}}</p>
