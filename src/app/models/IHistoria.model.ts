@@ -1,6 +1,6 @@
 import { IConquista } from './IConquista.model';
 export interface IHistoria{
-  idHistoria: number;
+  id: number;
   nomehistoria: string;
   tipo: string;
   descricao: string;

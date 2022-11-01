@@ -10,10 +10,10 @@ import { HistoriaService } from '../services/historia.service';
 })
 export class HistoriasPage implements OnInit {
 
-  historias: IHistoria[] = [];
   historia: IHistoria;
 
-  constructor(private historiaService: HistoriaService, private activatedRoute: ActivatedRoute) { }
+  constructor(private historiaService: HistoriaService,
+    private activatedRoute: ActivatedRoute) { }
 
 
   ngOnInit(): void {
@@ -22,7 +22,8 @@ export class HistoriasPage implements OnInit {
 
 
   exibirHistoria() {
-    const id = Number(this.activatedRoute.snapshot.paramMap.get('idHistoria'));
+    //console.log(this.activatedRoute.snapshot.paramMap.get('idHistoria'));
+    const id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
     this.historiaService.buscarHistoiraPeloId(id).subscribe(retorno => {
       this.historia = retorno;
     });

@@ -13,10 +13,10 @@
   </ion-chip>
 
   <ion-card routerLink="/historias">
-    <img class="img" [src]="historia?.imagem">
+    <img src="../../assets/img/historias/coraline.jpg"/>
     <ion-card-header>
       <ion-card-subtitle  class="nomeautor">TOP 1</ion-card-subtitle>
-      <ion-card-title class="nomehistoria">{{historia?.nomehistoria}}</ion-card-title>
+      <ion-card-title class="nomehistoria">Coraline</ion-card-title>
     </ion-card-header>
   </ion-card>
 
@@ -25,7 +25,7 @@
       <p class="section-title">Histórias infantis</p>
       <ion-slides class="slides" [options]="slideOpts">
         <ion-slide *ngFor="let historia of historias" class="historia-preview">
-          <div [routerLink]="['/historias/' + historia.idHistoria]">
+          <div [routerLink]="['/historias' , historia.id]">
             <img class="img" [src]="historia.imagem">
           <b class="nomehistoria">{{historia.nomehistoria}}</b>
           <p class="nomeautor">{{historia.autor}}</p>
@@ -37,9 +37,9 @@
 
         <div class="ion-no-padding">
           <p class="section-title2">Histórias clássicas</p>
-          <ion-slides class="slides2" [options]="slideOpts2" routerLink="/historias">
+          <ion-slides class="slides2" [options]="slideOpts2">
             <ion-slide *ngFor="let historia of historias" class="historia-preview">
-              <div [routerLink]="['/historias/' + historia.idHistoria]">
+              <div [routerLink]="['/historias' , historia.id]">
                 <img class="img" [src]="historia.imagem">
               <b class="nomehistoria">{{historia.nomehistoria}}</b>
               <p class="nomeautor">{{historia.autor}}</p>
@@ -65,9 +65,9 @@
 
       <div class="ion-no-padding">
         <p class="section-title3">Histórias clássicas</p>
-        <ion-slides class="slides3" [options]="slideOpts3" routerLink="/historias">
+        <ion-slides class="slides3" [options]="slideOpts3">
           <ion-slide *ngFor="let historia of historias" class="historia-preview">
-            <div [routerLink]="['/historias/' + historia.idHistoria]">
+            <div [routerLink]="['/historias' , historia.id]">
               <img class="img" [src]="historia.imagem">
             <b class="nomehistoria">{{historia.nomehistoria}}</b>
             <p class="nomeautor">{{historia.autor}}</p>
