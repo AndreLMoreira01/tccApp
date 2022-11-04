@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Question } from '../models/question';
+import { PrizeInfo } from '../models/prize-info';
 
 
 @Injectable({
-    providedIn: 'root'
-  })
+  providedIn: 'root'
+})
   export class QuestionService {
-  
+
     private questionCount = 0;
     private questions: Question[] = [
       {
@@ -19,7 +20,7 @@ import { Question } from '../models/question';
         ],
         level: 1
       },
-  
+
       {
         title: 'Qual o significado da palavra abaixo? P U R P L E',
         answers: [
@@ -30,7 +31,7 @@ import { Question } from '../models/question';
         ],
         level: 1
       },
-  
+
       {
         title: 'Qual o significado da palavra abaixo? P U R P L E',
         answers: [
@@ -41,7 +42,7 @@ import { Question } from '../models/question';
         ],
         level: 1
       },
-  
+
       {
         title: 'Lucas comeu banana',
         answers: [
@@ -52,7 +53,7 @@ import { Question } from '../models/question';
         ],
         level: 1
       },
-  
+
       {
         title: 'Marcela comeu kiwi',
         answers: [
@@ -63,7 +64,7 @@ import { Question } from '../models/question';
         ],
         level: 1
       },
-  
+
       {
         title: 'Bianca comprou melancia',
         answers: [
@@ -74,13 +75,13 @@ import { Question } from '../models/question';
         ],
         level: 1
       },
-  
+
     ];
 
     constructor() {
         this.questions.sort((a, b) => 0.5 - Math.random());
       }
-    
+
       nextQuestion(): Question {
         const randomIndex: number = Math.floor( Math.random() * this.questions.length );
         this.questionCount++;
@@ -88,4 +89,3 @@ import { Question } from '../models/question';
       }
 
     }
-    
