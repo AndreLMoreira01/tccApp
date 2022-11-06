@@ -33,12 +33,14 @@
     <div
       (click)="doAnswer(answer)"
       *ngFor="let answer of curQuesion.answers; let n = index;"
-      class="ion-activatable ion-focusable hydrated"
-    >
+      class="ion-activatable ion-focusable hydrated">
       <div class="letter"></div>
       <span class="circle">
         <span class="option">{{ n + 1 }}</span></span>
       <span class="answer">{{ answer.description }}</span>
     </div>
   </div>
+
+
+
 </ion-content>

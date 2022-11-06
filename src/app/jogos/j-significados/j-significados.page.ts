@@ -5,6 +5,7 @@ import { ModalController } from '@ionic/angular';
 import { Question, QuestionAnswer } from '../../models/question';
 import { PrizeInfo } from '../../models/prize-info';
 import { QuestionService } from '../../services/question.service';
+import { iif } from 'rxjs';
 
 @Component({
   selector: 'app-j-significados',
@@ -58,6 +59,12 @@ ngOnInit(): void {
     clearInterval(this.intervalId);
   }
 
+  givenUp(answer: QuestionAnswer) {
+  if(answer.isRight) {
+  this.finish('Fim de jogo', 'Seu tempo acabou!', 'correctAnswer')
+}
+  }
+
   doAnswer(answer: QuestionAnswer) {
     if(answer.isRight) {
       this.loadQuestion();
@@ -66,5 +73,6 @@ ngOnInit(): void {
       clearInterval(this.intervalId);
     }
   }
+
 
 }
