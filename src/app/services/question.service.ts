@@ -24,10 +24,10 @@ export class QuestionService {
     {
       title: 'YELLOW',
       answers: [
-        {description: 'Amarelo', isRight: true},
+        {description: 'Cinza', isRight: false},
         {description: 'Azul', isRight: false},
         {description: 'Vermelho', isRight: false},
-        {description: 'Preto', isRight: false},
+        {description: 'Amarelo', isRight: true},
       ],
       level: 1
     },
@@ -46,9 +46,9 @@ export class QuestionService {
     {
       title: 'BROWN',
       answers: [
-        {description: 'Marrom', isRight: true},
-        {description: 'Amarelo', isRight: false},
         {description: 'Roxo', isRight: false},
+        {description: 'Amarelo', isRight: false},
+        {description: 'Marrom', isRight: true},
         {description: 'Vermelho', isRight: false},
       ],
       level: 1
@@ -68,10 +68,10 @@ export class QuestionService {
     {
       title: 'GREY',
       answers: [
-        {description: 'Cinza', isRight: true},
+        {description: 'Preto', isRight: false},
         {description: 'Branco', isRight: false},
         {description: 'Laranja', isRight: false},
-        {description: 'Preto', isRight: false},
+        {description: 'Cinza', isRight: true},
       ],
       level: 1
     },
@@ -92,8 +92,8 @@ export class QuestionService {
       answers: [
         {description: 'Cinza', isRight: false},
         {description: 'Branco', isRight: false},
-        {description: 'Transparente', isRight: false},
         {description: 'Colorido', isRight: true},
+        {description: 'Transparente', isRight: false},
       ],
       level: 1
     },
@@ -102,10 +102,10 @@ export class QuestionService {
     {
       title: 'SILVER',
       answers: [
-        {description: 'Prata', isRight: true},
+        {description: 'Verde', isRight: false},
         {description: 'Preto', isRight: false},
         {description: 'Branco', isRight: false},
-        {description: 'Verde', isRight: false},
+        {description: 'Prata', isRight: true},
       ],
       level: 1
     },
@@ -153,7 +153,7 @@ export class QuestionService {
 
     return {
       correctAnswer: curQuesionPrize,
-      wrongAnswer: this.questionCount === 1 || this.questionCount === 16 ? 0 : accumulated/2,
+      wrongAnswer: this.questionCount === 1 || this.questionCount === 10 ? 0 : accumulated/2,
       quit: this.questionCount === 1 ? 0 : accumulated,
     };
   }
