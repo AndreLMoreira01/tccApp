@@ -5,7 +5,7 @@ import { ModalController } from '@ionic/angular';
 import { Question, QuestionAnswer } from '../../models/question';
 import { PrizeInfo } from '../../models/prize-info';
 import { QuestionService } from '../../services/question.service';
-import { iif } from 'rxjs';
+
 
 @Component({
   selector: 'app-j-significados',
@@ -27,7 +27,13 @@ export class JSignificadosPage implements OnInit {
 private loadQuestion() {
 this.curQuesion = this.questionService.nextQuestion();
 this.prizeInfo = this.questionService.getPrizeInfo();
+
 }
+
+//
+//private given() {
+//  this.curQuesion = this.questionService.getPrizeInfo();
+//}
 
 async finish(title: string, message: string, endingType: string) {
   const modal = await this.modalCtrl.create({
@@ -60,9 +66,7 @@ ngOnInit(): void {
   }
 
   givenUp(answer: QuestionAnswer) {
-  if(answer.isRight) {
-  this.finish('Fim de jogo', 'Seu tempo acabou!', 'correctAnswer')
-}
+  this.finish('Fim de jogo', 'Seu tempo acabou!', 'correctAnswer');
   }
 
   doAnswer(answer: QuestionAnswer) {
@@ -72,6 +76,9 @@ ngOnInit(): void {
       this.finish('Fim de jogo', 'Oops! Você errou!', 'wrongAnswer');
       clearInterval(this.intervalId);
     }
+      if(answer.isRight){
+      this.givenUp(answer);
+}
   }
 
 

@@ -18,7 +18,7 @@ export class EndingBComponent implements OnInit {
   message: string;
 
   @Input()
-  endingType: string; // quit, wrongAnser, win (ainda vai ser tratado)
+  endingType: string;
 
 
   constructor(private questionService: QuestionService,
@@ -32,6 +32,8 @@ export class EndingBComponent implements OnInit {
     const prizeInfo = this.questionService.getPrizeInfo();
     return prizeInfo[this.endingType];
   }
+
+  //
 
   confirm() {
     return this.modalCtrl.dismiss('confirm');
