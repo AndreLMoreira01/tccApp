@@ -14,10 +14,6 @@ export class ConquistasPage implements OnInit {
   constructor(private conquistaService: ConquistaService ) { }
 
   ngOnInit():  void{
-   this.carregarConquistas();
-  }
-
-  carregarConquistas(): void{
 
   }
 

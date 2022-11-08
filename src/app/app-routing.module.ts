@@ -20,10 +20,6 @@ const routes: Routes = [
     loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
   },
   {
-    path: 'teste',
-    loadChildren: () => import('./teste/teste.module').then( m => m.TestePageModule)
-  },
-  {
     path: 'conquistas',
     loadChildren: () => import('./conquistas/conquistas.module').then( m => m.ConquistasPageModule)
   },
@@ -55,31 +51,7 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
-  },
-  {
-    path: 'intro-j',
-    loadChildren: () => import('./intro-j/intro-j.module').then( m => m.IntroJPageModule)
-  },
-  {
-    path: 'alladin',
-    loadChildren: () => import('./historia-preview/alladin/alladin.module').then( m => m.AlladinPageModule)
-  },
-  {
-    path: 'dumbo',
-    loadChildren: () => import('./dumbo/dumbo.module').then( m => m.DumboPageModule)
-  },
-  {
-    path: 'porco',
-    loadChildren: () => import('./porco/porco.module').then( m => m.PorcoPageModule)
-  },
-  {
-    path: 'emilia',
-    loadChildren: () => import('./emilia/emilia.module').then( m => m.EmiliaPageModule)
   }
-
-
-
-
 ];
 
 @NgModule({
