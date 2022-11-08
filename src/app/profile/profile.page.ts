@@ -1,6 +1,9 @@
 /* eslint-disable max-len */
 /* eslint-disable @typescript-eslint/member-ordering */
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { IHistoria } from '../models/IHistoria.model';
+import { HistoriaService } from '../services/historia.service';
 
 @Component({
   selector: 'app-profile',
@@ -9,10 +12,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilePage implements OnInit {
 
-  constructor() { }
+  historias: IHistoria[] = [];
+
+
+  constructor(
+    private historiaService: HistoriaService,
+    private activatedRoute: ActivatedRoute
+    ) { }
 
   ngOnInit() {
+  this.listarHistorias();
   }
+
+  listarHistorias() {
+    this.historiaService.buscarHistoria().subscribe(retornoHistoria => {
+      this.historias = retornoHistoria;
+    }
+    );
+  }
+
 
   public slideOpts = {
     slidesPerView: 1.5,

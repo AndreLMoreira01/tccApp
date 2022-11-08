@@ -18,58 +18,43 @@
 
 
   <div class="details">
-    <div class="ion-no-padding">
+
       <p class="section-title">Histórias Favoritas</p>
-      <ion-slides class="slides" [options]="slideOpts">
-        <ion-slide class="historia-preview">
-          <div>
-          <img class="img" src="http://complemento.veja.abril.com.br/entretenimento/a-bela-e-a-fera/images/abre.jpg" />
-          <b class="nomehistoria">A Bela e a Fera</b>
-        </div>
-        </ion-slide>
 
-        <ion-slide class="historia-preview">
-          <div>
-          <img class="img" src="https://www.irmaos.com/wp-content/uploads/2019/12/pod392-1.jpg" />
-          <b class="nomehistoria">O Pequeno Príncipe</b>
-        </div>
-        </ion-slide>
+        <ion-slides class="slides" [options]="slideOpts">
+          <ion-slide *ngFor="let historia of historias" class="historia-preview">
+            <div [routerLink]="['/historias' , historia.id]">
+              <img class="img" [src]="historia.imagem">
+            <b class="nomehistoria">{{historia.nomehistoria}}</b>
+            <p class="nomeautor">{{historia.autor}}</p>
+          </div>
+          </ion-slide>
+        </ion-slides>
 
-        <ion-slide class="historia-preview">
-          <div>
-          <img class="img" src="https://epipoca.com.br/wp-content/uploads/2021/03/aladdin-2019-Deviant-Art-1920x1080-1.jpg" />
-          <b class="nomehistoria">Aladdin</b>
-        </div>
-        </ion-slide>
 
-      </ion-slides>
-    </div>
 
-    <p class="section-title2">Itens salvos</p>
-      <ion-slides class="slides2" [options]="slideOpts">
-        <ion-slide class="historia-preview2">
-          <div>
-          <img class="img" src="https://www.historiaparadormir.com.br/wp-content/uploads/2018/01/branca-de-neve.jpg" />
-          <b class="nomehistoria">A Branca de Neve</b>
-        </div>
-        </ion-slide>
 
-        <ion-slide class="historia-preview2">
-          <div>
-          <img class="img" src="https://s2.glbimg.com/CkEgjw7OCcfvcyCn2lqfaK9uTa8=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/h/y/Dd5DIbR32gmcog4IcMWg/curupira-001.jpg" />
-          <b class="nomehistoria">Curupira</b>
-        </div>
-        </ion-slide>
 
-        <ion-slide class="historia-preview2">
-          <div>
-          <img class="img" src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/9D87255DE3F9F4AFD69DB02A9857A9273AF0480078A028847EEC7E9587423BF3/scale?width=1200&aspectRatio=1.78&format=jpeg" />
-          <b class="nomehistoria">Dumbo</b>
-        </div>
-        </ion-slide>
+    <div class="details1">
 
-      </ion-slides>
+        <p class="section-title2">Itens salvos</p>
+
+          <ion-slides class="slides" [options]="slideOpts">
+            <ion-slide *ngFor="let historia of historias" class="historia-preview">
+              <div [routerLink]="['/historias' , historia.id]">
+                <img class="img" [src]="historia.imagem">
+              <b class="nomehistoria">{{historia.nomehistoria}}</b>
+              <p class="nomeautor">{{historia.autor}}</p>
+            </div>
+            </ion-slide>
+          </ion-slides>
+
+
+
+
   </div>
+
+</div>
 
 
 </ion-content>
