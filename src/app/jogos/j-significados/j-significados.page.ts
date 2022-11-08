@@ -53,7 +53,7 @@ ngOnInit(): void {
   this.intervalId = setInterval(() => {
     if(--this.timeLeft === 0) {
       clearInterval(this.intervalId);
-      this.finish('Fim de jogo', 'Seu tempo acabou!', 'wrongAnswer');
+      this.finish('Fim de jogo', 'Sa!', 'wrongAnswer');
       return;
     }
   }, 1000);
@@ -61,7 +61,7 @@ ngOnInit(): void {
 
 
   giveUp() {
-    this.finish('Fim de jogo', 'Você parou!', 'quit');
+    this.finish('Você fez', 'Você parou!', 'quit');
     clearInterval(this.intervalId);
   }
 
@@ -72,14 +72,15 @@ ngOnInit(): void {
   doAnswer(answer: QuestionAnswer) {
     if(answer.isRight) {
       this.loadQuestion();
-    } else {
+    }
+    else {
       this.finish('Fim de jogo', 'Oops! Você errou!', 'wrongAnswer');
       clearInterval(this.intervalId);
     }
-      if(answer.isRight){
-      this.givenUp(answer);
-}
+
   }
 
-
+// if(questionCount == 1500){
+// this.finish('Fim de jogo', 'Seu tempo acabou!', 'correctAnswer')
+// }
 }

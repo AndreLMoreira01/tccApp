@@ -144,6 +144,10 @@ export class QuestionService {
     const randomIndex: number = Math.floor( Math.random() * this.questions.length );
     this.questionCount++;
     return this.questions.splice(randomIndex, 1)[0];
+
+   // if(): Question{
+     // this.questionCount--;
+    //}
   }
 
 
@@ -154,7 +158,7 @@ export class QuestionService {
     return {
       correctAnswer: curQuesionPrize,
       wrongAnswer: this.questionCount === 1 || this.questionCount === 10 ? 0 : accumulated/2,
-      quit: this.questionCount === 1 ? 0 : accumulated,
+      quit: this.questionCount === 1500 ? 0 : accumulated,
     };
   }
 }
