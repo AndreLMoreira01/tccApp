@@ -118,8 +118,18 @@ export class QuestionService {
         {description: 'Laranja', isRight: false},
       ],
       level: 1
-    }
+    },
 
+    {
+      title: 'SALMON',
+      answers: [
+        {description: 'Salomão', isRight: false},
+        {description: 'Rosa', isRight: false},
+        {description: 'Vermelho', isRight: false},
+        {description: 'Preto', isRight: false},
+      ],
+      level: 1
+    }
 
   ];
 
