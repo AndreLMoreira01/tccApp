@@ -1,6 +1,7 @@
 import { AlertEarthComponent } from '../alerts/alert-earth/alert-earth.component';
 import { ModalController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
+import { InteracoesComponent } from '../interacoes/interacoes.component';
 
 @Component({
   selector: 'app-login',
@@ -21,9 +22,9 @@ export class LoginPage implements OnInit {
   async showModal( msg ){
 
     const modal = await this.modalController.create({
-      component: AlertEarthComponent,
+      component: InteracoesComponent,
       componentProps: { message: msg },
-      cssClass: 'alert-earth'
+      cssClass: 'interacoes'
     });
 
     await modal.present();
