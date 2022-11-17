@@ -12,6 +12,8 @@ import { QuestionService } from '../../services/question.service';
   templateUrl: './j-significados.page.html',
   styleUrls: ['./j-significados.page.scss'],
 })
+
+
 export class JSignificadosPage implements OnInit {
 
   curQuesion: Question;
@@ -68,6 +70,11 @@ ngOnInit(): void {
   givenUp(answer: QuestionAnswer) {
   this.finish('Fim de jogo', 'Seu tempo acabou!', 'correctAnswer');
   }
+
+  aoba(answer: QuestionAnswer) {
+
+  }
+
 
   doAnswer(answer: QuestionAnswer) {
     if(answer.isRight) {
