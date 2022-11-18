@@ -18,13 +18,14 @@
   border-radius: 50px 50px 0 0 / 30px 30px 0 0;
 }
 .head{
-  width: 97px;
-  height: 80px;
+  width: 13vh;
+  height: 12vh;
   position: absolute;
   z-index: 3;
   background: -webkit-linear-gradient(left, #e3e8eb 0%, #e3e8eb 50%, #fbfdfa 50%, #fbfdfa 100%);
   border-radius: 50%;
-  top: 34px;
+  /* top: 34px; */
+  /* font-size: 5rem; */
   left: calc(50% - 47.5px);
 }
 .head:after{
@@ -49,15 +50,15 @@
   box-shadow: 92px 0px 0px #618095;
 }
 .body{
-  width: 85px;
-  height: 100px;
-  position: absolute;
-  z-index: 2;
-  background-color: #fffbff;
-  border-radius: 40px / 20px;
-  top: 105px;
-  left: calc(50% - 41px);
-  background: -webkit-linear-gradient(left, #e3e8eb 0%, #e3e8eb 50%, #fbfdfa 50%, #fbfdfa 100%);
+  width: 11vh;
+    height: 15vh;
+    position: absolute;
+    z-index: 2;
+    /* background-color: #fffbff; */
+    border-radius: 40px/20px;
+    top: 90px;
+    left: calc(50% - 41px);
+    background: -webkit-linear-gradient(left, #e3e8eb 0%, #e3e8eb 50%, #fbfdfa 50%, #fbfdfa 100%);
 }
 .panel{
   width: 60px;
@@ -139,108 +140,56 @@
   right: 0;
   background-color: #b6d2e0;
 }
-.leg{
-  width: 30px;
-  height: 40px;
-  position: absolute;
-  z-index: 2;
-  bottom: 70px;
-}
-.leg-left{
-  left: 76px;
-  background-color: #e3e8eb;
-  transform: rotate(20deg);
-}
-.leg-right{
-  right: 73px;
-  background-color: #fbfdfa;
-  transform: rotate(-20deg);
-}
-.leg-left:before,
-.leg-right:before{
-  content: "";
-  width: 50px;
-  height: 25px;
-  position: absolute;
-  bottom: -26px;
-}
-.leg-left:before{
-  left: -20px;
-  background-color: #e3e8eb;
-  border-radius: 30px 0 0 0;
-  border-bottom: 10px solid #6d96ac;
-}
-.leg-right:before{
-  right: -20px;
-  background-color: #fbfdfa;
-  border-radius: 0 30px 0 0;
-  border-bottom: 10px solid #b0cfe4;
-}
 
-  @keyframes talk {
-    0%, 35% { opacity: 1; content: "Seja bem vindo ao World Kids, o aplicativo onde seu filho aprende brincando." }
-    35.1%, 37% { opacity: 0; }
-    37.1%, 45% { opacity: 1; content: "Got it? Perfect!" }
-    45.1%, 47% { opacity: 0; }
-    47.1%, 60% { opacity: 1; content: "Now I will shuffle the cards, \0a guess your pick, and \0a remove it from the deck" }
-    60.1%, 70% { opacity: 0; }
-    70.1%, 90% { opacity: 1; content: "Focus on your card! \0a \0a With my great magic powers \0a I will guess it!!" }
-    90.1%, 92% { opacity: 0; }
-    92.1%, 100% { opacity: 1; content: "Done! I found your card and \0a removed it from the deck! \0a TA-DA!" }
+
+
+
+  article {
+    --time: 10s;
   }
 
   article {
-    --time: 20s;
-  }
-
-  article {
-    outline: none;
-    width: 90vmin;
-    height: 90vmin;
-    position: absolute;
+    /* outline: none; */
+    width: 80%;
+    height: 40%;
     background-repeat: no-repeat;
     overflow: hidden;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-size: 1.5rem;
     line-height: 3.5vmin;
-    background: rgba(138, 106, 255, 0.603);
-    border-radius: 50%;
+    background: rgb(138 106 255 / 93%);
     padding: 15px 20px;
     display: inline-block;
     color: #fff;
-    position: absolute;
+    position: relative;
     box-sizing: border-box;
     border-radius: 50px;
     left: 50%;
-    top: -60px;
-    min-width: 150px;
-    text-align: center;
     transform: translateX(-50%);
-    white-space: nowrap;
-    top: 15vh;
-  }
+    top: 16vh;
+}
+
+.div{
+  position: absolute;
+}
 
   article::after {
-    content: "Seja bem vindo ao World Kids, o aplicativo onde seu filho aprende brincando.";
-    font-family: 'Poppins';
+    content: "Seja bem vindo! Meu nome é Theo e serei o seu amigo nessa busca pelo conhecimento!";
+    font-family: "Poppins";
     font-size: 1.5rem;
-    line-height: 3.5vmin;
-    background: rgba(138, 106, 255, 0.603);
+    line-height: 5vh;
     border-radius: 50%;
     padding: 15px 20px;
     display: inline-block;
     color: #fff;
     position: absolute;
     box-sizing: border-box;
-    border-radius: 50px;
-    left: 50%;
-    top: -60px;
-    min-width: 150px;
+    left: -85px;
     text-align: center;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    top: 15vh;
-  }
+    white-space: normal;
+    top: 5vh;
+    padding-left: 100px;
+}
 
   article::before {
     content: "";
@@ -254,19 +203,73 @@
   }
 
   @keyframes talk {
-    0%, 35% { opacity: 1; content: "HSeja bem vindo ao World Kids, o aplicativo onde seu filho aprende brincando." }
-    35.1%, 37% { opacity: 0; }
-    37.1%, 45% { opacity: 1; content: "Got it? Perfect!" }
-    45.1%, 47% { opacity: 0; }
-    47.1%, 60% { opacity: 1; content: "Now I will shuffle the cards, \0a guess your pick, and \0a remove it from the deck" }
-    60.1%, 70% { opacity: 0; }
-    70.1%, 90% { opacity: 1; content: "Focus on your card! \0a \0a With my great magic powers \0a I will guess it!!" }
-    90.1%, 92% { opacity: 0; }
-    92.1%, 100% { opacity: 1; content: "Done! I found your card and \0a removed it from the deck! \0a TA-DA!" }
+    0%, 100% {
+      opacity: 1;
+      content: "Aqui vamos nos divertir e aprender bastante com jogos e brincadeiras. Vamos começar?";
+    }
   }
 
+  .next{
+    position: fixed;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 100%;
+    background-color: #886cf5;
+    border: none;
+    top: 88vh;
+    right: 10px;
+    .img{
+      width: 50px;
+      height: 50px;
+      filter: invert(79%) sepia(97%) saturate(0%) hue-rotate(209deg) brightness(100%) contrast(101%);
+    }
+  }
 
   article:focus::after {
     animation: talk var(--time) linear 1 forwards;
   }
 
+.triangle{
+  width: 0;
+  height: 0;
+  border-top: 6vh solid transparent;
+  border-bottom: 6vh solid transparent;
+  border-right: 8vh solid rgba(138, 106, 255, 0.93);
+  position: fixed;
+  transform: rotate(50deg);
+  top: 48vh;
+  left: 3.5vh;
+}
+
+
+.wrapper {
+  display: flex;
+}
+
+.stick {
+  height: 310px;
+  width: 10px;
+  background: #1e1e11;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-left: 17.4vh;
+  margin-bottom: -150px;
+  position: relative;
+}
+
+.logo {
+  width: 130px;
+  margin-top: 61vh;
+  margin-left: 22vh;
+  position: absolute;
+  z-index: 4;
+}
+
+.flag {
+  width: 180px;
+  height: 120px;
+  background-color: #f3f3f3;
+  /* position: absolute; */
+  z-index: 3;
+}
