@@ -177,13 +177,38 @@
   border-bottom: 10px solid #b0cfe4;
 }
 
-  .message {
+  @keyframes talk {
+    0%, 35% { opacity: 1; content: "Seja bem vindo ao World Kids, o aplicativo onde seu filho aprende brincando." }
+    35.1%, 37% { opacity: 0; }
+    37.1%, 45% { opacity: 1; content: "Got it? Perfect!" }
+    45.1%, 47% { opacity: 0; }
+    47.1%, 60% { opacity: 1; content: "Now I will shuffle the cards, \0a guess your pick, and \0a remove it from the deck" }
+    60.1%, 70% { opacity: 0; }
+    70.1%, 90% { opacity: 1; content: "Focus on your card! \0a \0a With my great magic powers \0a I will guess it!!" }
+    90.1%, 92% { opacity: 0; }
+    92.1%, 100% { opacity: 1; content: "Done! I found your card and \0a removed it from the deck! \0a TA-DA!" }
+  }
+
+  article {
+    --time: 20s;
+  }
+
+  article {
+    outline: none;
+    width: 90vmin;
+    height: 90vmin;
+    position: absolute;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+    line-height: 3.5vmin;
     background: rgba(138, 106, 255, 0.603);
+    border-radius: 50%;
     padding: 15px 20px;
     display: inline-block;
     color: #fff;
     position: absolute;
-    top: 50px;
     box-sizing: border-box;
     border-radius: 50px;
     left: 50%;
@@ -191,8 +216,57 @@
     min-width: 150px;
     text-align: center;
     transform: translateX(-50%);
-    font-family: sans-serif;
     white-space: nowrap;
     top: 15vh;
+  }
+
+  article::after {
+    content: "Seja bem vindo ao World Kids, o aplicativo onde seu filho aprende brincando.";
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+    line-height: 3.5vmin;
+    background: rgba(138, 106, 255, 0.603);
+    border-radius: 50%;
+    padding: 15px 20px;
+    display: inline-block;
+    color: #fff;
+    position: absolute;
+    box-sizing: border-box;
+    border-radius: 50px;
+    left: 50%;
+    top: -60px;
+    min-width: 150px;
+    text-align: center;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    top: 15vh;
+  }
+
+  article::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 400%;
+    height: 22vmin;
+    transform: translate(0vmin, 0);
+  }
+
+  @keyframes talk {
+    0%, 35% { opacity: 1; content: "HSeja bem vindo ao World Kids, o aplicativo onde seu filho aprende brincando." }
+    35.1%, 37% { opacity: 0; }
+    37.1%, 45% { opacity: 1; content: "Got it? Perfect!" }
+    45.1%, 47% { opacity: 0; }
+    47.1%, 60% { opacity: 1; content: "Now I will shuffle the cards, \0a guess your pick, and \0a remove it from the deck" }
+    60.1%, 70% { opacity: 0; }
+    70.1%, 90% { opacity: 1; content: "Focus on your card! \0a \0a With my great magic powers \0a I will guess it!!" }
+    90.1%, 92% { opacity: 0; }
+    92.1%, 100% { opacity: 1; content: "Done! I found your card and \0a removed it from the deck! \0a TA-DA!" }
+  }
+
+
+  article:focus::after {
+    animation: talk var(--time) linear 1 forwards;
   }
 
