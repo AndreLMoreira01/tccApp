@@ -60,7 +60,9 @@ ngOnInit(): void {
   doAnswer(answer: QuestionAnswer) {
     if(answer.isRight) {
       this.loadQuestion();
-    } else {
+    }
+
+    else {
       this.finish('Fim de jogo', 'Oops! Você errou!', 'wrongAnswer');
       clearInterval(this.intervalId);
     }

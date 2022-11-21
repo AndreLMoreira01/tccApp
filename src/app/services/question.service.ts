@@ -154,10 +154,6 @@ export class QuestionService {
     const randomIndex: number = Math.floor( Math.random() * this.questions.length );
     this.questionCount++;
     return this.questions.splice(randomIndex, 1)[0];
-
-   // if(): Question{
-     // this.questionCount--;
-    //}
   }
 
 
