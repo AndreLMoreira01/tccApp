@@ -24,8 +24,8 @@
     <div class="ion-no-padding">
       <p class="section-title">Histórias infantis</p>
       <ion-slides class="slides" [options]="slideOpts">
-        <ion-slide *ngFor="let historia of historias" class="historia-preview">
-          <div [routerLink]="['/historias' , historia.id]">
+        <ion-slide *ngFor="let historia of historias" class="historia-preview" >
+          <div [routerLink]="['/historias' , historia.id]" (click)="unlockMars()">
             <img class="img" [src]="historia.imagem">
           <b class="nomehistoria">{{historia.nomehistoria}}</b>
           <p class="nomeautor">{{historia.autor}}</p>
@@ -39,7 +39,7 @@
           <p class="section-title2">Histórias clássicas</p>
           <ion-slides class="slides2" [options]="slideOpts2">
             <ion-slide *ngFor="let historia of historias" class="historia-preview">
-              <div [routerLink]="['/historias' , historia.id]">
+              <div [routerLink]="['/historias' , historia.id]" (click)="unlockMars()">
                 <img class="img" [src]="historia.imagem">
               <b class="nomehistoria">{{historia.nomehistoria}}</b>
               <p class="nomeautor">{{historia.autor}}</p>
@@ -51,8 +51,8 @@
         <div class="games">
           <div class="ion-no-padding">
             <h3 class="titleGames">Acesse os Jogos</h3>
-            <ion-slides class="slides2" [options]="slideOpts"  (click)="unlockMars()">
-              <ion-slide *ngFor="let jogo of jogos" class="historia-preview">
+            <ion-slides class="slides2" [options]="slideOpts">
+              <ion-slide *ngFor="let jogo of jogos" class="historia-preview"> <!-- COLOCAR CONQUISTASSS -->
                 <div [routerLink]="jogo.rota">
                   <img class="img" [src]="jogo.imagem">
                 <b class="title">{{jogo.nomejogo}}</b>
