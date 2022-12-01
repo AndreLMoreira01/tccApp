@@ -52,7 +52,7 @@
           <div class="ion-no-padding">
             <h3 class="titleGames">Acesse os Jogos</h3>
             <ion-slides class="slides2" [options]="slideOpts">
-              <ion-slide *ngFor="let jogo of jogos" class="historia-preview"> <!-- COLOCAR CONQUISTASSS -->
+              <ion-slide *ngFor="let jogo of jogos" class="historia-preview" (click)="jogo.conquistad">
                 <div [routerLink]="jogo.rota">
                   <img class="img" [src]="jogo.imagem">
                 <b class="title">{{jogo.nomejogo}}</b>

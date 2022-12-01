@@ -6,5 +6,6 @@ export interface IJogo{
   descricao: string;
   imagem: string;
   rota: string;
+  conquistad: string;
   conquistas: IConquista;
 }
