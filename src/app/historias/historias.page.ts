@@ -24,7 +24,6 @@ export class HistoriasPage implements OnInit {
 
 
   exibirHistoria() {
-    //console.log(this.activatedRoute.snapshot.paramMap.get('idHistoria'));
     const id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
     this.historiaService.buscarHistoiraPeloId(id).subscribe(retorno => {
       this.historia = retorno;
