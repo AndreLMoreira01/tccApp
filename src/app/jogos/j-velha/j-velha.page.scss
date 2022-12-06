@@ -289,7 +289,7 @@ h2 {
 #label-computer label:nth-child(9) { animation-delay: 0s; }
 
 
-/* Special cases */
+
 #a-0-x:checked ~ #a-4-x:checked ~ #a-8-o:checked ~ #label-computer label[for='a-2-o'],
 #a-0-x:checked ~ #a-4-x:checked ~ #a-8-o:checked ~ #label-computer label[for='a-6-o'],
 #a-2-x:checked ~ #a-4-x:checked ~ #a-6-o:checked ~ #label-computer label[for='a-0-o'],
@@ -346,7 +346,6 @@ h2 {
   animation: none;
 }
 
-/* Prevent other player from winning! */
 #difficulty:checked ~ form #a-1-x:checked ~ #a-2-x:checked ~ #label-computer label[for='a-0-o'],
 #difficulty:checked ~ form #a-3-x:checked ~ #a-6-x:checked ~ #label-computer label[for='a-0-o'],
 #difficulty:checked ~ form #a-4-x:checked ~ #a-8-x:checked ~ #label-computer label[for='a-0-o'],
@@ -371,7 +370,7 @@ h2 {
   animation: none;
 }
 
-/* if winning move, take it! */
+
 #dificuldade:checked ~ form #a-1-o:checked ~ #a-2-o:checked ~ #label-computer label[for='a-0-o'],
 #dificuldade:checked ~ form #a-3-o:checked ~ #a-6-o:checked ~ #label-computer label[for='a-0-o'],
 #dificuldade:checked ~ form #a-4-o:checked ~ #a-8-o:checked ~ #label-computer label[for='a-0-o'],
@@ -396,7 +395,7 @@ h2 {
   animation: none;
 }
 
-/* get center in first move */
+
 #dificuldade:checked ~ form #label-computer label[for='a-4-o'] {
   z-index: 100;
   animation: none;
@@ -431,10 +430,6 @@ input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~ 
 input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~ #board label[for$='-x'] {
   z-index: -1;
 }
-
-
-
-
 
 
 #first:checked ~ form #label-computer,
